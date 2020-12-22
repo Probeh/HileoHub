@@ -8,13 +8,47 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "allowJs": true,
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "module": "es2020",
+    "resolveJsonModule": true,
+    "module": "commonjs",
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@github/*": [
+        "src/app/github/*"
+      ],
+      "@models/*": [
+        "src/app/@common/models/*"
+      ],
+      "@enums/*": [
+        "src/app/@common/enums/*"
+      ],
+      "@helpers/*": [
+        "src/app/@common/helpers/*"
+      ],
+      "@services/*": [
+        "src/app/@common/services/*"
+      ],
+      "@identity/*": [
+        "src/app/identity/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@env/*": [
+        "src/environments/*"
+      ],
+      "@common/*": [
+        "src/app/@common/*"
+      ],
+      "@app/*": [
+        "src/app/*"
+      ],
+    },
   }
 }

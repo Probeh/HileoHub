@@ -1,0 +1,1 @@
+npm run docs & ng build --prod

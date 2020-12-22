@@ -1,0 +1,140 @@
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div
+    class="card h-100"
+    style="width: 30%;"
+  >
+    <div class="card-header"></div>
+    <div
+      class="card-body"
+      style="display: flex; flex-direction: column;"
+    >
+      <div style="height: max-content;">
+        <div class="btn-group w-100">
+          <button
+            (click)="this.setMethod('AES')"
+            [ngClass]="{'active': this.config.method == 'AES'}"
+            class="btn btn-method btn-outline-success"
+            id="AES"
+            type="button"
+          >AES</button>
+          <button
+            (click)="this.setMethod('Base64')"
+            [ngClass]="{'active': this.config.method == 'Base64'}"
+            class="btn btn-method btn-outline-success"
+            id="Base64"
+            type="button"
+          >Base64</button>
+        </div>
+        <hr>
+        <div
+          class="form-group text-info"
+          *ngIf="this.config.method == 'AES'"
+        >
+          <label for="secret"><i class="fa fa-lock"></i> Secret:</label>
+          <input
+            [(ngModel)]="this.secret"
+            class="form-control form-control-sm"
+            id="secret"
+            name="secret"
+            placeholder="Secret"
+            type="text"
+          >
+        </div>
+      </div>
+      <textarea
+        [(ngModel)]="this.contxt"
+        class="form-control form-control-sm"
+        id="content"
+        name="content"
+        placeholder="Content"
+        style="flex: auto;"
+        type="text"
+      ></textarea>
+      <hr>
+      <div class="row">
+        <div class="col"><button
+            [disabled]="!this.contxt"
+            class="btn btn-outline-info btn-block"
+            (click)="this.onSubmit()"
+          ><i class="fa fa-code"></i> Run</button></div>
+        <div class="col"><button
+            [disabled]="!this.contxt"
+            class="btn btn-outline-danger btn-block"
+            (click)="this.onClear()"
+          ><i class="fa fa-refresh"></i> Clear</button></div>
+      </div>
+    </div>
+    <div class="card-footer"></div>
+  </div>
+  <div
+    class="card h-100"
+    style="width: 200px;"
+  >
+    <div class="card-header"></div>
+    <div
+      class="card-body"
+      style="display: flex; flex-direction: column; justify-content: space-evenly;"
+    >
+      <button
+        (click)="this.setAction('Encrypt')"
+        [ngClass]="{'active': this.config.action == 'Encrypt'}"
+        class="btn btn-action btn-outline-success"
+        id="Encrypt"
+        type="button"
+      >Encrypt</button>
+      <button
+        (click)="this.setAction('Decrypt')"
+        [ngClass]="{'active': this.config.action == 'Decrypt'}"
+        class="btn btn-action btn-outline-success"
+        id="Decrypt"
+        type="button"
+      >Decrypt</button>
+    </div>
+    <div class="card-footer"></div>
+  </div>
+  <div
+    class="card h-100"
+    style="width: 30%;"
+  >
+    <div class="card-header"></div>
+    <div
+      class="card-body"
+      style="display: flex; flex-direction: column;"
+    >
+      <div style="height: max-content;">
+        <div class="btn-group w-100">
+          <button
+            (click)="this.setOutput('Text')"
+            [ngClass]="{'active': this.config.output == 'Text'}"
+            class="btn btn-outline-success"
+            id="Text"
+            type="button"
+          >Text</button>
+          <button
+            (click)="this.setOutput('JSON')"
+            [ngClass]="{'active': this.config.output == 'JSON'}"
+            class="btn btn-outline-success"
+            id="JSON"
+            type="button"
+          >JSON</button>
+        </div>
+        <hr>
+      </div>
+      <div
+        class="card"
+        style="flex: auto;"
+      >
+        <code *ngIf="this.config.output == 'JSON'">{{this.result | json}}</code>
+        <code *ngIf="this.config.output == 'Text'">{{this.result}}</code>
+      </div>
+      <div
+        *ngIf="this.function"
+        class="card bg-dark p-3 mt-2"
+        style="flex: auto;"
+      >
+        <code>{{this.function}}</code>
+      </div>
+    </div>
+    <div class="card-footer"></div>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+compodoc -p tsconfig.json -d src/docs -n HileoHub src --hideGenerator --theme readthedocs -s -r %random% -w -o

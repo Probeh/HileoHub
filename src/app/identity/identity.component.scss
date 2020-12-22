@@ -1,0 +1,8 @@
+#github {
+  width: 50px;
+  transition: ease-out 1000ms;
+}
+#github:hover {
+  transition: ease-in 500ms;
+  width: 250px;
+}
