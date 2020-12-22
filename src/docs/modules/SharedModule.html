@@ -70,13 +70,13 @@
 <title>cluster_SharedModule_imports</title>
 <polygon fill="none" stroke="black" points="498,-78 498,-130 734,-130 734,-78 498,-78"/>
 </g>
-<g id="clust6" class="cluster">
-<title>cluster_SharedModule_providers</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 490,-130 490,-78 16,-78"/>
-</g>
 <g id="clust4" class="cluster">
 <title>cluster_SharedModule_exports</title>
 <polygon fill="none" stroke="black" points="293,-208 293,-260 535,-260 535,-208 293,-208"/>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_SharedModule_providers</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 490,-130 490,-78 16,-78"/>
 </g>
 <!-- GithubModule -->
 <g id="node1" class="node">
@@ -277,8 +277,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/app/@common/shared.module.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/@common/shared.module.ts:30</a></div>
                 </td>
             </tr>
 
@@ -332,7 +332,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ToastrModule                      } from &#x27;ngx-toastr&#x27;
 import { CommonModule                      } from &#x27;@angular/common&#x27;
-import { HttpClientModule                  } from &#x27;@angular/common/http&#x27;
+import { HttpClientModule, HTTP_INTERCEPTORS                  } from &#x27;@angular/common/http&#x27;
 import { ModuleWithProviders    , NgModule } from &#x27;@angular/core&#x27;
 import { BrowserAnimationsModule           } from &#x27;@angular/platform-browser/animations&#x27;
 import { RouterModule                      } from &#x27;@angular/router&#x27;
@@ -342,6 +342,7 @@ import { IdentityService                   } from &#x27;@identity/identity.servi
 import { MessageService                    } from &#x27;@services/message.service&#x27;
 import { GithubModule                      } from &#x27;@app/github/github.module&#x27;
 import { GithubService                     } from &#x27;@app/github/github.service&#x27;
+import { RequestInterceptor } from &#x27;@services/request.interceptor&#x27;
 
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 const components &#x3D; [];
@@ -363,6 +364,7 @@ export class SharedModule {
       ngModule: SharedModule,
       providers: [
         { provide: SharedOptions, useValue: options },
+        { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
         services,
       ]
     }

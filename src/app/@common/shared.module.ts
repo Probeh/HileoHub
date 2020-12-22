@@ -1,6 +1,6 @@
 import { ToastrModule                      } from 'ngx-toastr'
 import { CommonModule                      } from '@angular/common'
-import { HttpClientModule                  } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS                  } from '@angular/common/http'
 import { ModuleWithProviders    , NgModule } from '@angular/core'
 import { BrowserAnimationsModule           } from '@angular/platform-browser/animations'
 import { RouterModule                      } from '@angular/router'
@@ -10,6 +10,7 @@ import { IdentityService                   } from '@identity/identity.service'
 import { MessageService                    } from '@services/message.service'
 import { GithubModule                      } from '@app/github/github.module'
 import { GithubService                     } from '@app/github/github.service'
+import { RequestInterceptor } from '@services/request.interceptor'
 
 // ======================================= //
 const components = [];
@@ -31,6 +32,7 @@ export class SharedModule {
       ngModule: SharedModule,
       providers: [
         { provide: SharedOptions, useValue: options },
+        { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
         services,
       ]
     }

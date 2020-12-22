@@ -136,6 +136,10 @@
                                 <a href="#login">login</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#logout">logout</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
                         </ul>
@@ -253,6 +257,47 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="logout"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            logout
+                        </b>
+                        <a href="#logout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>logout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/app/identity/identity.component.ts:17</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
                         <b>
@@ -294,13 +339,13 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import { IdentityService } from &#x27;@identity/identity.service&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component      , OnInit } from &#x27;@angular/core&#x27;             ;
+import { IdentityService         } from &#x27;@identity/identity.service&#x27;;
 
 @Component({
-  selector: &#x27;app-identity&#x27;,
-  templateUrl:  &#x27;./identity.component.html&#x27;,
-  styleUrls  : [&#x27;./identity.component.scss&#x27;]
+  selector    :  &#x27;app-identity&#x27;             ,
+  templateUrl :  &#x27;./identity.component.html&#x27;,
+  styleUrls   : [&#x27;./identity.component.scss&#x27;]
 })
 export class IdentityComponent implements OnInit {
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
@@ -309,6 +354,9 @@ export class IdentityComponent implements OnInit {
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //\
   public login() {
     this.service.login();
+  }
+  public logout() {
+    this.service.logout();
   }
 }
 </code></pre>
@@ -341,7 +389,8 @@ export class IdentityComponent implements OnInit {
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;card-dooter&quot;&gt;&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -385,7 +434,7 @@ export class IdentityComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div  class="h-100"  style="display: flex; flex-direction: column; justify-content: center; align-items: center;">  <div class="card shadow">    <div      class="text-center card-body text-info"      style="padding: 25px;"    >      <img        src="../../assets/images/logo.png"        style="width: 250px; margin: 100px;"      >      <hr>      <button        id="github"        (click)="this.login()"        style="margin: auto; border-radius: 30px; display: flex; justify-content: center; align-items: center;"        class="btn btn-outline-info shadow"      ><i          class="fa fa-github"          style="font-size: 36px;"        ></i> <span style="font-size: 24px;"></span></button>    </div>    <div class="card-dooter"></div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'IdentityComponent', 'selector': 'app-identity'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodeComponent', 'selector': 'app-code'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'IdentityComponent', 'selector': 'app-identity'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'ReposComponent', 'selector': 'app-repos'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'UsersComponent', 'selector': 'app-users'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'IdentityComponent'};
 </script>

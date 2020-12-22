@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core'
-import { RouterModule, Routes } from '@angular/router'
-import { GithubComponent } from '@app/github/github.component'
+import { NgModule                } from '@angular/core'
+import { RouterModule   , Routes } from '@angular/router'
+import { GithubComponent         } from '@app/github/github.component'
 
 // ======================================= //
 const routes: Routes = [

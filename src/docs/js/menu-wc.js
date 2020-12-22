@@ -78,21 +78,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/GithubModule.html" data-type="entity-link">GithubModule</a>
-                                    <li class="chapter inner">
-                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-GithubModule-241666588cedfe8e8cb7cf8a2a31ecdb"' : 'data-target="#xs-components-links-module-GithubModule-241666588cedfe8e8cb7cf8a2a31ecdb"' }>
-                                            <span class="icon ion-md-cog"></span>
-                                            <span>Components</span>
-                                            <span class="icon ion-ios-arrow-down"></span>
-                                        </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-GithubModule-241666588cedfe8e8cb7cf8a2a31ecdb"' :
-                                            'id="xs-components-links-module-GithubModule-241666588cedfe8e8cb7cf8a2a31ecdb"' }>
-                                            <li class="link">
-                                                <a href="components/GithubComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">GithubComponent</a>
-                                            </li>
-                                        </ul>
-                                    </li>
                             </li>
                             <li class="link">
                                 <a href="modules/GithubRoutingModule.html" data-type="entity-link">GithubRoutingModule</a>
@@ -137,13 +122,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SharedModule.html" data-type="entity-link">SharedModule</a>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#injectables-links-module-SharedModule-e9cff9104ec195b2a3c9937283981ce5"' : 'data-target="#xs-injectables-links-module-SharedModule-e9cff9104ec195b2a3c9937283981ce5"' }>
+                                        'data-target="#injectables-links-module-SharedModule-730c2ec156dda886c620f0ef6c134fcb"' : 'data-target="#xs-injectables-links-module-SharedModule-730c2ec156dda886c620f0ef6c134fcb"' }>
                                         <span class="icon ion-md-arrow-round-down"></span>
                                         <span>Injectables</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-SharedModule-e9cff9104ec195b2a3c9937283981ce5"' :
-                                        'id="xs-injectables-links-module-SharedModule-e9cff9104ec195b2a3c9937283981ce5"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-SharedModule-730c2ec156dda886c620f0ef6c134fcb"' :
+                                        'id="xs-injectables-links-module-SharedModule-730c2ec156dda886c620f0ef6c134fcb"' }>
                                         <li class="link">
                                             <a href="injectables/GithubService.html"
                                                 data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>GithubService</a>
@@ -170,10 +155,25 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="components-links"' : 'id="xs-components-links"' }>
                             <li class="link">
-                                <a href="components/AppComponent.html" data-type="entity-link">AppComponent</a>
+                                <a href="components/CodeComponent.html" data-type="entity-link">CodeComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/GithubComponent.html" data-type="entity-link">GithubComponent</a>
                             </li>
                             <li class="link">
                                 <a href="components/HomeComponent.html" data-type="entity-link">HomeComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/ProjectsComponent.html" data-type="entity-link">ProjectsComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/ReposComponent.html" data-type="entity-link">ReposComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/SearchComponent.html" data-type="entity-link">SearchComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/UsersComponent.html" data-type="entity-link">UsersComponent</a>
                             </li>
                         </ul>
                     </li>
@@ -210,6 +210,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </ul>
                         </li>
                     <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#interceptors-links"' :
+                            'data-target="#xs-interceptors-links"' }>
+                            <span class="icon ion-ios-swap"></span>
+                            <span>Interceptors</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse " ${ isNormalMode ? 'id="interceptors-links"' : 'id="xs-interceptors-links"' }>
+                            <li class="link">
+                                <a href="interceptors/RequestInterceptor.html" data-type="entity-link">RequestInterceptor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#interfaces-links"' :
                             'data-target="#xs-interfaces-links"' }>
                             <span class="icon ion-md-information-circle-outline"></span>
@@ -219,6 +232,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
                                 <a href="interfaces/Credentials.html" data-type="entity-link">Credentials</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/KeyValue.html" data-type="entity-link">KeyValue</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/User.html" data-type="entity-link">User</a>
