@@ -9,7 +9,6 @@ import { SearchScopes } from '@github/search-scopes';
   styleUrls: ['./github.component.scss']
 })
 export class GithubComponent implements OnInit {
-  // ======================================= //
   public textStr: string = '';
   public current: string = 'Users';
   public filters: string[] = ['Users', 'Code', 'Commits', 'Issues', 'Labels', 'Repositories', 'Topics',];
@@ -22,9 +21,9 @@ export class GithubComponent implements OnInit {
   }
   public async onSubmit() {
     this.service.search(this.current as SearchScopes, this.textStr)
-      .toPromise()
-      .then(result => {
-
-      })
+    .toPromise()
+    .then(result => {
+      console.log(result)
+    })
   }
 }

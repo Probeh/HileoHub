@@ -1,17 +1,19 @@
-import { Injectable } from '@angular/core';
-import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable                                               } from 'rxjs'
+import { HttpEvent    , HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http'
+import { Injectable                                               } from '@angular/core'
+import { SharedOptions                                            } from '@helpers/shared-options'
 
 @Injectable()
 export class RequestInterceptor implements HttpInterceptor {
   // ======================================= //
-  constructor() { }
+  constructor(private options: SharedOptions) { }
   // ======================================= //
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const headers = req.headers
-      .set('Accept', 'application/vnd.github.v3+json')
-      .set('Content-Type', 'application/json');
-    const authReq = req.clone({ headers });
+    const headers = {
+      'Accept': 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json'
+    }
+    const authReq = req.clone({ setHeaders: headers });
     return next.handle(authReq);
   }
 }

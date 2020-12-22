@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content interceptor">
+               <div class="content class">
                    <div class="content-data">
 
 
@@ -38,9 +38,12 @@
 
 
 
+
+
+
 <ol class="breadcrumb">
-  <li>Interceptors</li>
-  <li>RequestInterceptor</li>
+  <li>Classes</li>
+  <li>Crypto</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,8 +61,10 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/@common/services/request.interceptor.ts</code>
+            <code>src/app/@common/helpers/crypto-helper.ts</code>
         </p>
+
+
 
 
 
@@ -77,7 +82,12 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#intercept">intercept</a>
+                                    <span class="modifier">Static</span>
+                                <a href="#decrypt">decrypt</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#encrypt">encrypt</a>
                             </li>
                         </ul>
                     </td>
@@ -91,54 +101,7 @@
     </table>
 </section>
 
-            <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor(options: <a href="../classes/SharedOptions.html">SharedOptions</a>)</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/@common/services/request.interceptor.ts:7</a></div>
-                            </td>
-                        </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>options</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../classes/SharedOptions.html" target="_self" >SharedOptions</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
 
             <section>
     
@@ -149,26 +112,28 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="intercept"></a>
+                    <a name="decrypt"></a>
                     <span class="name">
                         <b>
-                            intercept
+                            <span class="modifier">Static</span>
+                            decrypt
                         </b>
-                        <a href="#intercept"><span class="icon ion-ios-link"></span></a>
+                        <a href="#decrypt"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>intercept(req: HttpRequest<any>, next: <a href="https://angular.io/api/common/http/HttpHandler" target="_blank">HttpHandler</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>decrypt(ciphertext: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, secret: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/app/@common/services/request.interceptor.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="5"
+                            class="link-to-prism">src/app/@common/helpers/crypto-helper.ts:5</a></div>
                 </td>
             </tr>
 
@@ -188,9 +153,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>req</td>
+                                    <td>ciphertext</td>
                                     <td>
-                                            <code>HttpRequest&lt;any&gt;</code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
 
                                     <td>
@@ -200,9 +165,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>next</td>
+                                    <td>secret</td>
                                     <td>
-                                                <code><a href="https://angular.io/api/common/http/HttpHandler" target="_blank" >HttpHandler</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
 
                                     <td>
@@ -217,7 +182,91 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;HttpEvent&lt;any&gt;&gt;</code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="encrypt"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Static</span>
+                            encrypt
+                        </b>
+                        <a href="#encrypt"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>encrypt(rawstring: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, secret: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="8"
+                            class="link-to-prism">src/app/@common/helpers/crypto-helper.ts:8</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rawstring</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>secret</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                     </div>
                     <div class="io-description">
@@ -229,34 +278,28 @@
     </table>
 </section>
 
+
+
+
+
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable                                               } from &#x27;rxjs&#x27;
-import { HttpEvent    , HttpHandler, HttpInterceptor, HttpRequest } from &#x27;@angular/common/http&#x27;
-import { Injectable                                               } from &#x27;@angular/core&#x27;
-import { SharedOptions                                            } from &#x27;@helpers/shared-options&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AES, enc } from &#x27;crypto-js&#x27;;
 
-@Injectable()
-export class RequestInterceptor implements HttpInterceptor {
+export default class Crypto {
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  constructor(private options: SharedOptions) { }
-  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  intercept(req: HttpRequest&lt;any&gt;, next: HttpHandler): Observable&lt;HttpEvent&lt;any&gt;&gt; {
-    const headers &#x3D; {
-      &#x27;Accept&#x27;: &#x27;application/vnd.github.v3+json&#x27;,
-      &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
-    }
-    const authReq &#x3D; req.clone({ setHeaders: headers });
-    return next.handle(authReq);
+  public static decrypt(ciphertext: string, secret: string) {
+    return AES.decrypt(ciphertext, btoa(secret)).toString(enc.Utf8);
   }
+  public static encrypt(rawstring: string, secret: string): string {
+    return AES.encrypt(rawstring, btoa(secret)).toString();
+  }
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 }</code></pre>
     </div>
 </div>
-
-
-
 
 
 
@@ -281,8 +324,8 @@ export class RequestInterceptor implements HttpInterceptor {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interceptor';
-            var COMPODOC_CURRENT_PAGE_URL = 'RequestInterceptor.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'Crypto.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

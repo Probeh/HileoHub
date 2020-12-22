@@ -67,21 +67,6 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#baseUrl">baseUrl</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -91,10 +76,6 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#getEndpoint">getEndpoint</a>
-                            </li>
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#search">search</a>
@@ -117,7 +98,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+<code>constructor(options: <a href="../classes/SharedOptions.html">SharedOptions</a>, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -139,6 +120,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                                <tr>
+                                                        <td>options</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/SharedOptions.html" target="_self" >SharedOptions</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                                 <tr>
                                                         <td>http</td>
                                                   
@@ -165,47 +158,6 @@
     <h3 id="methods">
         Methods
     </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getEndpoint"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            getEndpoint
-                        </b>
-                        <a href="#getEndpoint"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getEndpoint()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="17"
-                            class="link-to-prism">src/app/github/github.service.ts:17</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>{ [x: number]: string; }</code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -291,76 +243,26 @@
         </tbody>
     </table>
 </section>
-            <section>
-    
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="baseUrl"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            baseUrl</b>
-                            <a href="#baseUrl"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>&#x27;https://api.github.com&#x27;</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/github/github.service.ts:9</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-</section>
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient } from &#x27;@angular/common/http&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable } from &#x27;rxjs&#x27;
+import { HttpClient } from &#x27;@angular/common/http&#x27;
 import { Injectable } from &#x27;@angular/core&#x27;
+import githubSearch from &#x27;@github/github-endpoints&#x27;
 import { SearchScopes } from &#x27;@github/search-scopes&#x27;
-import { Observable } from &#x27;rxjs&#x27;;
+import { SharedOptions } from &#x27;@helpers/shared-options&#x27;
 
 @Injectable()
 export class GithubService {
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  private baseUrl: string &#x3D; &#x27;https://api.github.com&#x27;;
-  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  constructor(private http: HttpClient) { }
+  constructor(private options: SharedOptions, private http: HttpClient) { }
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
   public search(key: SearchScopes, value?: string): Observable&lt;any&gt; {
-    return this.http.get(&#x60;${this.getEndpoint()[key]}${value ? value : &#x27;&#x27;}&#x60;);
-  }
-
-  private getEndpoint() {
-    return {
-      [SearchScopes.Code]: &#x60;${this.baseUrl}/search/code?q&#x3D;swift&#x60;,
-      [SearchScopes.Commits]: &#x60;${this.baseUrl}/search/commits/&#x60;,
-      [SearchScopes.Issues]: &#x60;${this.baseUrl}/search/issues/&#x60;,
-      [SearchScopes.Labels]: &#x60;${this.baseUrl}/search/labels/&#x60;,
-      [SearchScopes.Repositories]: &#x60;${this.baseUrl}/search/repositories/&#x60;,
-      [SearchScopes.Topics]: &#x60;${this.baseUrl}/search/topics/&#x60;,
-      [SearchScopes.Users]: &#x60;${this.baseUrl}/search/users/probeh&#x60;,
-    }
+    const endpointUrl &#x3D; &#x60;${githubSearch()[key]}${value ? value : &#x27;&#x27;}&#x60;;
+    return this.http.get(endpointUrl);
   }
 }
 export interface KeyValue {

@@ -1,8 +1,9 @@
 export interface Credentials {
-  apiKey           ?: string;
-  appId            ?: string;
-  authDomain       ?: string;
-  messagingSenderId?: string;
-  projectId        ?: string;
-  storageBucket    ?: string;
+  apiKey            ?: string; /* Client Secret */
+  appId             ?: string; /* Client Id     */
+  authDomain        ?: string;
+  messagingSenderId ?: string;
+  projectId         ?: string;
+  storageBucket     ?: string;
+  baseUrl           ?: string;
 }

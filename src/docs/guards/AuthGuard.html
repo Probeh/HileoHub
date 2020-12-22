@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content interceptor">
+               <div class="content guard">
                    <div class="content-data">
 
 
@@ -38,9 +38,10 @@
 
 
 
+
 <ol class="breadcrumb">
-  <li>Interceptors</li>
-  <li>RequestInterceptor</li>
+    <li>Guards</li>
+    <li>AuthGuard</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -53,17 +54,19 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info">
-        <p class="comment">
+        <div class="tab-pane fade active in" id="c-info">
+            <p class="comment">
             <h3>File</h3>
-        </p>
-        <p class="comment">
-            <code>src/app/@common/services/request.interceptor.ts</code>
-        </p>
+            </p>
+            <p class="comment">
+                <code>src/app/identity/auth.guard.ts</code>
+            </p>
 
 
 
-            <section>
+
+
+                <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -77,7 +80,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#intercept">intercept</a>
+                                <a href="#canActivate">canActivate</a>
                             </li>
                         </ul>
                     </td>
@@ -91,18 +94,18 @@
     </table>
 </section>
 
-            <section>
+                <section>
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(options: <a href="../classes/SharedOptions.html">SharedOptions</a>)</code>
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/@common/services/request.interceptor.ts:7</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/app/identity/auth.guard.ts:6</a></div>
                             </td>
                         </tr>
 
@@ -120,10 +123,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>options</td>
+                                                        <td>router</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../classes/SharedOptions.html" target="_self" >SharedOptions</a></code>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -140,7 +143,7 @@
         </table>
 </section>
 
-            <section>
+                <section>
     
     <h3 id="methods">
         Methods
@@ -149,26 +152,26 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="intercept"></a>
+                    <a name="canActivate"></a>
                     <span class="name">
                         <b>
-                            intercept
+                            canActivate
                         </b>
-                        <a href="#intercept"><span class="icon ion-ios-link"></span></a>
+                        <a href="#canActivate"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>intercept(req: HttpRequest<any>, next: <a href="https://angular.io/api/common/http/HttpHandler" target="_blank">HttpHandler</a>)</code>
+<code>canActivate(route: <a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank">ActivatedRouteSnapshot</a>, state: <a href="https://angular.io/api/router/RouterStateSnapshot" target="_blank">RouterStateSnapshot</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/app/@common/services/request.interceptor.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="9"
+                            class="link-to-prism">src/app/identity/auth.guard.ts:9</a></div>
                 </td>
             </tr>
 
@@ -188,9 +191,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>req</td>
+                                    <td>route</td>
                                     <td>
-                                            <code>HttpRequest&lt;any&gt;</code>
+                                                <code><a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank" >ActivatedRouteSnapshot</a></code>
                                     </td>
 
                                     <td>
@@ -200,9 +203,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>next</td>
+                                    <td>state</td>
                                     <td>
-                                                <code><a href="https://angular.io/api/common/http/HttpHandler" target="_blank" >HttpHandler</a></code>
+                                                <code><a href="https://angular.io/api/router/RouterStateSnapshot" target="_blank" >RouterStateSnapshot</a></code>
                                     </td>
 
                                     <td>
@@ -217,7 +220,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;HttpEvent&lt;any&gt;&gt;</code>
+                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -228,33 +231,24 @@
         </tbody>
     </table>
 </section>
+        </div>
 
-    </div>
 
-
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable                                               } from &#x27;rxjs&#x27;
-import { HttpEvent    , HttpHandler, HttpInterceptor, HttpRequest } from &#x27;@angular/common/http&#x27;
-import { Injectable                                               } from &#x27;@angular/core&#x27;
-import { SharedOptions                                            } from &#x27;@helpers/shared-options&#x27;
+        <div class="tab-pane fade  tab-source-code" id="c-source">
+            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable            , of                                       } from &#x27;rxjs&#x27;
+import { Injectable                                                       } from &#x27;@angular/core&#x27;
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from &#x27;@angular/router&#x27;
 
 @Injectable()
-export class RequestInterceptor implements HttpInterceptor {
-  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  constructor(private options: SharedOptions) { }
-  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  intercept(req: HttpRequest&lt;any&gt;, next: HttpHandler): Observable&lt;HttpEvent&lt;any&gt;&gt; {
-    const headers &#x3D; {
-      &#x27;Accept&#x27;: &#x27;application/vnd.github.v3+json&#x27;,
-      &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
-    }
-    const authReq &#x3D; req.clone({ setHeaders: headers });
-    return next.handle(authReq);
+export class AuthGuard implements CanActivate {
+  constructor(private router: Router) { }
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable&lt;boolean&gt; {
+    return of(true);
   }
 }</code></pre>
-    </div>
+        </div>
 </div>
-
 
 
 
@@ -281,8 +275,8 @@ export class RequestInterceptor implements HttpInterceptor {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interceptor';
-            var COMPODOC_CURRENT_PAGE_URL = 'RequestInterceptor.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'guard';
+            var COMPODOC_CURRENT_PAGE_URL = 'AuthGuard.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

@@ -1,4 +1,3 @@
-
 import { Credentials } from '@helpers/credentials'
 export class SharedOptions {
   // ======================================= //

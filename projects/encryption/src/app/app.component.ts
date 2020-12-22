@@ -7,12 +7,13 @@ import { AES, enc } from 'crypto-js';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  // ======================================= //
   public config: Config;
   public secret: string;
   public contxt: string;
   public result: string;
   public function: string;
-
+  // ======================================= //
   constructor() {
     this.config = {
       method: 'Base64',
@@ -20,7 +21,7 @@ export class AppComponent {
       output: 'Text'
     };
   }
-
+  // ======================================= //
   public setMethod(value: Method) {
     this.config.method = value;
   }

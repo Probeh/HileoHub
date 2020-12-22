@@ -10,7 +10,7 @@ import { IdentityComponent     } from './identity.component'
 // ======================================= //
 @NgModule({
   imports: [
-    CommonModule         ,
+    CommonModule,
     IdentityRoutingModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(providers.firebase),

@@ -81,7 +81,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/github/github.service.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/github/github.service.ts:18</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -92,32 +92,21 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient } from &#x27;@angular/common/http&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable } from &#x27;rxjs&#x27;
+import { HttpClient } from &#x27;@angular/common/http&#x27;
 import { Injectable } from &#x27;@angular/core&#x27;
+import githubSearch from &#x27;@github/github-endpoints&#x27;
 import { SearchScopes } from &#x27;@github/search-scopes&#x27;
-import { Observable } from &#x27;rxjs&#x27;;
+import { SharedOptions } from &#x27;@helpers/shared-options&#x27;
 
 @Injectable()
 export class GithubService {
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  private baseUrl: string &#x3D; &#x27;https://api.github.com&#x27;;
-  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  constructor(private http: HttpClient) { }
+  constructor(private options: SharedOptions, private http: HttpClient) { }
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
   public search(key: SearchScopes, value?: string): Observable&lt;any&gt; {
-    return this.http.get(&#x60;${this.getEndpoint()[key]}${value ? value : &#x27;&#x27;}&#x60;);
-  }
-
-  private getEndpoint() {
-    return {
-      [SearchScopes.Code]: &#x60;${this.baseUrl}/search/code?q&#x3D;swift&#x60;,
-      [SearchScopes.Commits]: &#x60;${this.baseUrl}/search/commits/&#x60;,
-      [SearchScopes.Issues]: &#x60;${this.baseUrl}/search/issues/&#x60;,
-      [SearchScopes.Labels]: &#x60;${this.baseUrl}/search/labels/&#x60;,
-      [SearchScopes.Repositories]: &#x60;${this.baseUrl}/search/repositories/&#x60;,
-      [SearchScopes.Topics]: &#x60;${this.baseUrl}/search/topics/&#x60;,
-      [SearchScopes.Users]: &#x60;${this.baseUrl}/search/users/probeh&#x60;,
-    }
+    const endpointUrl &#x3D; &#x60;${githubSearch()[key]}${value ? value : &#x27;&#x27;}&#x60;;
+    return this.http.get(endpointUrl);
   }
 }
 export interface KeyValue {

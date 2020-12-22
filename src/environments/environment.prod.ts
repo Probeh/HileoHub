@@ -3,8 +3,9 @@ export const environment = {
 };
 export const providers = {
   github: {
-    appId : 'U2FsdGVkX1/kNHY6pFAX4uxzl4FXPoQ+ycywev9/8+Nhe1hrK2/f5NHM5vuxKLp9'                        ,
-    appKey: 'U2FsdGVkX18vmJmB9GooMvvV9biYa5X0MP47BmenGMC0bheOsxMjTnXowzA3lhbRBlOKAzKr9DZFe08TzNj3ng=='
+    apiKey : 'U2FsdGVkX18vmJmB9GooMvvV9biYa5X0MP47BmenGMC0bheOsxMjTnXowzA3lhbRBlOKAzKr9DZFe08TzNj3ng==',
+    appId  : 'U2FsdGVkX1/kNHY6pFAX4uxzl4FXPoQ+ycywev9/8+Nhe1hrK2/f5NHM5vuxKLp9'                        ,
+    baseUrl: 'https://api.github.com'
   },
   firebase: {
     apiKey           : "AIzaSyBpdNViHcAz3kVjWBhJ58a5N2RzTSGtwX0"  ,
