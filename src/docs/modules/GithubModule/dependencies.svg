@@ -28,13 +28,13 @@
 <title>cluster_GithubModule_imports</title>
 <polygon fill="none" stroke="black" points="240,-78 240,-130 400,-130 400,-78 240,-78"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_GithubModule_declarations</title>
-<polygon fill="none" stroke="black" points="96,-78 96,-130 232,-130 232,-78 96,-78"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_GithubModule_exports</title>
 <polygon fill="none" stroke="black" points="173,-208 173,-260 313,-260 313,-208 173,-208"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_GithubModule_declarations</title>
+<polygon fill="none" stroke="black" points="96,-78 96,-130 232,-130 232,-78 96,-78"/>
 </g>
 <!-- GithubComponent -->
 <g id="node1" class="node">
