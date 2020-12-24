@@ -78,10 +78,10 @@ import { HomeComponent         } from &#x27;@app/home/home.component&#x27;
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 const routes: Routes &#x3D; [
   { path: &#x27;auth&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./identity/identity.module&#x27;).then(m &#x3D;&gt; m.IdentityModule)&quot; },
-  { path: &#x27;search&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./github/github.module&#x27;).then(m &#x3D;&gt; m.GithubModule)&quot; },
+  { path: &#x27;hub&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./github/github.module&#x27;).then(m &#x3D;&gt; m.GithubModule)&quot; },
   { path: &#x27;home&#x27;, component: HomeComponent },
-  { path: &#x27;&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;auth&#x27; },
-  { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;auth&#x27; }
+  { path: &#x27;&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;hub&#x27; },
+  { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;hub&#x27; }
 ];
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 @NgModule({

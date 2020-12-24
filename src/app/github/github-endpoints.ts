@@ -1,5 +1,4 @@
 import { providers    } from '@env/environment'     ;
-import { SearchScopes } from '@github/search-scopes';
 
 export default function githubSearch() {
   return {
@@ -11,4 +10,13 @@ export default function githubSearch() {
     [SearchScopes.Topics      ]: `${providers.github.baseUrl}/search/topics?q=`      ,
     [SearchScopes.Users       ]: `${providers.github.baseUrl}/search/users?q=`       ,
   }
+}
+export enum SearchScopes {
+  Code         = 'code'        ,
+  Commits      = 'commits'     ,
+  Issues       = 'issues'      ,
+  Labels       = 'labels'      ,
+  Repositories = 'repositories',
+  Topics       = 'topics'      ,
+  Users        = 'users'       ,
 }

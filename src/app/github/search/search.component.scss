@@ -1,0 +1,16 @@
+@import "themes.scss";
+
+.nav-item {
+  color: $secondary;
+}
+.active {
+  transition: ease-in 200ms;
+  background: $teal !important;
+  color: white !important;
+}
+.form-body {
+  background: $teal;
+}
+.form-search {
+
+}

@@ -164,16 +164,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="components/HomeComponent.html" data-type="entity-link">HomeComponent</a>
                             </li>
                             <li class="link">
-                                <a href="components/ProjectsComponent.html" data-type="entity-link">ProjectsComponent</a>
+                                <a href="components/PackageComponent.html" data-type="entity-link">PackageComponent</a>
                             </li>
                             <li class="link">
-                                <a href="components/ReposComponent.html" data-type="entity-link">ReposComponent</a>
+                                <a href="components/ProjectComponent.html" data-type="entity-link">ProjectComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/RepoComponent.html" data-type="entity-link">RepoComponent</a>
                             </li>
                             <li class="link">
                                 <a href="components/SearchComponent.html" data-type="entity-link">SearchComponent</a>
                             </li>
                             <li class="link">
-                                <a href="components/UsersComponent.html" data-type="entity-link">UsersComponent</a>
+                                <a href="components/UserComponent.html" data-type="entity-link">UserComponent</a>
                             </li>
                         </ul>
                     </li>

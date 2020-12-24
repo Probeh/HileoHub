@@ -1,37 +1,13 @@
-<div class="container">
-  <div class="card">
+<div class="container h-100">
+  <div class="card h-100">
     <div class="card-header p-1 bg-success"></div>
     <img
       src="../../assets/images/logo.png"
       style="width: 250px; margin: 10px auto;"
       alt=""
     >
-    <div class="card-body p-0">
-      <nav class="nav nav-tabs nav-stacked">
-        <a
-          class="nav-link"
-          *ngFor="let item of this.filters"
-          [ngClass]="{'active': this.current == item}"
-          (click)="onTabSelect(item)"
-        >{{item}}</a>
-      </nav>
-      <div
-        class="form-group text-white"
-        style="padding: 15px; display: flex;"
-      >
-        <input
-          [(ngModel)]="this.textStr"
-          class="form-control"
-          id="search"
-          name="search"
-          placeholder="Search {{this.current}}"
-          type="text"
-        >
-        <button
-          class="btn btn-info"
-          (click)="this.onSubmit()"
-        ><i class="fa fa-search"></i></button>
-      </div>
+    <div class="card-body">
+      <router-outlet></router-outlet>
     </div>
     <div class="card-footer"></div>
   </div>

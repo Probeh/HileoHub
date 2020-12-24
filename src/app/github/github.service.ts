@@ -1,9 +1,8 @@
-import { Observable } from 'rxjs'
-import { HttpClient } from '@angular/common/http'
-import { Injectable } from '@angular/core'
-import githubSearch from '@github/github-endpoints'
-import { SearchScopes } from '@github/search-scopes'
-import { SharedOptions } from '@helpers/shared-options'
+import               { Observable    } from 'rxjs'
+import               { HttpClient    } from '@angular/common/http'
+import               { Injectable    } from '@angular/core'
+import githubSearch, { SearchScopes  } from '@github/github-endpoints'
+import               { SharedOptions } from '@helpers/shared-options'
 
 @Injectable()
 export class GithubService {

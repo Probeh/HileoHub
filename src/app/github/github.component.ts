@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Endpoints } from '@github/endpoints.enum';
-import { GithubService } from '@github/github.service';
-import { SearchScopes } from '@github/search-scopes';
+import { Component, OnInit } from '@angular/core'
+import { SearchScopes } from '@github/github-endpoints'
+import { GithubService } from '@github/github.service'
 
 @Component({
   selector: 'app-github',
@@ -9,9 +8,12 @@ import { SearchScopes } from '@github/search-scopes';
   styleUrls: ['./github.component.scss']
 })
 export class GithubComponent implements OnInit {
+  // ======================================= //
+  public results: { [key: string]: any[] } = {};
+  public options: boolean = false;
   public textStr: string = '';
-  public current: string = 'Users';
-  public filters: string[] = ['Users', 'Code', 'Commits', 'Issues', 'Labels', 'Repositories', 'Topics',];
+  public current: string = 'users';
+  public filters: string[] = ['users', 'code', 'commits', 'issues', 'labels', 'repositories', 'topics'];
   // ======================================= //
   constructor(private service: GithubService) { }
   ngOnInit() { }
@@ -19,11 +21,12 @@ export class GithubComponent implements OnInit {
   public onTabSelect(value: string) {
     this.current = value;
   }
+  public onToggleOptions() {
+    this.options = !this.options;
+  }
   public async onSubmit() {
     this.service.search(this.current as SearchScopes, this.textStr)
-    .toPromise()
-    .then(result => {
-      console.log(result)
-    })
+      .toPromise()
+      .then(result => this.results[this.current] = result.items)
   }
 }

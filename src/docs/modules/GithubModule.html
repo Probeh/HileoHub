@@ -149,18 +149,18 @@ import { FormsModule        , ReactiveFormsModule } from &#x27;@angular/forms&#x
 import { CodeComponent                            } from &#x27;@github/code/code.component&#x27;
 import { GithubRoutingModule                      } from &#x27;@github/github-routing.module&#x27;
 import { GithubComponent                          } from &#x27;@github/github.component&#x27;
-import { ProjectsComponent                        } from &#x27;@github/projects/projects.component&#x27;
-import { ReposComponent                           } from &#x27;@github/repos/repos.component&#x27;
+import { ProjectComponent                         } from &#x27;@github/project/project.component&#x27;
+import { RepoComponent                            } from &#x27;@github/repo/repo.component&#x27;
 import { SearchComponent                          } from &#x27;@github/search/search.component&#x27;
-import { UsersComponent                           } from &#x27;@github/users/users.component&#x27;
+import { UserComponent                            } from &#x27;@github/user/user.component&#x27;
 
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-const components &#x3D; [GithubComponent, SearchComponent, ReposComponent, ProjectsComponent, UsersComponent, CodeComponent]
+const components &#x3D; [GithubComponent, SearchComponent, RepoComponent, ProjectComponent, UserComponent, CodeComponent]
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 @NgModule({
-  imports      : [CommonModule, GithubRoutingModule, FormsModule, ReactiveFormsModule],
-  declarations :  components  ,
-  exports      :  components
+  imports     : [CommonModule, GithubRoutingModule, FormsModule, ReactiveFormsModule],
+  declarations:  components  ,
+  exports     :  components
 })
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 export class GithubModule { }
