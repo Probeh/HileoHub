@@ -36,11 +36,13 @@
           <div class="">
             <button
               class="btn btn-sm btn-outline-info ml-2"
+              [ngClass]="{'active': this.layout == 'tiles'}"
               (click)="this.onChangeLayout('tiles')"
             ><i class="fa fa-th"></i></button>
             <button
               class="btn btn-sm btn-outline-info ml-2"
-              (click)="this.onChangeLayout('tiles')"
+              [ngClass]="{'active': this.layout == 'rows'}"
+              (click)="this.onChangeLayout('rows')"
             ><i class="fa fa-bars"></i></button>
           </div>
         </div>
