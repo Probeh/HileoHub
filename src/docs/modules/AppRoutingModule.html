@@ -71,17 +71,16 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule              } from &#x27;@angular/core&#x27;
-import { RouterModule , Routes } from &#x27;@angular/router&#x27;
-import { HomeComponent         } from &#x27;@app/home/home.component&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;
+import { RouterModule, Routes } from &#x27;@angular/router&#x27;
 
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 const routes: Routes &#x3D; [
-  { path: &#x27;auth&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./identity/identity.module&#x27;).then(m &#x3D;&gt; m.IdentityModule)&quot; },
-  { path: &#x27;hub&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./github/github.module&#x27;).then(m &#x3D;&gt; m.GithubModule)&quot; },
-  { path: &#x27;home&#x27;, component: HomeComponent },
-  { path: &#x27;&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;hub&#x27; },
-  { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;hub&#x27; }
+  { path: &#x27;search&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./github/github.module&#x27;).then(m &#x3D;&gt; m.GithubModule)&quot; },
+  { path: &#x27;package&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./package/package.module&#x27;).then(m &#x3D;&gt; m.PackageModule)&quot; },
+  { path: &#x27;profile&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./profile/profile.module&#x27;).then(m &#x3D;&gt; m.ProfileModule)&quot; },
+  { path: &#x27;project&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./project/project.module&#x27;).then(m &#x3D;&gt; m.ProjectModule)&quot; },
+  { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;search&#x27; }
 ];
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 @NgModule({

@@ -1,14 +1,74 @@
-<div class="container h-100">
-  <div class="card h-100">
-    <div class="card-header p-1 bg-success"></div>
-    <img
-      src="../../assets/images/logo.png"
-      style="width: 250px; margin: 10px auto;"
-      alt=""
+<div
+  class="card h-100"
+  style="border: none;"
+>
+  <div
+    class="card-header p-1"
+    style="border-radius: 0px; border: none; background: var(--teal);"
+  ></div>
+  <img
+    src="../../assets/images/logo.png"
+    style="width: 250px; margin: 10px auto;"
+    alt=""
+  >
+  <div
+    class="card-body h-100"
+    style="display: flex; flex-direction: column; justify-content: space-between;"
+  >
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li
+            class="nav-item"
+            *ngFor="let item of this.filters"
+          >
+            <a
+              class="nav-link"
+              routerLinkActive="active"
+              routerLink="{{item}}"
+            >{{item | titlecase}}</a>
+          </li>
+        </ul>
+      </div>
+      <form
+        class="form-body text-white"
+        style="padding: 15px;"
+      >
+        <div
+          class="form-search"
+          style="display: flex;"
+        >
+          <input
+            [(ngModel)]="this.textStr"
+            class="form-control"
+            id="search"
+            name="search"
+            placeholder="Search {{this.current | titlecase}}"
+            type="text"
+          >
+          <button
+            type="submit"
+            class="btn btn-info"
+            (click)="this.onSubmit()"
+          ><i class="fa fa-search"></i></button>
+        </div>
+      </form>
+
+      <nav class="breadcrumb mb-0">
+        <a
+          class="breadcrumb-item"
+          *ngFor="let item of this.getBreadcrumbs(); let index = index"
+          [routerLink]="[item.value]"
+        >
+          {{item.key | titlecase}}
+        </a>
+      </nav>
+    </div>
+    <div
+      class="overflow-auto"
+      style="flex: auto;"
     >
-    <div class="card-body">
       <router-outlet></router-outlet>
     </div>
-    <div class="card-footer"></div>
   </div>
 </div>

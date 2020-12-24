@@ -1,0 +1,27 @@
+<div [ngSwitch]="this.current">
+  <div *ngSwitchCase="'users'">
+    <table
+      *ngIf="this.results['users']"
+      class="table shadow table-hover table-striped w-100"
+    >
+      <tbody>
+        <tr *ngFor="let item of this.results['users']">
+          <td>
+            <img
+              src="{{item.avatar_url}}"
+              class="shadow"
+              style="margin: auto; width: 50px; border-radius: 50%;"
+              alt=""
+            >
+          </td>
+          <td>{{item.login}}</td>
+          <td><button
+              class="btn btn-outline-info"
+              routerLink="user"
+              [queryParams]="{id: item.login}"
+            ><i class="fa fa-search mr-2"></i>View</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

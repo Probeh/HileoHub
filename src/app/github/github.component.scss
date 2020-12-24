@@ -1,7 +1,21 @@
 @import "themes.scss";
 
-.nav-item {
+a {
+  text-decoration: none;
+}
+a:hover {
   color: $secondary;
+}
+.nav {
+  border: none;
+}
+.nav-item {
+  color: $teal;
+}
+.nav-link {
+  color: $teal;
+  border: none;
+  font-weight: bold;
 }
 .active {
   transition: ease-in 200ms;
@@ -13,4 +27,7 @@
 }
 .form-search {
 
+}
+.breadcrumb {
+  border-radius: 0px;
 }

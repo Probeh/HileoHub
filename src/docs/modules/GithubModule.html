@@ -143,24 +143,24 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CommonModule                             } from &#x27;@angular/common&#x27;
-import { NgModule                                 } from &#x27;@angular/core&#x27;
-import { FormsModule        , ReactiveFormsModule } from &#x27;@angular/forms&#x27;
-import { CodeComponent                            } from &#x27;@github/code/code.component&#x27;
-import { GithubRoutingModule                      } from &#x27;@github/github-routing.module&#x27;
-import { GithubComponent                          } from &#x27;@github/github.component&#x27;
-import { ProjectComponent                         } from &#x27;@github/project/project.component&#x27;
-import { RepoComponent                            } from &#x27;@github/repo/repo.component&#x27;
-import { SearchComponent                          } from &#x27;@github/search/search.component&#x27;
-import { UserComponent                            } from &#x27;@github/user/user.component&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CommonModule                                } from &#x27;@angular/common&#x27;
+import { NgModule                                    } from &#x27;@angular/core&#x27;
+import { FormsModule           , ReactiveFormsModule } from &#x27;@angular/forms&#x27;
+import { CodeResultComponent                         } from &#x27;@github/code-result/code-result.component&#x27;
+import { GithubRoutingModule                         } from &#x27;@github/github-routing.module&#x27;
+import { GithubComponent                             } from &#x27;@github/github.component&#x27;
+import { PackageResultComponent                      } from &#x27;@github/package-result/package-result.component&#x27;
+import { ProjectResultComponent                      } from &#x27;@github/project-result/project-result.component&#x27;
+import { RepoResultComponent                         } from &#x27;@github/repo-result/repo-result.component&#x27;
+import { UserResultComponent                         } from &#x27;@github/user-result/user-result.component&#x27;
 
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-const components &#x3D; [GithubComponent, SearchComponent, RepoComponent, ProjectComponent, UserComponent, CodeComponent]
+const components &#x3D; [GithubComponent, PackageResultComponent, RepoResultComponent, ProjectResultComponent, UserResultComponent, CodeResultComponent]
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 @NgModule({
-  imports     : [CommonModule, GithubRoutingModule, FormsModule, ReactiveFormsModule],
-  declarations:  components  ,
-  exports     :  components
+  imports: [CommonModule, GithubRoutingModule, FormsModule, ReactiveFormsModule],
+  declarations: components,
+  exports: components
 })
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 export class GithubModule { }

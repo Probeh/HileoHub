@@ -1,21 +1,21 @@
-import { CommonModule                             } from '@angular/common'
-import { NgModule                                 } from '@angular/core'
-import { FormsModule        , ReactiveFormsModule } from '@angular/forms'
-import { CodeComponent                            } from '@github/code/code.component'
-import { GithubRoutingModule                      } from '@github/github-routing.module'
-import { GithubComponent                          } from '@github/github.component'
-import { ProjectComponent                         } from '@github/project/project.component'
-import { RepoComponent                            } from '@github/repo/repo.component'
-import { SearchComponent                          } from '@github/search/search.component'
-import { UserComponent                            } from '@github/user/user.component'
+import { CommonModule                                } from '@angular/common'
+import { NgModule                                    } from '@angular/core'
+import { FormsModule           , ReactiveFormsModule } from '@angular/forms'
+import { CodeResultComponent                         } from '@github/code-result/code-result.component'
+import { GithubRoutingModule                         } from '@github/github-routing.module'
+import { GithubComponent                             } from '@github/github.component'
+import { PackageResultComponent                      } from '@github/package-result/package-result.component'
+import { ProjectResultComponent                      } from '@github/project-result/project-result.component'
+import { RepoResultComponent                         } from '@github/repo-result/repo-result.component'
+import { UserResultComponent                         } from '@github/user-result/user-result.component'
 
 // ======================================= //
-const components = [GithubComponent, SearchComponent, RepoComponent, ProjectComponent, UserComponent, CodeComponent]
+const components = [GithubComponent, PackageResultComponent, RepoResultComponent, ProjectResultComponent, UserResultComponent, CodeResultComponent]
 // ======================================= //
 @NgModule({
-  imports     : [CommonModule, GithubRoutingModule, FormsModule, ReactiveFormsModule],
-  declarations:  components  ,
-  exports     :  components
+  imports: [CommonModule, GithubRoutingModule, FormsModule, ReactiveFormsModule],
+  declarations: components,
+  exports: components
 })
 // ======================================= //
 export class GithubModule { }

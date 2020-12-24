@@ -71,23 +71,33 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;
-import { RouterModule, Routes } from &#x27;@angular/router&#x27;
-import { GithubComponent } from &#x27;@github/github.component&#x27;
-import { RepoComponent } from &#x27;@github/repo/repo.component&#x27;;
-import { SearchComponent } from &#x27;@github/search/search.component&#x27;
-import { UserComponent } from &#x27;@github/user/user.component&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule                       } from &#x27;@angular/core&#x27;
+import { RouterModule          , Routes } from &#x27;@angular/router&#x27;
+import { CodeSearchComponent            } from &#x27;@github/code-search/code-search.component&#x27;
+import { CommitSearchComponent          } from &#x27;@github/commit-search/commit-search.component&#x27;
+import { GithubComponent                } from &#x27;@github/github.component&#x27;
+import { LabelSearchComponent           } from &#x27;@github/label-search/label-search.component&#x27;
+import { PackageSearchComponent         } from &#x27;@github/package-search/package-search.component&#x27;
+import { ProjectResultComponent         } from &#x27;@github/project-result/project-result.component&#x27;
+import { ProjectSearchComponent         } from &#x27;@github/project-search/project-search.component&#x27;
+import { RepoSearchComponent            } from &#x27;@github/repo-search/repo-search.component&#x27;
+import { TopicSearchComponent           } from &#x27;@github/topic-search/topic-search.component&#x27;
+import { UserSearchComponent            } from &#x27;@github/user-search/user-search.component&#x27;
 
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;, component: GithubComponent, children: [
-      { path: &#x27;&#x27;, component: SearchComponent },
-      { path: &#x27;user&#x27;, component: UserComponent },
-      { path: &#x27;repo&#x27;, component: RepoComponent },
-      { path: &#x27;code&#x27;, component: RepoComponent },
-      { path: &#x27;project&#x27;, component: RepoComponent },
-      { path: &#x27;package&#x27;, component: RepoComponent },
+      { path: &#x27;code&#x27;        , component: CodeSearchComponent    },
+      { path: &#x27;commits&#x27;     , component: CommitSearchComponent  },
+      { path: &#x27;issues&#x27;      , component: ProjectResultComponent },
+      { path: &#x27;labels&#x27;      , component: LabelSearchComponent   },
+      { path: &#x27;packages&#x27;    , component: PackageSearchComponent },
+      { path: &#x27;projects&#x27;    , component: ProjectSearchComponent },
+      { path: &#x27;repositories&#x27;, component: RepoSearchComponent    },
+      { path: &#x27;topics&#x27;      , component: TopicSearchComponent   },
+      { path: &#x27;users&#x27;       , component: UserSearchComponent    },
+      { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;users&#x27; },
     ]
   },
 ];
