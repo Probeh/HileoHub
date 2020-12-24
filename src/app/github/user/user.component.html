@@ -28,19 +28,72 @@
     <div class="card h-100">
       <div class="card-header p-1 bg-info"></div>
       <div class="card-body">
-        <div *ngIf="this.repos" class="row">
-          <div class="col-3" *ngFor="let item of this.repos">
+        <div
+          class="mb-2"
+          style="display: flex; justify-content: space-between;"
+        >
+          <div class=""></div>
+          <div class="">
+            <button
+              class="btn btn-sm btn-outline-info ml-2"
+              (click)="this.onChangeLayout('tiles')"
+            ><i class="fa fa-th"></i></button>
+            <button
+              class="btn btn-sm btn-outline-info ml-2"
+              (click)="this.onChangeLayout('tiles')"
+            ><i class="fa fa-bars"></i></button>
+          </div>
+        </div>
+        <div
+          class="row"
+          *ngIf="this.layout == 'rows'"
+        >
+          <div
+            class="col-3"
+            *ngFor="let item of this.repos"
+          >
             <div class="card mb-2">
               <div class="card-header p-1 bg-success"></div>
-              <div class="card-body" style="overflow-y: auto;">
+              <div
+                class="card-body"
+                style="overflow-y: auto;"
+              >
                 <h6 class="text-center">{{item.name}}</h6>
-                <h2 class="text-center"><i class="fa fa-code" style="background: #dee2e6; padding: 15px; border-radius: 50%; margin: 5px;"></i></h2>
+                <h2 class="text-center"><i
+                    class="fa fa-code"
+                    style="background: #dee2e6; padding: 15px; border-radius: 50%; margin: 5px;"
+                  ></i></h2>
                 <button class="btn btn-outline-success btn-block btn-sm"><i class="fa fa-search mr-1"></i>View</button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div
+        class="row"
+        *ngIf="this.layout == 'tiles'"
+      >
+        <div
+          class="col-3"
+          *ngFor="let item of this.repos"
+        >
+          <div class="card mb-2">
+            <div class="card-header p-1 bg-success"></div>
+            <div
+              class="card-body"
+              style="overflow-y: auto;"
+            >
+              <h6 class="text-center">{{item.name.slice(0,13)}} {{item.name.length > 13 ? '...' : ''}}</h6>
+              <h2 class="text-center"><i
+                  class="fa fa-desktop"
+                  style="background: #dee2e6; padding: 15px; border-radius: 50%; margin: 5px;"
+                ></i></h2>
+              <button class="btn btn-outline-success btn-block btn-sm"><i class="fa fa-search mr-1"></i>View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

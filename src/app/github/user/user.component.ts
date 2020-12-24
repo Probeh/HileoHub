@@ -13,6 +13,7 @@ export class UserComponent implements OnInit {
   public profile: any;
   public repos: any[] = [];
   public login: string;
+  public layout: 'tiles' | 'rows' = 'tiles';
   // ======================================= //
   constructor(private activeRoute: ActivatedRoute, private http: HttpClient) {
     this.activeRoute.queryParams.subscribe({
@@ -32,4 +33,7 @@ export class UserComponent implements OnInit {
   }
   ngOnInit() { }
   // ======================================= //
+  public onChangeLayout(value: 'tiles' | 'rows') {
+    this.layout = value;
+  }
 }
