@@ -1,14 +1,14 @@
 import { providers    } from '@env/environment'        ;
-import { SearchScopes } from '@enums/github-endpoints';
+import { SearchScopes } from '@enums/github-scopes';
 
-export default function githubSearch() {
+export default function builder() {
   return {
-    [SearchScopes.Code        ]: `${providers.github.baseUrl}/search/code?q=`        ,
-    [SearchScopes.Commits     ]: `${providers.github.baseUrl}/search/commits?q=`     ,
-    [SearchScopes.Issues      ]: `${providers.github.baseUrl}/search/issues?q=`      ,
-    [SearchScopes.Labels      ]: `${providers.github.baseUrl}/search/labels?q=`      ,
-    [SearchScopes.Repositories]: `${providers.github.baseUrl}/search/repositories?q=`,
-    [SearchScopes.Topics      ]: `${providers.github.baseUrl}/search/topics?q=`      ,
-    [SearchScopes.Users       ]: `${providers.github.baseUrl}/search/users?q=`       ,
+    [SearchScopes.Code        ]: `${providers.github.baseUrl}/search/code`        ,
+    [SearchScopes.Commits     ]: `${providers.github.baseUrl}/search/commits`     ,
+    [SearchScopes.Issues      ]: `${providers.github.baseUrl}/search/issues`      ,
+    [SearchScopes.Labels      ]: `${providers.github.baseUrl}/search/labels`      ,
+    [SearchScopes.Repositories]: `${providers.github.baseUrl}/search/repositories`,
+    [SearchScopes.Topics      ]: `${providers.github.baseUrl}/search/topics`      ,
+    [SearchScopes.Users       ]: `${providers.github.baseUrl}/search/users`       ,
   }
 }

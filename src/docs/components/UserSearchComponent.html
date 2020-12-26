@@ -167,12 +167,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(service: <a href="../injectables/GithubService.html">GithubService</a>, active: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+<code>constructor(service: <a href="../injectables/GithubService.html">GithubService</a>, active: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/github/user-search/user-search.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/github/user-search/user-search.component.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -206,18 +206,6 @@
                                                   
                                                         <td>
                                                                         <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>http</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -265,8 +253,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/app/github/user-search/user-search.component.ts:25</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/github/user-search/user-search.component.ts:27</a></div>
                 </td>
             </tr>
 
@@ -303,13 +291,13 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>SearchDTO&lt;UserResult&gt;</code>
+                            <i>Type : </i>        <code><a href="../interfaces/UserSearch.html" target="_self" >UserSearch</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/github/user-search/user-search.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/github/user-search/user-search.component.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -322,14 +310,10 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable     }         from &#x27;rxjs&#x27;
-import { HttpClient     }         from &#x27;@angular/common/http&#x27;
-import { Component     , OnInit } from &#x27;@angular/core&#x27;
-import { ActivatedRoute }         from &#x27;@angular/router&#x27;
-import { GithubService  }         from &#x27;@github/github.service&#x27;
-import   githubSearch             from &#x27;@helpers/search-builder&#x27;
-import { UserResult     }         from &#x27;@models/DTOs/user-result.dto&#x27;
-import { SearchDTO      }         from &#x27;@models/search.dto&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;
+import { GithubService } from &#x27;@github/github.service&#x27;
+import { UserSearch } from &#x27;@models/search/user-search.dto&#x27;
 
 @Component({
   selector: &#x27;app-user-search&#x27;,
@@ -338,15 +322,21 @@ import { SearchDTO      }         from &#x27;@models/search.dto&#x27;
 })
 export class UserSearchComponent implements OnInit {
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  public results: SearchDTO&lt;UserResult&gt;;
+  public results: UserSearch;
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  constructor(private service: GithubService, private active: ActivatedRoute, private http: HttpClient) {
+  constructor(private service: GithubService, private active: ActivatedRoute) {
     this.active.queryParams.subscribe(params &#x3D;&gt; {
-      this.http.get&lt;SearchDTO&lt;UserResult&gt;&gt;(githubSearch()[this.active.snapshot.routeConfig.path], { params })
-      .subscribe({next: result &#x3D;&gt; console.log(result)});
+      if (Object.keys(params)?.length &gt; 0) {
+        this.service.searchUsers(params)
+          .subscribe({
+            next: response &#x3D;&gt; {
+              this.results &#x3D; response;
+            }
+          });
+      }
     });
   }
-  ngOnInit() {}
+  ngOnInit() { }
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 }
 </code></pre>

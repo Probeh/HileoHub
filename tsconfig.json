@@ -25,6 +25,9 @@
       "@models/*": [
         "src/app/@common/models/*"
       ],
+      "@data/*": [
+        "src/app/@common/data/*"
+      ],
       "@enums/*": [
         "src/app/@common/enums/*"
       ],

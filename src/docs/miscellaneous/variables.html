@@ -68,19 +68,19 @@
                             <a href="#context" title="src/test.ts"><b>context</b>&nbsp;&nbsp;&nbsp;(src/.../test.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                            <a href="#environment" title="src/environments/environment.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="src/environments/environment.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
+                            <a href="#environment" title="src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
                         </li>
                         <li>
                             <a href="#modules" title="src/app/@common/shared.module.ts"><b>modules</b>&nbsp;&nbsp;&nbsp;(src/.../shared.module.ts)</a>
                         </li>
                         <li>
-                            <a href="#providers" title="src/environments/environment.ts"><b>providers</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                            <a href="#providers" title="src/environments/environment.prod.ts"><b>providers</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
                         </li>
                         <li>
-                            <a href="#providers" title="src/environments/environment.prod.ts"><b>providers</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
+                            <a href="#providers" title="src/environments/environment.ts"><b>providers</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
                         </li>
                         <li>
                             <a href="#require" title="src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(src/.../test.ts)</a>
@@ -255,79 +255,6 @@
             </tbody>
         </table>
 </section>
-    <h3>src/environments/environment.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="environment"></a>
-                        <span class="name">
-                            <b>
-                            environment</b>
-                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>{
-  production: false,
-}</code>
-                        </td>
-                    </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="providers"></a>
-                        <span class="name">
-                            <b>
-                            providers</b>
-                            <a href="#providers"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>{
-  github: {
-    apiKey: &#x27;U2FsdGVkX18vmJmB9GooMvvV9biYa5X0MP47BmenGMC0bheOsxMjTnXowzA3lhbRBlOKAzKr9DZFe08TzNj3ng&#x3D;&#x3D;&#x27;,
-    appId : &#x27;U2FsdGVkX1/kNHY6pFAX4uxzl4FXPoQ+ycywev9/8+Nhe1hrK2/f5NHM5vuxKLp9&#x27;                        ,
-    baseUrl: &#x27;https://api.github.com&#x27;
-  },
-  firebase: {
-    apiKey           : &quot;AIzaSyBpdNViHcAz3kVjWBhJ58a5N2RzTSGtwX0&quot;  ,
-    appId            : &quot;1:644607673263:web:b4a55c1daa666a4970655a&quot;,
-    authDomain       : &quot;hileohub.firebaseapp.com&quot;                 ,
-    messagingSenderId: &quot;644607673263&quot;                             ,
-    projectId        : &quot;hileohub&quot;                                 ,
-    storageBucket    : &quot;hileohub.appspot.com&quot;                     ,
-  }
-}</code>
-                        </td>
-                    </tr>
-
-
-            </tbody>
-        </table>
-</section>
     <h3>src/environments/environment.prod.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
@@ -383,6 +310,79 @@
   github: {
     apiKey : &#x27;U2FsdGVkX18vmJmB9GooMvvV9biYa5X0MP47BmenGMC0bheOsxMjTnXowzA3lhbRBlOKAzKr9DZFe08TzNj3ng&#x3D;&#x3D;&#x27;,
     appId  : &#x27;U2FsdGVkX1/kNHY6pFAX4uxzl4FXPoQ+ycywev9/8+Nhe1hrK2/f5NHM5vuxKLp9&#x27;                        ,
+    baseUrl: &#x27;https://api.github.com&#x27;
+  },
+  firebase: {
+    apiKey           : &quot;AIzaSyBpdNViHcAz3kVjWBhJ58a5N2RzTSGtwX0&quot;  ,
+    appId            : &quot;1:644607673263:web:b4a55c1daa666a4970655a&quot;,
+    authDomain       : &quot;hileohub.firebaseapp.com&quot;                 ,
+    messagingSenderId: &quot;644607673263&quot;                             ,
+    projectId        : &quot;hileohub&quot;                                 ,
+    storageBucket    : &quot;hileohub.appspot.com&quot;                     ,
+  }
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/environments/environment.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="environment"></a>
+                        <span class="name">
+                            <b>
+                            environment</b>
+                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  production: false,
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="providers"></a>
+                        <span class="name">
+                            <b>
+                            providers</b>
+                            <a href="#providers"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  github: {
+    apiKey: &#x27;U2FsdGVkX18vmJmB9GooMvvV9biYa5X0MP47BmenGMC0bheOsxMjTnXowzA3lhbRBlOKAzKr9DZFe08TzNj3ng&#x3D;&#x3D;&#x27;,
+    appId : &#x27;U2FsdGVkX1/kNHY6pFAX4uxzl4FXPoQ+ycywev9/8+Nhe1hrK2/f5NHM5vuxKLp9&#x27;                        ,
     baseUrl: &#x27;https://api.github.com&#x27;
   },
   firebase: {

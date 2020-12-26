@@ -1,11 +1,7 @@
-import { Observable     }         from 'rxjs'
-import { HttpClient     }         from '@angular/common/http'
-import { Component     , OnInit } from '@angular/core'
-import { ActivatedRoute }         from '@angular/router'
-import { GithubService  }         from '@github/github.service'
-import   githubSearch             from '@helpers/search-builder'
-import { UserResult     }         from '@models/DTOs/user-result.dto'
-import { SearchDTO      }         from '@models/search.dto'
+import { Component, OnInit } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
+import { GithubService } from '@github/github.service'
+import { UserSearch } from '@models/search/user-search.dto'
 
 @Component({
   selector: 'app-user-search',
@@ -14,14 +10,20 @@ import { SearchDTO      }         from '@models/search.dto'
 })
 export class UserSearchComponent implements OnInit {
   // ======================================= //
-  public results: SearchDTO<UserResult>;
+  public results: UserSearch;
   // ======================================= //
-  constructor(private service: GithubService, private active: ActivatedRoute, private http: HttpClient) {
+  constructor(private service: GithubService, private active: ActivatedRoute) {
     this.active.queryParams.subscribe(params => {
-      this.http.get<SearchDTO<UserResult>>(githubSearch()[this.active.snapshot.routeConfig.path], { params })
-      .subscribe({next: result => console.log(result)});
+      if (Object.keys(params)?.length > 0) {
+        this.service.searchUsers(params)
+          .subscribe({
+            next: response => {
+              this.results = response;
+            }
+          });
+      }
     });
   }
-  ngOnInit() {}
+  ngOnInit() { }
   // ======================================= //
 }

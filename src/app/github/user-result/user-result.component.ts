@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core'
-import { SearchScopes } from '@enums/github-endpoints'
 import { GithubService } from '@github/github.service'
 
 @Component({

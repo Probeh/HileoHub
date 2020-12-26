@@ -281,37 +281,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"' }>
                             <li class="link">
-                                <a href="classes/CodeResult.html" data-type="entity-link">CodeResult</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/CompanyResult.html" data-type="entity-link">CompanyResult</a>
-                            </li>
-                            <li class="link">
                                 <a href="classes/Crypto.html" data-type="entity-link">Crypto</a>
                             </li>
                             <li class="link">
                                 <a href="classes/KeyValue.html" data-type="entity-link">KeyValue</a>
                             </li>
                             <li class="link">
-                                <a href="classes/PackageResult.html" data-type="entity-link">PackageResult</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/ProjectResult.html" data-type="entity-link">ProjectResult</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/RepoResult.html" data-type="entity-link">RepoResult</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/SearchDTO.html" data-type="entity-link">SearchDTO</a>
-                            </li>
-                            <li class="link">
                                 <a href="classes/SharedOptions.html" data-type="entity-link">SharedOptions</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/TopicResult.html" data-type="entity-link">TopicResult</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/UserResult.html" data-type="entity-link">UserResult</a>
                             </li>
                         </ul>
                     </li>
@@ -369,10 +345,73 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
+                                <a href="interfaces/CodeSearch.html" data-type="entity-link">CodeSearch</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/CommitResult.html" data-type="entity-link">CommitResult</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/CommitResult-1.html" data-type="entity-link">CommitResult</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/CommitSearch.html" data-type="entity-link">CommitSearch</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/CompanyResult.html" data-type="entity-link">CompanyResult</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/CompanySearch.html" data-type="entity-link">CompanySearch</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ContentSearch.html" data-type="entity-link">ContentSearch</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/Credentials.html" data-type="entity-link">Credentials</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/KeyValue.html" data-type="entity-link">KeyValue</a>
+                                <a href="interfaces/Dictionary.html" data-type="entity-link">Dictionary</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/GitSearch.html" data-type="entity-link">GitSearch</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/PackageResult.html" data-type="entity-link">PackageResult</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/PackageSearch.html" data-type="entity-link">PackageSearch</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Params.html" data-type="entity-link">Params</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ProjectResult.html" data-type="entity-link">ProjectResult</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ProjectSearch.html" data-type="entity-link">ProjectSearch</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/RepoResult.html" data-type="entity-link">RepoResult</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/RepoSearch.html" data-type="entity-link">RepoSearch</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/TopicResult.html" data-type="entity-link">TopicResult</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/TopicSearch.html" data-type="entity-link">TopicSearch</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/TreeSearch.html" data-type="entity-link">TreeSearch</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/UserResult.html" data-type="entity-link">UserResult</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/UserSearch.html" data-type="entity-link">UserSearch</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/VerificationModel.html" data-type="entity-link">VerificationModel</a>
                             </li>
                         </ul>
                     </li>
