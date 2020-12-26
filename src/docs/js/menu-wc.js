@@ -372,7 +372,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/Dictionary.html" data-type="entity-link">Dictionary</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/GitSearch.html" data-type="entity-link">GitSearch</a>
+                                <a href="interfaces/GitResult.html" data-type="entity-link">GitResult</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/GitTree.html" data-type="entity-link">GitTree</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Languages.html" data-type="entity-link">Languages</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/PackageResult.html" data-type="entity-link">PackageResult</a>
@@ -400,9 +406,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/TopicSearch.html" data-type="entity-link">TopicSearch</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/TreeSearch.html" data-type="entity-link">TreeSearch</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/UserResult.html" data-type="entity-link">UserResult</a>

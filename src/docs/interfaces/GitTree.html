@@ -44,7 +44,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>CommitResult</li>
+  <li>GitTree</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,7 +62,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/@common/models/commit.result.dto.ts</code>
+            <code>src/app/@common/models/git.tree.dto.ts</code>
         </p>
 
 
@@ -80,25 +80,16 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#author">author</a>
-                                </li>
-                                <li>
-                                        <a href="#comment_count">comment_count</a>
-                                </li>
-                                <li>
-                                        <a href="#committer">committer</a>
-                                </li>
-                                <li>
-                                        <a href="#message">message</a>
+                                        <a href="#sha">sha</a>
                                 </li>
                                 <li>
                                         <a href="#tree">tree</a>
                                 </li>
                                 <li>
-                                        <a href="#url">url</a>
+                                        <a href="#truncated">truncated</a>
                                 </li>
                                 <li>
-                                        <a href="#verification">verification</a>
+                                        <a href="#url">url</a>
                                 </li>
                             </ul>
                         </td>
@@ -115,100 +106,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="author"></a>
-                                        <span class="name"><b>author</b><a href="#author"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="sha"></a>
+                                        <span class="name"><b>sha</b><a href="#sha"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>author:         <code><a href="../interfaces/UserResult.html" target="_self" >UserResult</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/UserResult.html" target="_self" >UserResult</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="comment_count"></a>
-                                        <span class="name"><b>comment_count</b><a href="#comment_count"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>comment_count:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="committer"></a>
-                                        <span class="name"><b>committer</b><a href="#committer"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>committer:         <code><a href="../interfaces/UserResult.html" target="_self" >UserResult</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/UserResult.html" target="_self" >UserResult</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="message"></a>
-                                        <span class="name"><b>message</b><a href="#message"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>message:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>sha:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -237,7 +141,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>tree:         <code><a href="../interfaces/GitTree.html" target="_self" >GitTree</a></code>
+                                        <code>tree:         <code><a href="../interfaces/GitResult.html" target="_self" >GitResult[]</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -245,7 +149,36 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/GitTree.html" target="_self" >GitTree</a></code>
+                                            <i>Type : </i>        <code><a href="../interfaces/GitResult.html" target="_self" >GitResult[]</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="truncated"></a>
+                                        <span class="name"><b>truncated</b><a href="#truncated"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>truncated:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
@@ -285,54 +218,19 @@
 
                         </tbody>
                     </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="verification"></a>
-                                        <span class="name"><b>verification</b><a href="#verification"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>verification:         <code><a href="../interfaces/VerificationModel.html" target="_self" >VerificationModel</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/VerificationModel.html" target="_self" >VerificationModel</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
             </section>
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { GitResult as GitTree        } from &#x27;@models/git.result.dto&#x27;
-import { UserResult        } from &#x27;@models/user-result.dto&#x27;
-import { VerificationModel } from &#x27;@models/verification.model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { GitResult } from &#x27;@models/git.result.dto&#x27;;
 
-export interface CommitResult {
-  author        : UserResult       ;
-  committer     : UserResult       ;
-  message       : string           ;
-  tree          : GitTree          ;
-  url           : string           ;
-  comment_count : number           ;
-  verification  : VerificationModel;
-}
-</code></pre>
+export interface GitTree {
+  sha       : string     ;
+  url       : string     ;
+  tree      : GitResult[];
+  truncated : boolean    ;
+}</code></pre>
     </div>
 </div>
 
@@ -359,7 +257,7 @@ export interface CommitResult {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'CommitResult-1.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'GitTree.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

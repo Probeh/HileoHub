@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { GithubService } from '@github/github.service'
-import { UserSearch } from '@models/search/user-search.dto'
+import { UserSearch } from '@models/user-search.dto'
 
 @Component({
   selector: 'app-user-search',

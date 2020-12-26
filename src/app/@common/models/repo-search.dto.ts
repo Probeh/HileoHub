@@ -1,6 +1,6 @@
-import { UserResult } from '@models/search/user-result.dto';
+import { UserResult } from '@models/user-result.dto';
 
-export interface RepoResult {
+export interface RepoSearch {
   id               : number    ;
   node_id          : string    ;
   name             : string    ;
@@ -8,7 +8,7 @@ export interface RepoResult {
   private          : boolean   ;
   owner            : UserResult;
   html_url         : string    ;
-  description?     : any       ;
+  description?     : string    ;
   fork             : boolean   ;
   url              : string    ;
   forks_url        : string    ;
@@ -54,7 +54,7 @@ export interface RepoResult {
   ssh_url          : string    ;
   clone_url        : string    ;
   svn_url          : string    ;
-  homepage?        : any       ;
+  homepage?        : string    ;
   size             : number    ;
   stargazers_count : number    ;
   watchers_count   : number    ;
@@ -65,11 +65,11 @@ export interface RepoResult {
   has_wiki         : boolean   ;
   has_pages        : boolean   ;
   forks_count      : number    ;
-  mirror_url?      : any       ;
+  mirror_url?      : string    ;
   archived         : boolean   ;
   disabled         : boolean   ;
   open_issues_count: number    ;
-  license?         : any       ;
+  license?         : string    ;
   forks            : number    ;
   open_issues      : number    ;
   watchers         : number    ;
