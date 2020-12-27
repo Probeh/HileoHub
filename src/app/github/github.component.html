@@ -8,14 +8,14 @@
   ></div>
   <img
     src="../../assets/images/logo.png"
-    style="width: 250px; margin: 10px auto;"
+    style="width: 200px; margin: 10px auto;"
     alt=""
   >
   <div
     class="card-body h-100"
     style="display: flex; flex-direction: column; justify-content: space-between;"
   >
-    <div class="card text-center">
+    <div class="card card-nav text-center">
       <div class="card-header">
         <ul class="nav nav-tabs card-header-tabs">
           <li
@@ -24,14 +24,16 @@
           >
             <a
               class="nav-link"
-              routerLinkActive="active"
-              routerLink="{{item}}"
+              [routerLink]="item"
+              [routerLinkActive]="'active'"
+              (click)="this.onToggleShow(item)"
             >{{item | titlecase}}</a>
           </li>
         </ul>
       </div>
       <form
         class="form-body text-white"
+        [ngClass]="{'hide': !this.visible}"
         style="padding: 15px;"
       >
         <div

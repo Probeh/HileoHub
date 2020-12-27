@@ -7,15 +7,13 @@ import { providers        } from '@env/environment'
 
 // ======================================= //
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule.forRoot({
       firebase: providers.firebase,
-      github: providers.github
+      github  : providers.github
     }),
   ],
   providers: [],

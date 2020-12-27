@@ -25,9 +25,35 @@ a:hover {
 .form-body {
   background: $teal;
 }
+.hide {
+  display: none;
+}
 .form-search {
 
 }
 .breadcrumb {
+  background: $teal;
   border-radius: 0px;
+  display: flex;
+  position: relative;
+  .breadcrumb-item {
+    color: white;
+    font-weight: bold;
+  }
+  .breadcrumb-item::before {
+    color: white;
+  }
+  .show {
+    display: block;
+  }
+}
+.card-nav {
+  .card-header {
+    @media screen and (min-width: 450px) {
+      display: block;
+    }
+    @media screen and (max-width: 450px) {
+      display: none;
+    }
+  }
 }

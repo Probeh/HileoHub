@@ -81,7 +81,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/github/github.service.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/github/github.service.ts:50</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -92,9 +92,10 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { tap           } from &#x27;rxjs/operators&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable    } from &#x27;rxjs&#x27;
 import { HttpClient    } from &#x27;@angular/common/http&#x27;
 import { Injectable    } from &#x27;@angular/core&#x27;
+import { Params        } from &#x27;@angular/router&#x27;
 import { SearchScopes  } from &#x27;@enums/github-scopes&#x27;
 import   builder         from &#x27;@helpers/search-builder&#x27;
 import { SharedOptions } from &#x27;@helpers/shared-options&#x27;
@@ -105,24 +106,43 @@ import { UserSearch    } from &#x27;@models/user-search.dto&#x27;
 export class GithubService {
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
   private _search: Dictionary &#x3D; {};
-  private _result: Dictionary &#x3D; {};
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  constructor(private options: SharedOptions, private http: HttpClient) { }
+  constructor(private options: SharedOptions, private http: HttpClient) {
+    this._search &#x3D; localStorage.getItem(&#x27;search&#x27;) ? JSON.parse(localStorage.getItem(&#x27;search&#x27;)) : {};
+  }
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  public searchUsers(query: Params) {
-    return this.http.get&lt;UserSearch&gt;(builder()[SearchScopes.Users], { params: query })
-      .pipe(tap(result &#x3D;&gt; {
-        if (!this._search[SearchScopes.Users])
-          this._search[SearchScopes.Users] &#x3D; new Array&lt;UserResult&gt;();
-        result.items.forEach(item &#x3D;&gt; this._search[SearchScopes.Users].push(item));
-      }));
+  public getCachedUsers(): Observable&lt;UserResult[]&gt; {
+    return new Observable&lt;UserResult[]&gt;(emitter &#x3D;&gt; emitter.next(this._search[SearchScopes.Users] ? this._search[SearchScopes.Users] : []));
+  }
+  public async searchUsers(query: Params): Promise&lt;Observable&lt;UserResult[]&gt;&gt; {
+    const response &#x3D; await this.http
+      .get&lt;UserSearch&gt;(builder()[SearchScopes.Users], { params: query })
+      .toPromise();
+    this._search[SearchScopes.Users] &#x3D; !this._search[SearchScopes.Users]
+      ? new Array&lt;UserResult&gt;()
+      : this._search[SearchScopes.Users];
+    return this.processUsers(response.items);
+  }
+  public getUserByLogin(login?: string) {
+    return login !&#x3D; undefined ? this._search[SearchScopes.Users]?.find((user: UserResult) &#x3D;&gt; user.login &#x3D;&#x3D; login) : null;
+  }
+  private processUsers(users: UserResult[]): Observable&lt;UserResult[]&gt; {
+    return new Observable&lt;UserResult[]&gt;((emitter) &#x3D;&gt; {
+      users.forEach(async (user: UserResult) &#x3D;&gt; {
+        if (!this._search[SearchScopes.Users].includes((item: UserResult) &#x3D;&gt; item.id &#x3D;&#x3D; user.id)) {
+          this._search[SearchScopes.Users].push(await this.http.get&lt;UserResult&gt;(user.url).toPromise());
+        }
+      });
+      emitter.next(this._search[SearchScopes.Users].slice().filter((user: UserResult) &#x3D;&gt; users.some(x &#x3D;&gt; x.id &#x3D;&#x3D; user.id)));
+      this.updateStorage();
+    });
+  }
+  private updateStorage() {
+    localStorage.setItem(&#x27;search&#x27;, JSON.stringify(this._search));
   }
 }
 export interface Dictionary {
   [scope: string]: any[];
-}
-export interface Params {
-  [scope: string]: any;
 }</code></pre>
     </div>
 </div>

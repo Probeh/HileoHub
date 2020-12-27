@@ -112,7 +112,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/github/github.component.ts:49</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/github/github.component.ts:55</a></div>
                             </td>
                         </tr>
 
@@ -188,7 +188,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/github/github.component.ts:48</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/github/github.component.ts:54</a></div>
                             </td>
                         </tr>
 
@@ -216,7 +216,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/github/github.component.ts:49</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/github/github.component.ts:55</a></div>
                             </td>
                         </tr>
 
@@ -235,22 +235,23 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component    , OnInit } from &#x27;@angular/core&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;
 import { NavigationEnd, Router } from &#x27;@angular/router&#x27;
-import { GithubService         } from &#x27;@github/github.service&#x27;
+import { GithubService } from &#x27;@github/github.service&#x27;
 
 @Component({
-  selector   :  &#x27;app-github&#x27;             ,
-  templateUrl:  &#x27;./github.component.html&#x27;,
-  styleUrls  : [&#x27;./github.component.scss&#x27;]
+  selector   : &#x27;app-github&#x27;             ,
+  templateUrl: &#x27;./github.component.html&#x27;,
+  styleUrls: [&#x27;./github.component.scss&#x27;]
 })
 export class GithubComponent implements OnInit {
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
+  public visible: boolean &#x3D; true;
   public options: boolean &#x3D; false;
   public textStr: string &#x3D; &#x27;&#x27;;
   public current: string &#x3D; &#x27;users&#x27;;
   public pathmap: { [key: string]: string };
-  public filters: string[] &#x3D; [&#x27;users&#x27;, &#x27;code&#x27;, &#x27;commits&#x27;, &#x27;issues&#x27;, &#x27;packages&#x27;, &#x27;projects&#x27;, &#x27;topics&#x27;, &#x27;labels&#x27;, &#x27;repositories&#x27;];
+  public filters: string[] &#x3D; [&#x27;users&#x27;, &#x27;projects&#x27;, &#x27;code&#x27;, &#x27;commits&#x27;, &#x27;packages&#x27;, &#x27;topics&#x27;, &#x27;labels&#x27;];
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
   constructor(private service: GithubService, private router: Router) {
     this.router.events.subscribe({
@@ -258,8 +259,9 @@ export class GithubComponent implements OnInit {
         if (event instanceof NavigationEnd) {
           this.pathmap &#x3D; {};
           this.current &#x3D; event.urlAfterRedirects.split(&#x27;/&#x27;)[2]?.split(&#x27;?&#x27;)[0];
+          this.visible &#x3D; event.urlAfterRedirects.endsWith(this.current);
           const routes: string[] &#x3D; event.urlAfterRedirects.split(&#x27;/&#x27;);
-          routes.forEach(route &#x3D;&gt; {
+          routes?.forEach(route &#x3D;&gt; {
             if (route.includes(&#x27;?q&#x3D;&#x27;)) {
               this.pathmap[route.split(&#x27;?q&#x3D;&#x27;)[0]] &#x3D; event.urlAfterRedirects.slice(0, event.urlAfterRedirects.indexOf(&#x27;?q&#x3D;&#x27;));
             }
@@ -272,13 +274,17 @@ export class GithubComponent implements OnInit {
   ngOnInit() { }
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
   public getBreadcrumbs() {
-    return Object.keys(this.pathmap).map(route &#x3D;&gt; new KeyValue(route, this.pathmap[route]));
+    return this.pathmap ? Object.keys(this.pathmap)?.map(route &#x3D;&gt; new KeyValue(route, this.pathmap[route])) : [];
   }
   public onToggleOptions() {
     this.options &#x3D; !this.options;
   }
+  public onToggleShow(path?: string) {
+    this.visible &#x3D; !this.visible;
+  }
   public async onSubmit() {
-    this.router.navigate([this.router.url], { queryParams: { q: this.textStr } });
+    this.visible &#x3D; false;
+    this.router.navigate([this.current], { queryParams: { q: this.textStr } });
   }
 }
 export class KeyValue&lt;T_Key, T_Value&gt; {

@@ -71,18 +71,22 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule                       } from &#x27;@angular/core&#x27;
-import { RouterModule          , Routes } from &#x27;@angular/router&#x27;
-import { CodeSearchComponent            } from &#x27;@github/code-search/code-search.component&#x27;
-import { CommitSearchComponent          } from &#x27;@github/commit-search/commit-search.component&#x27;
-import { GithubComponent                } from &#x27;@github/github.component&#x27;
-import { LabelSearchComponent           } from &#x27;@github/label-search/label-search.component&#x27;
-import { PackageSearchComponent         } from &#x27;@github/package-search/package-search.component&#x27;
-import { ProjectResultComponent         } from &#x27;@github/project-result/project-result.component&#x27;
-import { ProjectSearchComponent         } from &#x27;@github/project-search/project-search.component&#x27;
-import { RepoSearchComponent            } from &#x27;@github/repo-search/repo-search.component&#x27;
-import { TopicSearchComponent           } from &#x27;@github/topic-search/topic-search.component&#x27;
-import { UserSearchComponent            } from &#x27;@github/user-search/user-search.component&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;
+import { RouterModule, Routes } from &#x27;@angular/router&#x27;
+import { ActivitySearchComponent } from &#x27;@github/activity/activity-search/activity-search.component&#x27;
+import { CodeSearchComponent } from &#x27;@github/code/code-search/code-search.component&#x27;
+import { CommitSearchComponent } from &#x27;@github/commit/commit-search/commit-search.component&#x27;
+import { GithubComponent } from &#x27;@github/github.component&#x27;
+import { LabelSearchComponent } from &#x27;@github/label-search/label-search.component&#x27;
+import { LanguageSearchComponent } from &#x27;@github/language/language-search/language-search.component&#x27;
+import { PackageSearchComponent } from &#x27;@github/package/package-search/package-search.component&#x27;
+import { PatternSearchComponent } from &#x27;@github/pattern/pattern-search/pattern-search.component&#x27;
+import { RepoResultComponent } from &#x27;@github/repository/repo-result/repo-result.component&#x27;
+import { RepoSearchComponent } from &#x27;@github/repository/repo-search/repo-search.component&#x27;
+import { TopicSearchComponent } from &#x27;@github/topic/topic-search/topic-search.component&#x27;
+import { UserProfileComponent } from &#x27;@github/user/user-profile/user-profile.component&#x27;
+import { UserResultComponent } from &#x27;@github/user/user-result/user-result.component&#x27;
+import { UserSearchComponent } from &#x27;@github/user/user-search/user-search.component&#x27;
 
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 const routes: Routes &#x3D; [
@@ -90,16 +94,27 @@ const routes: Routes &#x3D; [
     path: &#x27;&#x27;, component: GithubComponent, children: [
       { path: &#x27;code&#x27;        , component: CodeSearchComponent    },
       { path: &#x27;commits&#x27;     , component: CommitSearchComponent  },
-      { path: &#x27;issues&#x27;      , component: ProjectResultComponent },
       { path: &#x27;labels&#x27;      , component: LabelSearchComponent   },
       { path: &#x27;packages&#x27;    , component: PackageSearchComponent },
-      { path: &#x27;projects&#x27;    , component: ProjectSearchComponent },
-      { path: &#x27;repositories&#x27;, component: RepoSearchComponent    },
+      { path: &#x27;projects&#x27;    , component: RepoSearchComponent    },
+      { path: &#x27;projects/:id&#x27;, component: RepoResultComponent    },
       { path: &#x27;topics&#x27;      , component: TopicSearchComponent   },
       { path: &#x27;users&#x27;       , component: UserSearchComponent    },
+      {
+        path: &#x27;users/:login&#x27;, component: UserResultComponent, children: [
+          { path: &#x27;profile&#x27;   , component: UserProfileComponent    },
+          { path: &#x27;packages&#x27;  , component: PackageSearchComponent  },
+          { path: &#x27;projects&#x27;  , component: RepoSearchComponent     },
+          { path: &#x27;languages&#x27; , component: LanguageSearchComponent },
+          { path: &#x27;patterns&#x27;  , component: PatternSearchComponent  },
+          { path: &#x27;activity&#x27;  , component: ActivitySearchComponent },
+          { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;profile&#x27; }
+        ]
+      },
       { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;users&#x27; },
     ]
   },
+  { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;&#x27; }
 ];
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 @NgModule({
