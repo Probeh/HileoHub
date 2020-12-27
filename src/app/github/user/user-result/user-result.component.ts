@@ -14,7 +14,6 @@ export class UserResultComponent implements OnInit {
   // ======================================= //
   constructor(private activeRoute: ActivatedRoute, private service: GithubService) {
     this.activeRoute.params.subscribe((params: Params) => {
-      console.log(params, params['login'])
       this.userResult = this.service.getUserByLogin(params['login']);
     })
   }
