@@ -136,13 +136,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SharedModule.html" data-type="entity-link">SharedModule</a>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#injectables-links-module-SharedModule-64a43f70fe4b9746389a8857c6259b31"' : 'data-target="#xs-injectables-links-module-SharedModule-64a43f70fe4b9746389a8857c6259b31"' }>
+                                        'data-target="#injectables-links-module-SharedModule-5daaa45fd1d4896382b65c2fe70310f8"' : 'data-target="#xs-injectables-links-module-SharedModule-5daaa45fd1d4896382b65c2fe70310f8"' }>
                                         <span class="icon ion-md-arrow-round-down"></span>
                                         <span>Injectables</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-SharedModule-64a43f70fe4b9746389a8857c6259b31"' :
-                                        'id="xs-injectables-links-module-SharedModule-64a43f70fe4b9746389a8857c6259b31"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-SharedModule-5daaa45fd1d4896382b65c2fe70310f8"' :
+                                        'id="xs-injectables-links-module-SharedModule-5daaa45fd1d4896382b65c2fe70310f8"' }>
                                         <li class="link">
                                             <a href="injectables/GithubService.html"
                                                 data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>GithubService</a>
