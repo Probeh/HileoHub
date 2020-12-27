@@ -66,6 +66,10 @@
 <title>cluster_SharedModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 626,-268 626,-70 8,-70"/>
 </g>
+<g id="clust4" class="cluster">
+<title>cluster_SharedModule_exports</title>
+<polygon fill="none" stroke="black" points="246,-208 246,-260 368,-260 368,-208 246,-208"/>
+</g>
 <g id="clust6" class="cluster">
 <title>cluster_SharedModule_providers</title>
 <polygon fill="none" stroke="black" points="144,-78 144,-130 618,-130 618,-78 144,-78"/>
@@ -73,10 +77,6 @@
 <g id="clust3" class="cluster">
 <title>cluster_SharedModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-78 16,-130 136,-130 136,-78 16,-78"/>
-</g>
-<g id="clust4" class="cluster">
-<title>cluster_SharedModule_exports</title>
-<polygon fill="none" stroke="black" points="246,-208 246,-260 368,-260 368,-208 246,-208"/>
 </g>
 <!-- IdentityModule -->
 <g id="node1" class="node">
@@ -247,8 +247,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/app/@common/shared.module.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/app/@common/shared.module.ts:33</a></div>
                 </td>
             </tr>
 
@@ -300,23 +300,27 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ToastrModule                              } from &#x27;ngx-toastr&#x27;
-import { CommonModule                              } from &#x27;@angular/common&#x27;
-import { HTTP_INTERCEPTORS      , HttpClientModule } from &#x27;@angular/common/http&#x27;
-import { ModuleWithProviders    , NgModule         } from &#x27;@angular/core&#x27;
-import { BrowserAnimationsModule                   } from &#x27;@angular/platform-browser/animations&#x27;
-import { RouterModule                              } from &#x27;@angular/router&#x27;
-import { GithubService                             } from &#x27;@app/github/github.service&#x27;
-import { SharedOptions                             } from &#x27;@helpers/shared-options&#x27;
-import { IdentityModule                            } from &#x27;@identity/identity.module&#x27;
-import { IdentityService                           } from &#x27;@identity/identity.service&#x27;
-import { MessageService                            } from &#x27;@services/message.service&#x27;
-import { RequestInterceptor                        } from &#x27;@services/request.interceptor&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ToastrModule                               } from &#x27;ngx-toastr&#x27;
+import { CommonModule                               } from &#x27;@angular/common&#x27;
+import { HTTP_INTERCEPTORS       , HttpClientModule } from &#x27;@angular/common/http&#x27;
+import { ModuleWithProviders     , NgModule         } from &#x27;@angular/core&#x27;
+import { BrowserAnimationsModule                    } from &#x27;@angular/platform-browser/animations&#x27;
+import { RouterModule                               } from &#x27;@angular/router&#x27;
+import { GithubService                              } from &#x27;@app/github/github.service&#x27;
+import { SharedOptions                              } from &#x27;@helpers/shared-options&#x27;
+import { IdentityModule                             } from &#x27;@identity/identity.module&#x27;
+import { IdentityService                            } from &#x27;@identity/identity.service&#x27;
+import { MessageService                             } from &#x27;@services/message.service&#x27;
+import { RequestInterceptor                         } from &#x27;@services/request.interceptor&#x27;
+import { AngularFireModule                          } from &#x27;@angular/fire&#x27;
+import { AngularFireAuthModule                      } from &#x27;@angular/fire/auth&#x27;
+import { providers                                  } from &#x27;@env/environment&#x27;
+import { getCredentials                             } from &#x27;@helpers/credentials&#x27;
 
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 const components &#x3D; [];
-const modules  &#x3D; [CommonModule   , IdentityModule, HttpClientModule, BrowserAnimationsModule, RouterModule.forChild([]), ToastrModule.forRoot()];
-const services &#x3D; [IdentityService, GithubService , MessageService                                                                              ];
+const modules &#x3D; [CommonModule, IdentityModule, HttpClientModule, BrowserAnimationsModule, AngularFireAuthModule, RouterModule.forChild([]), ToastrModule.forRoot(), AngularFireModule.initializeApp(getCredentials(providers.firebase, &#x27;firebase&#x27;))];
+const services &#x3D; [IdentityService, GithubService, MessageService];
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 
 @NgModule({

@@ -8,11 +8,11 @@ export const providers = {
     baseUrl: 'https://api.github.com'
   },
   firebase: {
-    apiKey           : "AIzaSyBpdNViHcAz3kVjWBhJ58a5N2RzTSGtwX0"  ,
-    appId            : "1:644607673263:web:b4a55c1daa666a4970655a",
-    authDomain       : "hileohub.firebaseapp.com"                 ,
-    messagingSenderId: "644607673263"                             ,
-    projectId        : "hileohub"                                 ,
-    storageBucket    : "hileohub.appspot.com"                     ,
+    apiKey           : "U2FsdGVkX1+hIZAGnxYLXAczw8Xg93ybGGZVMApMRIOkOgfAjJrjs9onSA1cxgEI0rF+71wbEMC1lxrcJYvObw==",
+    appId            : "U2FsdGVkX1/aM+wz5lpnuCaLuZy+Ao92qmdIV9Z4C0Ezn5TQPjLQ6STkaTGO4CDEjFtJw3LKyqJU2/1Uicz6IA==",
+    messagingSenderId: "U2FsdGVkX1/JwZgKrOuZT2Hai4GOJtDvtcJoLdANpzY="                                            ,
+    projectId        : "hileohub"                                                                                ,
+    authDomain       : "hileohub.firebaseapp.com"                                                                ,
+    storageBucket    : "hileohub.appspot.com"                                                                    ,
   }
 }
