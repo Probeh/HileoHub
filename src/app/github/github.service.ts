@@ -1,12 +1,12 @@
-import { Observable } from 'rxjs'
-import { HttpClient } from '@angular/common/http'
-import { Injectable } from '@angular/core'
-import { Params } from '@angular/router'
-import { SearchScopes } from '@enums/github-scopes'
-import builder from '@helpers/search-builder'
+import { Observable    } from 'rxjs'
+import { HttpClient    } from '@angular/common/http'
+import { Injectable    } from '@angular/core'
+import { Params        } from '@angular/router'
+import { SearchScopes  } from '@enums/github-scopes'
+import   builder         from '@helpers/search-builder'
 import { SharedOptions } from '@helpers/shared-options'
-import { UserResult } from '@models/user-result.dto'
-import { UserSearch } from '@models/user-search.dto'
+import { UserResult    } from '@models/user-result.dto'
+import { UserSearch    } from '@models/user-search.dto'
 
 @Injectable()
 export class GithubService {

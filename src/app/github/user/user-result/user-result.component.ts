@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core'
-import { ActivatedRoute, Params } from '@angular/router';
-import { GithubService } from '@github/github.service'
-import { UserResult } from '@models/user-result.dto'
+import { Component     , OnInit } from '@angular/core'
+import { ActivatedRoute, Params } from '@angular/router'        ;
+import { GithubService          } from '@github/github.service'
+import { UserResult             } from '@models/user-result.dto'
 
 @Component({
   selector: 'app-user-result',

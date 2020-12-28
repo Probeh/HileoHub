@@ -1,5 +1,5 @@
-import { providers    } from '@env/environment'        ;
-import { SearchScopes } from '@enums/github-scopes';
+import { providers    } from '@env/environment'     ;
+import { SearchScopes } from '@enums/github-scopes' ;
 
 export default function builder() {
   return {

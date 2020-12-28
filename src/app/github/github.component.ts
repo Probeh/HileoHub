@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core'
+import { Component    , OnInit } from '@angular/core'
 import { NavigationEnd, Router } from '@angular/router'
-import { GithubService } from '@github/github.service'
+import { GithubService         } from '@github/github.service'
 
 @Component({
   selector   : 'app-github'             ,
