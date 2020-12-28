@@ -93,10 +93,6 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getCachedUsers">getCachedUsers</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
                                 <a href="#getUserByLogin">getUserByLogin</a>
                             </li>
                             <li>
@@ -194,47 +190,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getCachedUsers"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getCachedUsers
-                        </b>
-                        <a href="#getCachedUsers"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getCachedUsers()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/app/github/github.service.ts:20</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/UserResult.html" target="_self" >Observable&lt;UserResult[]&gt;</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="getUserByLogin"></a>
                     <span class="name">
                         <b>
@@ -255,8 +210,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/app/github/github.service.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/github/github.service.ts:29</a></div>
                 </td>
             </tr>
 
@@ -327,8 +282,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/app/github/github.service.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/github/github.service.ts:32</a></div>
                 </td>
             </tr>
 
@@ -400,8 +355,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/app/github/github.service.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/github/github.service.ts:20</a></div>
                 </td>
             </tr>
 
@@ -465,15 +420,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>updateStorage()</code>
+                    <code>updateStorage(scope: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">src/app/github/github.service.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/github/github.service.ts:49</a></div>
                 </td>
             </tr>
 
@@ -482,8 +437,51 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>scope</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -534,15 +532,15 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable    } from &#x27;rxjs&#x27;
-import { HttpClient    } from &#x27;@angular/common/http&#x27;
-import { Injectable    } from &#x27;@angular/core&#x27;
-import { Params        } from &#x27;@angular/router&#x27;
-import { SearchScopes  } from &#x27;@enums/github-scopes&#x27;
-import   builder         from &#x27;@helpers/search-builder&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable } from &#x27;rxjs&#x27;
+import { HttpClient } from &#x27;@angular/common/http&#x27;
+import { Injectable } from &#x27;@angular/core&#x27;
+import { Params } from &#x27;@angular/router&#x27;
+import { SearchScopes } from &#x27;@enums/github-scopes&#x27;
+import builder from &#x27;@helpers/search-builder&#x27;
 import { SharedOptions } from &#x27;@helpers/shared-options&#x27;
-import { UserResult    } from &#x27;@models/user-result.dto&#x27;
-import { UserSearch    } from &#x27;@models/user-search.dto&#x27;
+import { UserResult } from &#x27;@models/user-result.dto&#x27;
+import { UserSearch } from &#x27;@models/user-search.dto&#x27;
 
 @Injectable()
 export class GithubService {
@@ -553,9 +551,6 @@ export class GithubService {
     this._search &#x3D; localStorage.getItem(&#x27;search&#x27;) ? JSON.parse(localStorage.getItem(&#x27;search&#x27;)) : {};
   }
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  public getCachedUsers(): Observable&lt;UserResult[]&gt; {
-    return new Observable&lt;UserResult[]&gt;(emitter &#x3D;&gt; emitter.next(this._search[SearchScopes.Users] ? this._search[SearchScopes.Users] : []));
-  }
   public async searchUsers(query: Params): Promise&lt;Observable&lt;UserResult[]&gt;&gt; {
     const response &#x3D; await this.http
       .get&lt;UserSearch&gt;(builder()[SearchScopes.Users], { params: query })
@@ -570,21 +565,30 @@ export class GithubService {
   }
   private processUsers(users: UserResult[]): Observable&lt;UserResult[]&gt; {
     return new Observable&lt;UserResult[]&gt;((emitter) &#x3D;&gt; {
-      users.forEach(async (user: UserResult) &#x3D;&gt; {
-        if (!this._search[SearchScopes.Users].includes((item: UserResult) &#x3D;&gt; item.id &#x3D;&#x3D; user.id)) {
-          this._search[SearchScopes.Users].push(await this.http.get&lt;UserResult&gt;(user.url).toPromise());
+      users.forEach((user: UserResult) &#x3D;&gt; {
+        if (!this._search[SearchScopes.Users].some((item: UserResult) &#x3D;&gt; item.id &#x3D;&#x3D; user.id)) {
+          this.http.get&lt;UserResult&gt;(user.url).toPromise().then((result) &#x3D;&gt; {
+            this._search[SearchScopes.Users].push(result);
+            this.updateStorage(&#x27;search&#x27;, this._search);
+            emitter.next(this._search[SearchScopes.Users].slice().filter((user: UserResult) &#x3D;&gt; users.some(x &#x3D;&gt; x.id &#x3D;&#x3D; user.id)));
+          });
+        }
+        else {
+          emitter.next(this._search[SearchScopes.Users].slice().filter((user: UserResult) &#x3D;&gt; users.some(x &#x3D;&gt; x.id &#x3D;&#x3D; user.id)));
         }
       });
-      emitter.next(this._search[SearchScopes.Users].slice().filter((user: UserResult) &#x3D;&gt; users.some(x &#x3D;&gt; x.id &#x3D;&#x3D; user.id)));
-      this.updateStorage();
     });
   }
-  private updateStorage() {
-    localStorage.setItem(&#x27;search&#x27;, JSON.stringify(this._search));
+
+  private updateStorage(scope: string, value: any) {
+    localStorage.setItem(scope, JSON.stringify(value));
   }
 }
 export interface Dictionary {
   [scope: string]: any[];
+}
+export interface ICollection {
+  [scope: string]: Observable&lt;any[]&gt;;
 }</code></pre>
     </div>
 

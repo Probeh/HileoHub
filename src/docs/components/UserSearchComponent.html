@@ -253,8 +253,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/app/github/user/user-search/user-search.component.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/github/user/user-search/user-search.component.ts:26</a></div>
                 </td>
             </tr>
 
@@ -310,11 +310,11 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable             } from &#x27;rxjs&#x27;
+import { Component     , OnInit } from &#x27;@angular/core&#x27;
 import { ActivatedRoute, Params } from &#x27;@angular/router&#x27;
-import { GithubService } from &#x27;@github/github.service&#x27;
-import { UserResult } from &#x27;@models/user-result.dto&#x27;
-import { Observable } from &#x27;rxjs&#x27;;
+import { GithubService          } from &#x27;@github/github.service&#x27;
+import { UserResult             } from &#x27;@models/user-result.dto&#x27;
 
 @Component({
   selector: &#x27;app-user-search&#x27;,
@@ -326,12 +326,10 @@ export class UserSearchComponent implements OnInit {
   public $results: Observable&lt;UserResult[]&gt;;
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
   constructor(private service: GithubService, private active: ActivatedRoute) {
-    this.$results &#x3D; this.service.getCachedUsers();
     this.active.queryParams.subscribe(params &#x3D;&gt; {
       if (Object.keys(params)?.length &gt; 0) {
         const query: Params &#x3D; { per_page: 10 };
         Object.keys(params).forEach(param &#x3D;&gt; query[param] &#x3D; params[param]);
-
         this.service.searchUsers(query)
           .then((response) &#x3D;&gt; this.$results &#x3D; response);
       }
@@ -339,6 +337,7 @@ export class UserSearchComponent implements OnInit {
   }
   ngOnInit() { }
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
+
 }
 </code></pre>
     </div>

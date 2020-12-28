@@ -66,6 +66,10 @@
 <title>cluster_SharedModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 626,-268 626,-70 8,-70"/>
 </g>
+<g id="clust4" class="cluster">
+<title>cluster_SharedModule_exports</title>
+<polygon fill="none" stroke="black" points="276,-208 276,-260 398,-260 398,-208 276,-208"/>
+</g>
 <g id="clust3" class="cluster">
 <title>cluster_SharedModule_imports</title>
 <polygon fill="none" stroke="black" points="498,-78 498,-130 618,-130 618,-78 498,-78"/>
@@ -73,10 +77,6 @@
 <g id="clust6" class="cluster">
 <title>cluster_SharedModule_providers</title>
 <polygon fill="none" stroke="black" points="16,-78 16,-130 490,-130 490,-78 16,-78"/>
-</g>
-<g id="clust4" class="cluster">
-<title>cluster_SharedModule_exports</title>
-<polygon fill="none" stroke="black" points="276,-208 276,-260 398,-260 398,-208 276,-208"/>
 </g>
 <!-- IdentityModule -->
 <g id="node1" class="node">
@@ -247,8 +247,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/app/@common/shared.module.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/@common/shared.module.ts:32</a></div>
                 </td>
             </tr>
 
@@ -315,12 +315,11 @@ import { RequestInterceptor                         } from &#x27;@services/reque
 import { AngularFireModule                          } from &#x27;@angular/fire&#x27;
 import { AngularFireAuthModule                      } from &#x27;@angular/fire/auth&#x27;
 import { providers                                  } from &#x27;@env/environment&#x27;
-import { getCredentials                             } from &#x27;@helpers/credentials&#x27;
 
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 const components &#x3D; [];
-const modules  &#x3D; [CommonModule   , IdentityModule, HttpClientModule, BrowserAnimationsModule, AngularFireAuthModule, RouterModule.forChild([]), ToastrModule.forRoot(), AngularFireModule.initializeApp(getCredentials(providers.firebase, &#x27;firebase&#x27;))];
-const services &#x3D; [IdentityService, GithubService , MessageService                                                                                                                                                                                      ];
+const modules  &#x3D; [CommonModule    , IdentityModule , HttpClientModule, BrowserAnimationsModule, AngularFireAuthModule, RouterModule.forChild([]), ToastrModule.forRoot(), AngularFireModule.initializeApp(providers.firebase)];
+const services &#x3D; [IdentityService , GithubService  , MessageService                                                                                                                                                          ];
 // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
 
 @NgModule({

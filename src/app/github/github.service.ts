@@ -1,12 +1,12 @@
-import { Observable    } from 'rxjs'
-import { HttpClient    } from '@angular/common/http'
-import { Injectable    } from '@angular/core'
-import { Params        } from '@angular/router'
-import { SearchScopes  } from '@enums/github-scopes'
-import   builder         from '@helpers/search-builder'
+import { Observable } from 'rxjs'
+import { HttpClient } from '@angular/common/http'
+import { Injectable } from '@angular/core'
+import { Params } from '@angular/router'
+import { SearchScopes } from '@enums/github-scopes'
+import builder from '@helpers/search-builder'
 import { SharedOptions } from '@helpers/shared-options'
-import { UserResult    } from '@models/user-result.dto'
-import { UserSearch    } from '@models/user-search.dto'
+import { UserResult } from '@models/user-result.dto'
+import { UserSearch } from '@models/user-search.dto'
 
 @Injectable()
 export class GithubService {
@@ -17,9 +17,6 @@ export class GithubService {
     this._search = localStorage.getItem('search') ? JSON.parse(localStorage.getItem('search')) : {};
   }
   // ======================================= //
-  public getCachedUsers(): Observable<UserResult[]> {
-    return new Observable<UserResult[]>(emitter => emitter.next(this._search[SearchScopes.Users] ? this._search[SearchScopes.Users] : []));
-  }
   public async searchUsers(query: Params): Promise<Observable<UserResult[]>> {
     const response = await this.http
       .get<UserSearch>(builder()[SearchScopes.Users], { params: query })
@@ -34,19 +31,28 @@ export class GithubService {
   }
   private processUsers(users: UserResult[]): Observable<UserResult[]> {
     return new Observable<UserResult[]>((emitter) => {
-      users.forEach(async (user: UserResult) => {
-        if (!this._search[SearchScopes.Users].includes((item: UserResult) => item.id == user.id)) {
-          this._search[SearchScopes.Users].push(await this.http.get<UserResult>(user.url).toPromise());
+      users.forEach((user: UserResult) => {
+        if (!this._search[SearchScopes.Users].some((item: UserResult) => item.id == user.id)) {
+          this.http.get<UserResult>(user.url).toPromise().then((result) => {
+            this._search[SearchScopes.Users].push(result);
+            this.updateStorage('search', this._search);
+            emitter.next(this._search[SearchScopes.Users].slice().filter((user: UserResult) => users.some(x => x.id == user.id)));
+          });
+        }
+        else {
+          emitter.next(this._search[SearchScopes.Users].slice().filter((user: UserResult) => users.some(x => x.id == user.id)));
         }
       });
-      emitter.next(this._search[SearchScopes.Users].slice().filter((user: UserResult) => users.some(x => x.id == user.id)));
-      this.updateStorage();
     });
   }
-  private updateStorage() {
-    localStorage.setItem('search', JSON.stringify(this._search));
+
+  private updateStorage(scope: string, value: any) {
+    localStorage.setItem(scope, JSON.stringify(value));
   }
 }
 export interface Dictionary {
   [scope: string]: any[];
+}
+export interface ICollection {
+  [scope: string]: Observable<any[]>;
 }

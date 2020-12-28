@@ -13,12 +13,11 @@ import { RequestInterceptor                         } from '@services/request.in
 import { AngularFireModule                          } from '@angular/fire'
 import { AngularFireAuthModule                      } from '@angular/fire/auth'
 import { providers                                  } from '@env/environment'
-import { getCredentials                             } from '@helpers/credentials'
 
 // ======================================= //
 const components = [];
-const modules  = [CommonModule   , IdentityModule, HttpClientModule, BrowserAnimationsModule, AngularFireAuthModule, RouterModule.forChild([]), ToastrModule.forRoot(), AngularFireModule.initializeApp(getCredentials(providers.firebase, 'firebase'))];
-const services = [IdentityService, GithubService , MessageService                                                                                                                                                                                      ];
+const modules  = [CommonModule    , IdentityModule , HttpClientModule, BrowserAnimationsModule, AngularFireAuthModule, RouterModule.forChild([]), ToastrModule.forRoot(), AngularFireModule.initializeApp(providers.firebase)];
+const services = [IdentityService , GithubService  , MessageService                                                                                                                                                          ];
 // ======================================= //
 
 @NgModule({
