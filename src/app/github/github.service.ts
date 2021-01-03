@@ -3,6 +3,7 @@ import { HttpClient    } from '@angular/common/http'
 import { Injectable    } from '@angular/core'
 import { Params        } from '@angular/router'
 import { SearchScopes  } from '@enums/github-scopes'
+import { UserProfile   } from '@github/user/user-profile'
 import   builder         from '@helpers/search-builder'
 import { SharedOptions } from '@helpers/shared-options'
 import { UserResult    } from '@models/user-result.dto'
@@ -11,12 +12,26 @@ import { UserSearch    } from '@models/user-search.dto'
 @Injectable()
 export class GithubService {
   // ======================================= //
+  private _username: string;
   private _search: Dictionary = {};
+  private _profile: UserProfile;
   // ======================================= //
   constructor(private options: SharedOptions, private http: HttpClient) {
     this._search = localStorage.getItem('search') ? JSON.parse(localStorage.getItem('search')) : {};
   }
   // ======================================= //
+  public setSelectedUsername(login: string) {
+    this._username = login;
+  }
+  public setSelectedProfile(profile: UserProfile) {
+    this._profile = profile;
+  }
+  public getSelectedProfile() {
+    return this._profile;
+  }
+  public getSelectedUsername() {
+    return this._username;
+  }
   public async searchUsers(query: Params): Promise<Observable<UserResult[]>> {
     const response = await this.http
       .get<UserSearch>(builder()[SearchScopes.Users], { params: query })

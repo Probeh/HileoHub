@@ -112,7 +112,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/github/github.component.ts:55</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/github/github.component.ts:56</a></div>
                             </td>
                         </tr>
 
@@ -188,7 +188,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/github/github.component.ts:54</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/github/github.component.ts:55</a></div>
                             </td>
                         </tr>
 
@@ -216,7 +216,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/github/github.component.ts:55</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/github/github.component.ts:56</a></div>
                             </td>
                         </tr>
 
@@ -264,6 +264,7 @@ export class GithubComponent implements OnInit {
           routes?.forEach(route &#x3D;&gt; {
             if (route.includes(&#x27;?q&#x3D;&#x27;)) {
               this.pathmap[route.split(&#x27;?q&#x3D;&#x27;)[0]] &#x3D; event.urlAfterRedirects.slice(0, event.urlAfterRedirects.indexOf(&#x27;?q&#x3D;&#x27;));
+              route.split(&#x27;?q&#x3D;&#x27;)[1]?.split(&#x27;/&#x27;)[0] ? this.service.setSelectedUsername(route.split(&#x27;?q&#x3D;&#x27;)[1]?.split(&#x27;/&#x27;)[0]) : {};
             }
             else this.pathmap[route &#x3D;&#x3D; &#x27;&#x27; ? &#x27;search&#x27; : route] &#x3D; event.urlAfterRedirects.slice(0, event.urlAfterRedirects.indexOf(route) + route.length);
           })

@@ -3,8 +3,6 @@ import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router'
 import { GithubService } from '@github/github.service'
 import { UserProfile } from '@github/user/user-profile'
-import { getSVG } from '@helpers/icon.helper'
-import { IconResult } from '@helpers/icon.options'
 import { CommitSearch } from '@models/commit-search.dto'
 import { Languages } from '@models/languages.model.dto'
 import { RepoSearch } from '@models/repo-search.dto'
@@ -36,7 +34,9 @@ export class UserProfileComponent implements OnInit {
     this.route?.queryParams?.subscribe({
       next: param => {
         if (!this._login || this.getLoginParam(this.route.snapshot) && this.getLoginParam(this.route.snapshot) != this._login)
-          this._login = this.getLoginParam(this.route.snapshot);
+          this.getLoginParam(this.route.snapshot)
+            ? this._login = this.getLoginParam(this.route.snapshot)
+            : this._login = this.service.getSelectedUsername();
       }
     });
   }
@@ -45,25 +45,32 @@ export class UserProfileComponent implements OnInit {
     if (this._login) {
       if (localStorage.getItem(this._login)) {
         this.profile = JSON.parse(localStorage.getItem(this._login));
+        this.service.setSelectedProfile(this.profile);
       }
       else {
         this.profile = new UserProfile(this.service.getUserByLogin(this._login));
-        this.getUserRepositories();
+        this.getUserRepositories()
+          .then(result => this.service.setSelectedProfile(result));
       }
     }
   }
-  private getUserRepositories() {
-    if (!this.profile.repos) {
-      this.http.get<RepoSearch[]>(this.profile.user.repos_url)
-        .toPromise()
-        .then((repositories: RepoSearch[]) => {
-          this.profile.repos = new Array<RepoSearch>();
-          this.getUserActivity(repositories)
-            .then(() => this.getUserLanguages());
-        })
-        .then(() => localStorage.setItem(this._login, JSON.stringify(this.profile)))
-        .catch((error) => { });
-    }
+  private getUserRepositories(): Promise<UserProfile> {
+    return new Promise((resolve, reject) => {
+      if (!this.profile.repos) {
+
+        this.http.get<RepoSearch[]>(this.profile.user.repos_url)
+          .toPromise()
+          .then((repositories: RepoSearch[]) => {
+            this.profile.repos = new Array<RepoSearch>();
+            this.getUserActivity(repositories)
+              .then(() => this.getUserLanguages())
+              .then(() => resolve(this.profile));
+          })
+          .then(() => localStorage.setItem(this._login, JSON.stringify(this.profile)))
+          .catch((error) => resolve(this.profile));
+      }
+      else resolve(this.profile);
+    });
   }
   private getUserActivity(repositories: RepoSearch[]) {
     const isComplete: (current: RepoSearch) => boolean = (current: RepoSearch) => current.id == repositories[repositories.length - 1].id;

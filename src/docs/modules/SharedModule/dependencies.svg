@@ -24,83 +24,83 @@
 <title>cluster_SharedModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 626,-268 626,-70 8,-70"/>
 </g>
-<g id="clust3" class="cluster">
-<title>cluster_SharedModule_imports</title>
-<polygon fill="none" stroke="black" points="498,-78 498,-130 618,-130 618,-78 498,-78"/>
+<g id="clust4" class="cluster">
+<title>cluster_SharedModule_exports</title>
+<polygon fill="none" stroke="black" points="246,-208 246,-260 368,-260 368,-208 246,-208"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_SharedModule_providers</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 490,-130 490,-78 16,-78"/>
+<polygon fill="none" stroke="black" points="144,-78 144,-130 618,-130 618,-78 144,-78"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_SharedModule_exports</title>
-<polygon fill="none" stroke="black" points="276,-208 276,-260 398,-260 398,-208 276,-208"/>
+<g id="clust3" class="cluster">
+<title>cluster_SharedModule_imports</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 136,-130 136,-78 16,-78"/>
 </g>
 <!-- IdentityModule -->
 <g id="node1" class="node">
 <title>IdentityModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="609.6,-122 606.6,-126 585.6,-126 582.6,-122 506.4,-122 506.4,-86 609.6,-86 609.6,-122"/>
-<text text-anchor="middle" x="558" y="-99.8" font-family="Times,serif" font-size="14.00">IdentityModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="127.6,-122 124.6,-126 103.6,-126 100.6,-122 24.4,-122 24.4,-86 127.6,-86 127.6,-122"/>
+<text text-anchor="middle" x="76" y="-99.8" font-family="Times,serif" font-size="14.00">IdentityModule</text>
 </g>
 <!-- SharedModule -->
 <g id="node2" class="node">
 <title>SharedModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="386.42,-187 383.42,-191 362.42,-191 359.42,-187 287.58,-187 287.58,-151 386.42,-151 386.42,-187"/>
-<text text-anchor="middle" x="337" y="-164.8" font-family="Times,serif" font-size="14.00">SharedModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="356.42,-187 353.42,-191 332.42,-191 329.42,-187 257.58,-187 257.58,-151 356.42,-151 356.42,-187"/>
+<text text-anchor="middle" x="307" y="-164.8" font-family="Times,serif" font-size="14.00">SharedModule</text>
 </g>
 <!-- IdentityModule&#45;&gt;SharedModule -->
 <g id="edge1" class="edge">
 <title>IdentityModule&#45;&gt;SharedModule</title>
-<path fill="none" stroke="black" d="M558,-122.11C558,-141.34 558,-169 558,-169 558,-169 396.32,-169 396.32,-169"/>
-<polygon fill="black" stroke="black" points="396.32,-165.5 386.32,-169 396.32,-172.5 396.32,-165.5"/>
+<path fill="none" stroke="black" d="M76,-122.11C76,-141.34 76,-169 76,-169 76,-169 247.73,-169 247.73,-169"/>
+<polygon fill="black" stroke="black" points="247.73,-172.5 257.73,-169 247.73,-165.5 247.73,-172.5"/>
 </g>
 <!-- IdentityModule  -->
 <g id="node3" class="node">
 <title>IdentityModule </title>
-<polygon fill="#fb8072" stroke="black" points="390.1,-252 283.9,-252 283.9,-216 390.1,-216 390.1,-252"/>
-<text text-anchor="middle" x="337" y="-229.8" font-family="Times,serif" font-size="14.00">IdentityModule </text>
+<polygon fill="#fb8072" stroke="black" points="360.1,-252 253.9,-252 253.9,-216 360.1,-216 360.1,-252"/>
+<text text-anchor="middle" x="307" y="-229.8" font-family="Times,serif" font-size="14.00">IdentityModule </text>
 </g>
 <!-- SharedModule&#45;&gt;IdentityModule  -->
 <g id="edge2" class="edge">
 <title>SharedModule&#45;&gt;IdentityModule </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M337,-187.11C337,-187.11 337,-205.99 337,-205.99"/>
-<polygon fill="black" stroke="black" points="333.5,-205.99 337,-215.99 340.5,-205.99 333.5,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M307,-187.11C307,-187.11 307,-205.99 307,-205.99"/>
+<polygon fill="black" stroke="black" points="303.5,-205.99 307,-215.99 310.5,-205.99 303.5,-205.99"/>
 </g>
 <!-- GithubService -->
 <g id="node4" class="node">
 <title>GithubService</title>
-<ellipse fill="#fdb462" stroke="black" cx="415" cy="-104" rx="66.63" ry="18"/>
-<text text-anchor="middle" x="415" y="-99.8" font-family="Times,serif" font-size="14.00">GithubService</text>
+<ellipse fill="#fdb462" stroke="black" cx="543" cy="-104" rx="66.63" ry="18"/>
+<text text-anchor="middle" x="543" y="-99.8" font-family="Times,serif" font-size="14.00">GithubService</text>
 </g>
 <!-- GithubService&#45;&gt;SharedModule -->
 <g id="edge3" class="edge">
 <title>GithubService&#45;&gt;SharedModule</title>
-<path fill="none" stroke="black" d="M367.2,-116.84C367.2,-116.84 367.2,-140.52 367.2,-140.52"/>
-<polygon fill="black" stroke="black" points="363.7,-140.52 367.2,-150.52 370.7,-140.52 363.7,-140.52"/>
+<path fill="none" stroke="black" d="M543,-122.11C543,-141.34 543,-169 543,-169 543,-169 366.47,-169 366.47,-169"/>
+<polygon fill="black" stroke="black" points="366.47,-165.5 356.47,-169 366.47,-172.5 366.47,-165.5"/>
 </g>
 <!-- IdentityService -->
 <g id="node5" class="node">
 <title>IdentityService</title>
-<ellipse fill="#fdb462" stroke="black" cx="260" cy="-104" rx="70.06" ry="18"/>
-<text text-anchor="middle" x="260" y="-99.8" font-family="Times,serif" font-size="14.00">IdentityService</text>
+<ellipse fill="#fdb462" stroke="black" cx="388" cy="-104" rx="70.06" ry="18"/>
+<text text-anchor="middle" x="388" y="-99.8" font-family="Times,serif" font-size="14.00">IdentityService</text>
 </g>
 <!-- IdentityService&#45;&gt;SharedModule -->
 <g id="edge4" class="edge">
 <title>IdentityService&#45;&gt;SharedModule</title>
-<path fill="none" stroke="black" d="M308.91,-117.15C308.91,-117.15 308.91,-140.69 308.91,-140.69"/>
-<polygon fill="black" stroke="black" points="305.41,-140.69 308.91,-150.69 312.41,-140.69 305.41,-140.69"/>
+<path fill="none" stroke="black" d="M337.09,-116.53C337.09,-116.53 337.09,-140.85 337.09,-140.85"/>
+<polygon fill="black" stroke="black" points="333.59,-140.85 337.09,-150.85 340.59,-140.85 333.59,-140.85"/>
 </g>
 <!-- MessageService -->
 <g id="node6" class="node">
 <title>MessageService</title>
-<ellipse fill="#fdb462" stroke="black" cx="98" cy="-104" rx="73.55" ry="18"/>
-<text text-anchor="middle" x="98" y="-99.8" font-family="Times,serif" font-size="14.00">MessageService</text>
+<ellipse fill="#fdb462" stroke="black" cx="226" cy="-104" rx="73.55" ry="18"/>
+<text text-anchor="middle" x="226" y="-99.8" font-family="Times,serif" font-size="14.00">MessageService</text>
 </g>
 <!-- MessageService&#45;&gt;SharedModule -->
 <g id="edge5" class="edge">
 <title>MessageService&#45;&gt;SharedModule</title>
-<path fill="none" stroke="black" d="M98,-122.11C98,-141.34 98,-169 98,-169 98,-169 277.77,-169 277.77,-169"/>
-<polygon fill="black" stroke="black" points="277.77,-172.5 287.77,-169 277.77,-165.5 277.77,-172.5"/>
+<path fill="none" stroke="black" d="M278.78,-116.84C278.78,-116.84 278.78,-140.52 278.78,-140.52"/>
+<polygon fill="black" stroke="black" points="275.28,-140.52 278.78,-150.52 282.28,-140.52 275.28,-140.52"/>
 </g>
 </g>
 </svg>

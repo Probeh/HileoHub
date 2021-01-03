@@ -16,7 +16,6 @@ a {
   color: $secondary;
 }
 .list-group-item-action:hover {
-  transition: ease-in 250ms;
   border-color: $teal;
   background: $teal;
   color: white;
@@ -24,8 +23,16 @@ a {
 .list-group-item-action.active {
   border-color: $teal;
   background: $teal;
+  color: white;
 }
 .list-group-item:active {
   border-color: $teal;
-  background: darken($color: $teal, $amount: 10%);
+  background: lighten($color: $teal, $amount: 10%);
+}
+.card {
+  border-radius: 0px;
+
+  .card-header {
+    border-radius: 0px;
+  }
 }

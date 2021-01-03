@@ -27,6 +27,7 @@ export class GithubComponent implements OnInit {
           routes?.forEach(route => {
             if (route.includes('?q=')) {
               this.pathmap[route.split('?q=')[0]] = event.urlAfterRedirects.slice(0, event.urlAfterRedirects.indexOf('?q='));
+              route.split('?q=')[1]?.split('/')[0] ? this.service.setSelectedUsername(route.split('?q=')[1]?.split('/')[0]) : {};
             }
             else this.pathmap[route == '' ? 'search' : route] = event.urlAfterRedirects.slice(0, event.urlAfterRedirects.indexOf(route) + route.length);
           })

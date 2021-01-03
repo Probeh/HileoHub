@@ -292,8 +292,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/app/github/github.component.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/github/github.component.ts:40</a></div>
                 </td>
             </tr>
 
@@ -331,8 +331,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="37"
-                            class="link-to-prism">src/app/github/github.component.ts:37</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/github/github.component.ts:38</a></div>
                 </td>
             </tr>
 
@@ -373,8 +373,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">src/app/github/github.component.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/github/github.component.ts:49</a></div>
                 </td>
             </tr>
 
@@ -414,8 +414,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">src/app/github/github.component.ts:42</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/github/github.component.ts:43</a></div>
                 </td>
             </tr>
 
@@ -455,8 +455,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/app/github/github.component.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/github/github.component.ts:46</a></div>
                 </td>
             </tr>
 
@@ -737,6 +737,7 @@ export class GithubComponent implements OnInit {
           routes?.forEach(route &#x3D;&gt; {
             if (route.includes(&#x27;?q&#x3D;&#x27;)) {
               this.pathmap[route.split(&#x27;?q&#x3D;&#x27;)[0]] &#x3D; event.urlAfterRedirects.slice(0, event.urlAfterRedirects.indexOf(&#x27;?q&#x3D;&#x27;));
+              route.split(&#x27;?q&#x3D;&#x27;)[1]?.split(&#x27;/&#x27;)[0] ? this.service.setSelectedUsername(route.split(&#x27;?q&#x3D;&#x27;)[1]?.split(&#x27;/&#x27;)[0]) : {};
             }
             else this.pathmap[route &#x3D;&#x3D; &#x27;&#x27; ? &#x27;search&#x27; : route] &#x3D; event.urlAfterRedirects.slice(0, event.urlAfterRedirects.indexOf(route) + route.length);
           })
@@ -940,7 +941,7 @@ a:hover {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div  class="card h-100">  <div    class="card-header p-1"    style="border-radius: 0px; border: none; background: var(--teal);"  ></div>  <img    src="../../assets/images/logo.png"    style="width: 200px; margin: 10px auto;"    alt=""  >  <div    class="card-body"    style="display: flex; flex-direction: column; justify-content: space-between;"  >    <div class="card card-nav text-center">      <div class="card-header">        <ul class="nav nav-tabs card-header-tabs">          <li            class="nav-item"            *ngFor="let item of this.filters"          >            <a              class="nav-link"              [routerLink]="item"              [routerLinkActive]="\'active\'"              (click)="this.onToggleShow(item)"            >{{item | titlecase}}</a>          </li>        </ul>      </div>      <form        class="form-body text-white"        [ngClass]="{\'hide\': !this.visible}"        style="padding: 15px;"      >        <div          class="form-search"          style="display: flex;"        >          <input            [(ngModel)]="this.textStr"            class="form-control"            id="search"            name="search"            placeholder="Search {{this.current | titlecase}}"            type="text"          >          <button            type="submit"            class="btn btn-info"            (click)="this.onSubmit()"          ><i class="fa fa-search"></i></button>        </div>      </form>      <nav class="breadcrumb mb-0">        <a          class="breadcrumb-item"          *ngFor="let item of this.getBreadcrumbs(); let index = index"          [routerLink]="[item.value]"        >          {{item.key | titlecase}}        </a>      </nav>    </div>    <div      class="overflow-auto"      style="flex: auto;"    >      <router-outlet></router-outlet>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'ActivityResultComponent', 'selector': 'app-activity-result'},{'name': 'ActivitySearchComponent', 'selector': 'app-activity-search'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodeResultComponent', 'selector': 'app-code-result'},{'name': 'CodeSearchComponent', 'selector': 'app-code-search'},{'name': 'CommitResultComponent', 'selector': 'app-commit-result'},{'name': 'CommitSearchComponent', 'selector': 'app-commit-search'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'IdentityComponent', 'selector': 'app-identity'},{'name': 'LabelSearchComponent', 'selector': 'app-label-search'},{'name': 'LanguageResultComponent', 'selector': 'app-language-result'},{'name': 'LanguageSearchComponent', 'selector': 'app-language-search'},{'name': 'PackageResultComponent', 'selector': 'app-package-result'},{'name': 'PackageSearchComponent', 'selector': 'app-package-search'},{'name': 'PatternResultComponent', 'selector': 'app-pattern-result'},{'name': 'PatternSearchComponent', 'selector': 'app-pattern-search'},{'name': 'RepoResultComponent', 'selector': 'app-repo-result'},{'name': 'RepoSearchComponent', 'selector': 'app-repo-search'},{'name': 'TopicResultComponent', 'selector': 'app-topic-result'},{'name': 'TopicSearchComponent', 'selector': 'app-topic-search'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'UserResultComponent', 'selector': 'app-user-result'},{'name': 'UserSearchComponent', 'selector': 'app-user-search'}];
+    var COMPONENTS = [{'name': 'ActivityResultComponent', 'selector': 'app-activity-result'},{'name': 'ActivitySearchComponent', 'selector': 'app-activity-search'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodeResultComponent', 'selector': 'app-code-result'},{'name': 'CodeSearchComponent', 'selector': 'app-code-search'},{'name': 'CommitResultComponent', 'selector': 'app-commit-result'},{'name': 'CommitsComponent', 'selector': 'app-commits'},{'name': 'CommitSearchComponent', 'selector': 'app-commit-search'},{'name': 'FrameworkComponent', 'selector': 'app-framework'},{'name': 'FrameworksComponent', 'selector': 'app-frameworks'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'IdentityComponent', 'selector': 'app-identity'},{'name': 'LabelSearchComponent', 'selector': 'app-label-search'},{'name': 'LanguageResultComponent', 'selector': 'app-language-result'},{'name': 'LanguagesComponent', 'selector': 'app-languages'},{'name': 'LanguageSearchComponent', 'selector': 'app-language-search'},{'name': 'LibrariesComponent', 'selector': 'app-libraries'},{'name': 'LibraryComponent', 'selector': 'app-library'},{'name': 'PackageResultComponent', 'selector': 'app-package-result'},{'name': 'PackageSearchComponent', 'selector': 'app-package-search'},{'name': 'PatternResultComponent', 'selector': 'app-pattern-result'},{'name': 'PatternSearchComponent', 'selector': 'app-pattern-search'},{'name': 'PlatformComponent', 'selector': 'app-platform'},{'name': 'PlatformsComponent', 'selector': 'app-platforms'},{'name': 'RepoResultComponent', 'selector': 'app-repo-result'},{'name': 'RepoSearchComponent', 'selector': 'app-repo-search'},{'name': 'TopicResultComponent', 'selector': 'app-topic-result'},{'name': 'TopicSearchComponent', 'selector': 'app-topic-search'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'UserResultComponent', 'selector': 'app-user-result'},{'name': 'UserSearchComponent', 'selector': 'app-user-search'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'GithubComponent'};
 </script>

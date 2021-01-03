@@ -81,7 +81,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/github/github.service.ts:53</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/github/github.service.ts:68</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -97,6 +97,7 @@ import { HttpClient    } from &#x27;@angular/common/http&#x27;
 import { Injectable    } from &#x27;@angular/core&#x27;
 import { Params        } from &#x27;@angular/router&#x27;
 import { SearchScopes  } from &#x27;@enums/github-scopes&#x27;
+import { UserProfile   } from &#x27;@github/user/user-profile&#x27;
 import   builder         from &#x27;@helpers/search-builder&#x27;
 import { SharedOptions } from &#x27;@helpers/shared-options&#x27;
 import { UserResult    } from &#x27;@models/user-result.dto&#x27;
@@ -105,12 +106,26 @@ import { UserSearch    } from &#x27;@models/user-search.dto&#x27;
 @Injectable()
 export class GithubService {
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
+  private _username: string;
   private _search: Dictionary &#x3D; {};
+  private _profile: UserProfile;
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
   constructor(private options: SharedOptions, private http: HttpClient) {
     this._search &#x3D; localStorage.getItem(&#x27;search&#x27;) ? JSON.parse(localStorage.getItem(&#x27;search&#x27;)) : {};
   }
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
+  public setSelectedUsername(login: string) {
+    this._username &#x3D; login;
+  }
+  public setSelectedProfile(profile: UserProfile) {
+    this._profile &#x3D; profile;
+  }
+  public getSelectedProfile() {
+    return this._profile;
+  }
+  public getSelectedUsername() {
+    return this._username;
+  }
   public async searchUsers(query: Params): Promise&lt;Observable&lt;UserResult[]&gt;&gt; {
     const response &#x3D; await this.http
       .get&lt;UserSearch&gt;(builder()[SearchScopes.Users], { params: query })

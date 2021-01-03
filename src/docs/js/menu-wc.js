@@ -166,7 +166,16 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="components/CommitResultComponent.html" data-type="entity-link">CommitResultComponent</a>
                             </li>
                             <li class="link">
+                                <a href="components/CommitsComponent.html" data-type="entity-link">CommitsComponent</a>
+                            </li>
+                            <li class="link">
                                 <a href="components/CommitSearchComponent.html" data-type="entity-link">CommitSearchComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/FrameworkComponent.html" data-type="entity-link">FrameworkComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/FrameworksComponent.html" data-type="entity-link">FrameworksComponent</a>
                             </li>
                             <li class="link">
                                 <a href="components/GithubComponent.html" data-type="entity-link">GithubComponent</a>
@@ -178,7 +187,16 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="components/LanguageResultComponent.html" data-type="entity-link">LanguageResultComponent</a>
                             </li>
                             <li class="link">
+                                <a href="components/LanguagesComponent.html" data-type="entity-link">LanguagesComponent</a>
+                            </li>
+                            <li class="link">
                                 <a href="components/LanguageSearchComponent.html" data-type="entity-link">LanguageSearchComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/LibrariesComponent.html" data-type="entity-link">LibrariesComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/LibraryComponent.html" data-type="entity-link">LibraryComponent</a>
                             </li>
                             <li class="link">
                                 <a href="components/PackageResultComponent.html" data-type="entity-link">PackageResultComponent</a>
@@ -191,6 +209,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="components/PatternSearchComponent.html" data-type="entity-link">PatternSearchComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/PlatformComponent.html" data-type="entity-link">PlatformComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/PlatformsComponent.html" data-type="entity-link">PlatformsComponent</a>
                             </li>
                             <li class="link">
                                 <a href="components/RepoResultComponent.html" data-type="entity-link">RepoResultComponent</a>

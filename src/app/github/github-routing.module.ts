@@ -3,11 +3,14 @@ import { RouterModule           , Routes } from '@angular/router'
 import { ActivitySearchComponent         } from '@github/activity/activity-search/activity-search.component'
 import { CodeSearchComponent             } from '@github/code/code-search/code-search.component'
 import { CommitSearchComponent           } from '@github/commit/commit-search/commit-search.component'
+import { FrameworksComponent             } from '@github/frameworks/frameworks.component'
 import { GithubComponent                 } from '@github/github.component'
 import { LabelSearchComponent            } from '@github/label-search/label-search.component'
-import { LanguageSearchComponent         } from '@github/language/language-search/language-search.component'
+import { LanguagesComponent              } from '@github/languages/languages.component'
+import { LibrariesComponent              } from '@github/libraries/libraries.component'
 import { PackageSearchComponent          } from '@github/package/package-search/package-search.component'
 import { PatternSearchComponent          } from '@github/pattern/pattern-search/pattern-search.component'
+import { PlatformsComponent              } from '@github/platforms/platforms.component'
 import { RepoResultComponent             } from '@github/repository/repo-result/repo-result.component'
 import { RepoSearchComponent             } from '@github/repository/repo-search/repo-search.component'
 import { TopicSearchComponent            } from '@github/topic/topic-search/topic-search.component'
@@ -29,13 +32,15 @@ const routes: Routes = [
       { path: 'users'       , component: UserSearchComponent    },
       {
         path: 'users/:login', component: UserResultComponent, children: [
-          { path: 'profile'   , component: UserProfileComponent    },
-          { path: 'packages'  , component: PackageSearchComponent  },
-          { path: 'projects'  , component: RepoSearchComponent     },
-          { path: 'languages' , component: LanguageSearchComponent },
-          { path: 'patterns'  , component: PatternSearchComponent  },
-          { path: 'activity'  , component: ActivitySearchComponent },
-          { path: '**', pathMatch: 'full', redirectTo: 'profile' }
+          { path: 'profile'   , component:         UserProfileComponent               },
+          { path: 'activity'  , component:         ActivitySearchComponent            },
+          { path: 'platforms' , component:         PlatformsComponent                 },
+          { path: 'libraries' , component:         LibrariesComponent                 },
+          { path: 'frameworks', component:         FrameworksComponent                },
+          { path: 'languages' , component:         LanguagesComponent                 },
+          { path: 'projects'  , component:         RepoSearchComponent                },
+          { path: 'patterns'  , component:         PatternSearchComponent             },
+          { path: '**'        , pathMatch: 'full', redirectTo             : 'profile' }
         ]
       },
       { path: '**', pathMatch: 'full', redirectTo: 'users' },
