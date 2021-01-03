@@ -774,7 +774,6 @@ export class KeyValue&lt;T_Key, T_Value&gt; {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div
   class&#x3D;&quot;card h-100&quot;
-  style&#x3D;&quot;border: none;&quot;
 &gt;
   &lt;div
     class&#x3D;&quot;card-header p-1&quot;
@@ -786,7 +785,7 @@ export class KeyValue&lt;T_Key, T_Value&gt; {
     alt&#x3D;&quot;&quot;
   &gt;
   &lt;div
-    class&#x3D;&quot;card-body h-100&quot;
+    class&#x3D;&quot;card-body&quot;
     style&#x3D;&quot;display: flex; flex-direction: column; justify-content: space-between;&quot;
   &gt;
     &lt;div class&#x3D;&quot;card card-nav text-center&quot;&gt;
@@ -905,10 +904,10 @@ a:hover {
 }
 .card-nav {
   .card-header {
-    @media screen and (min-width: 450px) {
+    @media screen and (min-width: 585px) {
       display: block;
     }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 585px) {
       display: none;
     }
   }
@@ -940,7 +939,7 @@ a:hover {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div  class="card h-100"  style="border: none;">  <div    class="card-header p-1"    style="border-radius: 0px; border: none; background: var(--teal);"  ></div>  <img    src="../../assets/images/logo.png"    style="width: 200px; margin: 10px auto;"    alt=""  >  <div    class="card-body h-100"    style="display: flex; flex-direction: column; justify-content: space-between;"  >    <div class="card card-nav text-center">      <div class="card-header">        <ul class="nav nav-tabs card-header-tabs">          <li            class="nav-item"            *ngFor="let item of this.filters"          >            <a              class="nav-link"              [routerLink]="item"              [routerLinkActive]="\'active\'"              (click)="this.onToggleShow(item)"            >{{item | titlecase}}</a>          </li>        </ul>      </div>      <form        class="form-body text-white"        [ngClass]="{\'hide\': !this.visible}"        style="padding: 15px;"      >        <div          class="form-search"          style="display: flex;"        >          <input            [(ngModel)]="this.textStr"            class="form-control"            id="search"            name="search"            placeholder="Search {{this.current | titlecase}}"            type="text"          >          <button            type="submit"            class="btn btn-info"            (click)="this.onSubmit()"          ><i class="fa fa-search"></i></button>        </div>      </form>      <nav class="breadcrumb mb-0">        <a          class="breadcrumb-item"          *ngFor="let item of this.getBreadcrumbs(); let index = index"          [routerLink]="[item.value]"        >          {{item.key | titlecase}}        </a>      </nav>    </div>    <div      class="overflow-auto"      style="flex: auto;"    >      <router-outlet></router-outlet>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div  class="card h-100">  <div    class="card-header p-1"    style="border-radius: 0px; border: none; background: var(--teal);"  ></div>  <img    src="../../assets/images/logo.png"    style="width: 200px; margin: 10px auto;"    alt=""  >  <div    class="card-body"    style="display: flex; flex-direction: column; justify-content: space-between;"  >    <div class="card card-nav text-center">      <div class="card-header">        <ul class="nav nav-tabs card-header-tabs">          <li            class="nav-item"            *ngFor="let item of this.filters"          >            <a              class="nav-link"              [routerLink]="item"              [routerLinkActive]="\'active\'"              (click)="this.onToggleShow(item)"            >{{item | titlecase}}</a>          </li>        </ul>      </div>      <form        class="form-body text-white"        [ngClass]="{\'hide\': !this.visible}"        style="padding: 15px;"      >        <div          class="form-search"          style="display: flex;"        >          <input            [(ngModel)]="this.textStr"            class="form-control"            id="search"            name="search"            placeholder="Search {{this.current | titlecase}}"            type="text"          >          <button            type="submit"            class="btn btn-info"            (click)="this.onSubmit()"          ><i class="fa fa-search"></i></button>        </div>      </form>      <nav class="breadcrumb mb-0">        <a          class="breadcrumb-item"          *ngFor="let item of this.getBreadcrumbs(); let index = index"          [routerLink]="[item.value]"        >          {{item.key | titlecase}}        </a>      </nav>    </div>    <div      class="overflow-auto"      style="flex: auto;"    >      <router-outlet></router-outlet>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'ActivityResultComponent', 'selector': 'app-activity-result'},{'name': 'ActivitySearchComponent', 'selector': 'app-activity-search'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodeResultComponent', 'selector': 'app-code-result'},{'name': 'CodeSearchComponent', 'selector': 'app-code-search'},{'name': 'CommitResultComponent', 'selector': 'app-commit-result'},{'name': 'CommitSearchComponent', 'selector': 'app-commit-search'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'IdentityComponent', 'selector': 'app-identity'},{'name': 'LabelSearchComponent', 'selector': 'app-label-search'},{'name': 'LanguageResultComponent', 'selector': 'app-language-result'},{'name': 'LanguageSearchComponent', 'selector': 'app-language-search'},{'name': 'PackageResultComponent', 'selector': 'app-package-result'},{'name': 'PackageSearchComponent', 'selector': 'app-package-search'},{'name': 'PatternResultComponent', 'selector': 'app-pattern-result'},{'name': 'PatternSearchComponent', 'selector': 'app-pattern-search'},{'name': 'RepoResultComponent', 'selector': 'app-repo-result'},{'name': 'RepoSearchComponent', 'selector': 'app-repo-search'},{'name': 'TopicResultComponent', 'selector': 'app-topic-result'},{'name': 'TopicSearchComponent', 'selector': 'app-topic-search'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'UserResultComponent', 'selector': 'app-user-result'},{'name': 'UserSearchComponent', 'selector': 'app-user-search'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'GithubComponent'};

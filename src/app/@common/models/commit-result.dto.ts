@@ -1,13 +1,24 @@
-import { VerificationModel } from '@models/verification.model'    ;
-import { UserResult        } from '@models/user-result.dto';
-import { GitResult        } from '@models/git.result.dto';
+import { GitTree           } from '@models/git.tree.dto'
+import { Languages         } from '@models/languages.model.dto'
+import { VerificationModel } from '@models/verification.model'
 
 export interface CommitResult {
-  author        : UserResult       ;
-  committer     : UserResult       ;
-  message       : string           ;
-  tree          : GitResult        ;
-  url           : string           ;
-  comment_count : number           ;
-  verification  : VerificationModel;
+  author       : Author           ;
+  committer    : Committer        ;
+  message      : string           ;
+  languages    : Languages        ;
+  tree         : GitTree          ;
+  url          : string           ;
+  comment_count: number           ;
+  verification : VerificationModel;
+}
+export interface Author {
+  name : string;
+  date : Date  ;
+  email: string;
+}
+export interface Committer {
+  name : string;
+  date : Date  ;
+  email: string;
 }

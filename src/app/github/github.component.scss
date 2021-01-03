@@ -49,10 +49,10 @@ a:hover {
 }
 .card-nav {
   .card-header {
-    @media screen and (min-width: 450px) {
+    @media screen and (min-width: 585px) {
       display: block;
     }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 585px) {
       display: none;
     }
   }

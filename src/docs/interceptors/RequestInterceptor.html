@@ -233,10 +233,10 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable                                               } from &#x27;rxjs&#x27;
-import { HttpEvent    , HttpHandler, HttpInterceptor, HttpRequest } from &#x27;@angular/common/http&#x27;
-import { Injectable                                               } from &#x27;@angular/core&#x27;
-import { SharedOptions                                            } from &#x27;@helpers/shared-options&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable } from &#x27;rxjs&#x27;
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from &#x27;@angular/common/http&#x27;
+import { Injectable } from &#x27;@angular/core&#x27;
+import { SharedOptions } from &#x27;@helpers/shared-options&#x27;
 
 @Injectable()
 export class RequestInterceptor implements HttpInterceptor {
@@ -246,10 +246,11 @@ export class RequestInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest&lt;any&gt;, next: HttpHandler): Observable&lt;HttpEvent&lt;any&gt;&gt; {
     const headers &#x3D; {
       &#x27;Accept&#x27;: &#x27;application/vnd.github.v3+json&#x27;,
-      &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
+      &#x27;Content-Type&#x27;: &#x27;application/svg&#x27;
     }
-    const authReq &#x3D; req.clone({ setHeaders: headers });
-    return next.handle(authReq);
+
+    const request &#x3D; req.clone({ setHeaders: headers });
+    return next.handle(request);
   }
 }</code></pre>
     </div>

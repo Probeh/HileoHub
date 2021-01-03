@@ -1,3 +1,5 @@
+import { GitTree } from '@models/git.tree.dto';
+
 export interface GitResult {
   path : string                  ;
   mode : number                  ;
@@ -5,4 +7,5 @@ export interface GitResult {
   sha  : string                  ;
   size?: number                  ;
   url  : string                  ;
+  tree : GitTree[]             ;
 }

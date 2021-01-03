@@ -232,6 +232,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <li class="link">
                                 <a href="classes/SharedOptions.html" data-type="entity-link">SharedOptions</a>
                             </li>
+                            <li class="link">
+                                <a href="classes/UserProfile.html" data-type="entity-link">UserProfile</a>
+                            </li>
                         </ul>
                     </li>
                         <li class="chapter">
@@ -288,16 +291,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
+                                <a href="interfaces/Author.html" data-type="entity-link">Author</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/CodeSearch.html" data-type="entity-link">CodeSearch</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/CommitResult.html" data-type="entity-link">CommitResult</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/CommitResult-1.html" data-type="entity-link">CommitResult</a>
+                                <a href="interfaces/CommitSearch.html" data-type="entity-link">CommitSearch</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/CommitSearch.html" data-type="entity-link">CommitSearch</a>
+                                <a href="interfaces/Committer.html" data-type="entity-link">Committer</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/CompanyResult.html" data-type="entity-link">CompanyResult</a>
@@ -312,6 +318,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/Credentials.html" data-type="entity-link">Credentials</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/Devicon.html" data-type="entity-link">Devicon</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/Dictionary.html" data-type="entity-link">Dictionary</a>
                             </li>
                             <li class="link">
@@ -322,6 +331,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/ICollection.html" data-type="entity-link">ICollection</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/IconResult.html" data-type="entity-link">IconResult</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/Languages.html" data-type="entity-link">Languages</a>
