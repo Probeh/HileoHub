@@ -85,14 +85,14 @@ export class UserProfileComponent implements OnInit {
               repository.commits = commits;
             }
           })
-          .then(() => localStorage.setItem(this._login, JSON.stringify(this.profile)))
           .then(() => isComplete(repository) ? resolve(null) : {})
           .catch((error) => isComplete(repository) ? resolve(null) : {});
       })
     });
   }
   private getUserLanguages() {
-    // ======================================= //
+    return new Promise((resolve,reject) => {
+      // ======================================= //
     this.profile.languages = {};
     this.profile.user.languages = {};
     // ======================================= //
@@ -112,6 +112,7 @@ export class UserProfileComponent implements OnInit {
         .then(() => localStorage.setItem(this._login, JSON.stringify(this.profile)))
         .catch((error) => { })
     });
+    })
   }
   private claimsOwnership(commits: CommitSearch[]) {
     /*

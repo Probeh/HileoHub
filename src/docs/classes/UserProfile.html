@@ -111,7 +111,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(user: <a href="../interfaces/UserResult.html">UserResult</a>, repos?: <a href="../interfaces/RepoSearch.html">RepoSearch[]</a>, languages?: <a href="../interfaces/Languages.html">Languages</a>)</code>
+<code>constructor(user?: <a href="../interfaces/UserResult.html">UserResult</a>, repos?: <a href="../interfaces/RepoSearch.html">RepoSearch[]</a>, languages?: <a href="../interfaces/Languages.html">Languages</a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -141,7 +141,7 @@
                                                         </td>
                                                   
                                                     <td>
-                                                            No
+                                                            Yes
                                                     </td>
                                                     
                                                 </tr>
@@ -289,7 +289,7 @@ export class UserProfile {
   public repos    : RepoSearch[];
   public languages: Languages   ;
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  constructor(user: UserResult, repos?: RepoSearch[], languages?: Languages) {
+  constructor(user?: UserResult, repos?: RepoSearch[], languages?: Languages) {
     this.user      &#x3D; user     ;
     this.repos     &#x3D; repos    ;
     this.languages &#x3D; languages;

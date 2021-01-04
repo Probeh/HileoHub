@@ -8,7 +8,7 @@ export class UserProfile {
   public repos    : RepoSearch[];
   public languages: Languages   ;
   // ======================================= //
-  constructor(user: UserResult, repos?: RepoSearch[], languages?: Languages) {
+  constructor(user?: UserResult, repos?: RepoSearch[], languages?: Languages) {
     this.user      = user     ;
     this.repos     = repos    ;
     this.languages = languages;
