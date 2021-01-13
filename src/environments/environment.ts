@@ -3,14 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: כשךדק,
+  production: false,
   firebase: {
-    apiKey: "AIzaSyBpdNViHcAz3kVjWBhJ58a5N2RzTSGtwX0",
-    appId: "1:644607673263:web:b4a55c1daa666a4970655a",
+    apiKey: "AIzaSyAApHNCXjkMXuPC7cNowAMDJnkbLDeN7Hw",
     authDomain: "hileo-hub.firebaseapp.com",
-    messagingSenderId: "644607673263",
     projectId: "hileo-hub",
     storageBucket: "hileo-hub.appspot.com",
+    messagingSenderId: "733173237922",
+    appId: "1:733173237922:web:4992777c654c49f58f2ffb"
   }
 };
 
