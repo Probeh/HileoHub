@@ -13,10 +13,10 @@ export class ProfileService {
   private _cached_items: IUserProfile[];
   // ======================================= //
   constructor(private auth: AuthService, private github: GithubService) {
-    this._cached_items = JSON.parse(localStorage.getItem('profiles')) as IUserProfile[];
-    this._user_account = JSON.parse(localStorage.getItem('account')) as IUserAccount;
     this.auth.authChanged
       .subscribe((result: IKeyValue<boolean, IUserProfile>) => this._user_profile = result.val);
+    this._cached_items = JSON.parse(localStorage.getItem('profiles')) as IUserProfile[];
+    this._user_account = JSON.parse(localStorage.getItem('account')) as IUserAccount;
   }
   // ======================================= //
   public getCurrentProfile() {

@@ -16,9 +16,9 @@ export class OverviewComponent implements OnInit {
   public pie_values: any;
   // ======================================= //
   constructor(private auth: AuthService, private profile: ProfileService) {
-    this.user_profile = this.profile.getCurrentProfile();
     this.auth.authChanged
       .subscribe((result: IKeyValue<boolean, IUserProfile>) => this.user_profile = result.val);
+    this.user_profile = this.profile.getCurrentProfile();
     this.initializeKnobs();
     this.setPieChart()
   }

@@ -1,3 +1,4 @@
+import { AuthService } from '@account/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { IUserProfile } from '@profile/models/profile';
 import { ProfileService } from '@profile/services/profile.service';
@@ -10,8 +11,12 @@ import { ProfileService } from '@profile/services/profile.service';
 export class ProfileComponent implements OnInit {
   public user_profile: IUserProfile;
   // ======================================= //
-  constructor(private profile: ProfileService) { }
-  ngOnInit() { this.user_profile = this.profile.getCurrentProfile(); }
+  constructor(private auth: AuthService, private profile: ProfileService) {
+    this.auth.authChanged
+      .subscribe(result => this.user_profile = result.val);
+    this.user_profile = this.profile.getCurrentProfile();
+  }
+  ngOnInit() { }
   // ======================================= //
   public getUserRepos() {
     return this.user_profile?.knowledge?.repositories?.slice();
