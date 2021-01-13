@@ -1,0 +1,32 @@
+<div class="row h-100">
+  <div class="col-xl-2 col-md-3 col-sm-12 p-0">
+    <div class="card profile-card">
+      <img
+        [src]="this.user_profile.avatar_url"
+        class="avatar"
+        alt=""
+      >
+      <div class="card-body">
+        <h5 class="card-title m-0">{{this.user_profile?.name | titlecase}}</h5>
+        <p class="text-muted m-0">{{this.user_profile?.email}}</p>
+      </div>
+      <div
+        class="card-footer"
+        *ngIf="this.user_profile?.description"
+      >
+        <p class="text-muted m-0">{{this.user_profile?.description}}</p>
+      </div>
+    </div>
+    <div class="list-group list-group-flush">
+      <a routerLink="overview" routerLinkActive="active" class="list-group-item list-group-item-action"><i class="fa fa-id-card mr-1"></i> Overview</a>
+      <a routerLink="languages" routerLinkActive="active" class="list-group-item list-group-item-action"><i class="fa fa-file-code-o mr-1"></i> Languages</a>
+      <a routerLink="repositories" routerLinkActive="active" class="list-group-item list-group-item-action"><i class="fa fa-suitcase mr-1"></i> Projects</a>
+      <a routerLink="libraries" routerLinkActive="active" class="list-group-item list-group-item-action"><i class="fa fa-book mr-1"></i> Libraries</a>
+      <a routerLink="frameworks" routerLinkActive="active" class="list-group-item list-group-item-action"><i class="fa fa-industry mr-1"></i> Frameworks</a>
+      <a routerLink="platforms" routerLinkActive="active" class="list-group-item list-group-item-action"><i class="fa fa-desktop mr-1"></i> Platforms</a>
+    </div>
+  </div>
+  <div class="col-xl-10 col-md-9 col-sm-12 overflow-auto p-0 h-100">
+    <router-outlet></router-outlet>
+  </div>
+</div>

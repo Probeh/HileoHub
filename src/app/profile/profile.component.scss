@@ -1,0 +1,53 @@
+@import "styles.scss";
+
+.profile-card {
+  .card-header {
+    background: $primary;
+    padding: 2px;
+  }
+  .card-body {
+    text-align: center;
+    .card-title {
+      color: $secondary;
+    }
+  }
+}
+.menu-card {
+  .card-header {
+    background: $primary;
+    padding: 2px;
+  }
+  .card-body {
+    padding: 0px;
+    margin: 0px;
+  }
+}
+.avatar {
+  border-radius: 50%;
+  max-width: 100px;
+  margin: 10px auto;
+  @extend .shadow;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: $secondary;
+}
+.list-group-item-action {
+  background: inherit;
+  color: $secondary;
+}
+.list-group-item-action:hover {
+  border-color: $teal;
+  background: $teal;
+  color: white;
+}
+.list-group-item-action.active {
+  border-color: $teal;
+  background: $teal;
+  color: white;
+}
+.list-group-item:active {
+  border-color: $teal;
+  background: lighten($color: $teal, $amount: 10%);
+}

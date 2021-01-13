@@ -1,38 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 @import "themes.scss";
-
+@import "global.scss";
+// ======================================= //
 html,
 body {
-  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  // ======================================= //
+  overflow-y: hidden;
+  overflow-x: hidden;
+  // ======================================= //
+  font-size: 14px;
+  font-family: $poppins;
 }
-a {
-  cursor: pointer;
-  text-decoration: none;
-  color: $secondary;
-}
-.list-group-item-action {
-  font-weight: bold;
-  background: inherit;
-  color: $secondary;
-}
-.list-group-item-action:hover {
-  border-color: $teal;
+.bg-teal {
   background: $teal;
   color: white;
 }
-.list-group-item-action.active {
-  border-color: $teal;
-  background: $teal;
-  color: white;
+.text-teal {
+  color: $teal;
 }
-.list-group-item:active {
-  border-color: $teal;
-  background: lighten($color: $teal, $amount: 10%);
+.text-title {
+  font-family: "Pacifico", cursive;
+  font-size: 24px;
+}
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.row {
+  margin: 0px;
 }
 .card {
-  border-radius: 0px;
-
+  border-color: transparent;
   .card-header {
-    border-radius: 0px;
+    border-color: transparent;
   }
 }

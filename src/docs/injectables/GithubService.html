@@ -57,7 +57,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/github/github.service.ts</code>
+            <code>src/app/github/services/github.service.ts</code>
         </p>
 
 
@@ -77,15 +77,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_profile">_profile</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#_search">_search</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#_username">_username</a>
+                                <a href="#_baseUrl">_baseUrl</a>
                             </li>
                         </ul>
                     </td>
@@ -101,36 +93,27 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getSelectedProfile">getSelectedProfile</a>
+                                <a href="#getRepoCommits">getRepoCommits</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getSelectedUsername">getSelectedUsername</a>
+                                <a href="#getRepoLanguages">getRepoLanguages</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getUserByLogin">getUserByLogin</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#processUsers">processUsers</a>
+                                <a href="#getUser">getUser</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                    <span class="modifier">Async</span>
-                                <a href="#searchUsers">searchUsers</a>
+                                <a href="#getUserRepos">getUserRepos</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#setSelectedProfile">setSelectedProfile</a>
+                                <a href="#initializeUser">initializeUser</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#setSelectedUsername">setSelectedUsername</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#updateStorage">updateStorage</a>
+                                <a href="#setUserLanguages">setUserLanguages</a>
                             </li>
                         </ul>
                     </td>
@@ -150,12 +133,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(options: <a href="../classes/SharedOptions.html">SharedOptions</a>, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+<code>constructor(storage: <a href="../injectables/StorageService.html">StorageService</a>, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/github/github.service.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/github/services/github.service.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -173,10 +156,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>options</td>
+                                                        <td>storage</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../classes/SharedOptions.html" target="_self" >SharedOptions</a></code>
+                                                                        <code><a href="../injectables/StorageService.html" target="_self" >StorageService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -214,61 +197,20 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getSelectedProfile"></a>
+                    <a name="getRepoCommits"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Public</span>
-                            getSelectedProfile
+                            getRepoCommits
                         </b>
-                        <a href="#getSelectedProfile"><span class="icon ion-ios-link"></span></a>
+                        <a href="#getRepoCommits"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getSelectedProfile()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/app/github/github.service.ts:29</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getSelectedUsername"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getSelectedUsername
-                        </b>
-                        <a href="#getSelectedUsername"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getSelectedUsername()</code>
+                    <code>getRepoCommits(repo: <a href="../interfaces/IRepository.html">IRepository</a>)</code>
                 </td>
             </tr>
 
@@ -276,48 +218,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/app/github/github.service.ts:32</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getUserByLogin"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getUserByLogin
-                        </b>
-                        <a href="#getUserByLogin"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getUserByLogin(login?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/app/github/github.service.ts:44</a></div>
+                            class="link-to-prism">src/app/github/services/github.service.ts:32</a></div>
                 </td>
             </tr>
 
@@ -337,7 +238,319 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>login</td>
+                                    <td>repo</td>
+                                    <td>
+                                                <code><a href="../interfaces/IRepository.html" target="_self" >IRepository</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/IGitCommit.html" target="_self" >Promise&lt;IGitCommit[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRepoLanguages"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getRepoLanguages
+                        </b>
+                        <a href="#getRepoLanguages"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRepoLanguages(repo: <a href="../interfaces/IRepository.html">IRepository</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/github/services/github.service.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>repo</td>
+                                    <td>
+                                                <code><a href="../interfaces/IRepository.html" target="_self" >IRepository</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Languages.html" target="_self" >Promise&lt;Languages&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUser"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getUser
+                        </b>
+                        <a href="#getUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getUser(query: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/app/github/services/github.service.ts:19</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>query</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUserRepos"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getUserRepos
+                        </b>
+                        <a href="#getUserRepos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getUserRepos(repos_url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/github/services/github.service.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>repos_url</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/IRepository.html" target="_self" >Promise&lt;IRepository[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializeUser"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            initializeUser
+                        </b>
+                        <a href="#initializeUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initializeUser(displayName?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, email?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, photo?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/github/services/github.service.ts:40</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>displayName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>email</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>photo</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -368,28 +581,28 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="processUsers"></a>
+                    <a name="setUserLanguages"></a>
                     <span class="name">
                         <b>
-                            <span class="modifier">Private</span>
-                            processUsers
+                            <span class="modifier">Public</span>
+                            setUserLanguages
                         </b>
-                        <a href="#processUsers"><span class="icon ion-ios-link"></span></a>
+                        <a href="#setUserLanguages"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>processUsers(users: <a href="../interfaces/UserResult.html">UserResult[]</a>)</code>
+                    <code>setUserLanguages(languages: <a href="../interfaces/Languages.html">Languages</a>, profile: <a href="../interfaces/IUserProfile.html">IUserProfile</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="47"
-                            class="link-to-prism">src/app/github/github.service.ts:47</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/github/services/github.service.ts:77</a></div>
                 </td>
             </tr>
 
@@ -409,9 +622,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>users</td>
+                                    <td>languages</td>
                                     <td>
-                                                <code><a href="../interfaces/UserResult.html" target="_self" >UserResult[]</a></code>
+                                                <code><a href="../interfaces/Languages.html" target="_self" >Languages</a></code>
                                     </td>
 
                                     <td>
@@ -420,143 +633,10 @@
 
 
                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/UserResult.html" target="_self" >Observable&lt;UserResult[]&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="searchUsers"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            <span class="modifier">Async</span>
-                            searchUsers
-                        </b>
-                        <a href="#searchUsers"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>searchUsers(query: <a href="https://angular.io/api/router/Params" target="_blank">Params</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/app/github/github.service.ts:35</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>query</td>
-                                    <td>
-                                                <code><a href="https://angular.io/api/router/Params" target="_blank" >Params</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/UserResult.html" target="_self" >Promise&lt;Observable&lt;UserResult[]&gt;&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="setSelectedProfile"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            setSelectedProfile
-                        </b>
-                        <a href="#setSelectedProfile"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>setSelectedProfile(profile: <a href="../classes/UserProfile.html">UserProfile</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/app/github/github.service.ts:26</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
                                 <tr>
                                     <td>profile</td>
                                     <td>
-                                                <code><a href="../classes/UserProfile.html" target="_self" >UserProfile</a></code>
+                                                <code><a href="../interfaces/IUserProfile.html" target="_self" >IUserProfile</a></code>
                                     </td>
 
                                     <td>
@@ -571,163 +651,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="setSelectedUsername"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            setSelectedUsername
-                        </b>
-                        <a href="#setSelectedUsername"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>setSelectedUsername(login: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/app/github/github.service.ts:23</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>login</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="updateStorage"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            updateStorage
-                        </b>
-                        <a href="#updateStorage"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>updateStorage(scope: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">src/app/github/github.service.ts:64</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>scope</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>value</td>
-                                    <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/IUserProfile.html" target="_self" >Promise&lt;IUserProfile&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -747,73 +671,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="_profile"></a>
+                        <a name="_baseUrl"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Private</span>
-                            _profile</b>
-                            <a href="#_profile"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../classes/UserProfile.html" target="_self" >UserProfile</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/github/github.service.ts:17</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="_search"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            _search</b>
-                            <a href="#_search"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../interfaces/Dictionary.html" target="_self" >Dictionary</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>{}</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/github/github.service.ts:16</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="_username"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            _username</b>
-                            <a href="#_username"><span class="icon ion-ios-link"></span></a>
+                            _baseUrl</b>
+                            <a href="#_baseUrl"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -823,9 +686,14 @@
 
                         </td>
                     </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;https://api.github.com/search&#x27;</code>
+                        </td>
+                    </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/github/github.service.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/github/services/github.service.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -838,79 +706,116 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable    } from &#x27;rxjs&#x27;
-import { HttpClient    } from &#x27;@angular/common/http&#x27;
-import { Injectable    } from &#x27;@angular/core&#x27;
-import { Params        } from &#x27;@angular/router&#x27;
-import { SearchScopes  } from &#x27;@enums/github-scopes&#x27;
-import { UserProfile   } from &#x27;@github/user/user-profile&#x27;
-import   builder         from &#x27;@helpers/search-builder&#x27;
-import { SharedOptions } from &#x27;@helpers/shared-options&#x27;
-import { UserResult    } from &#x27;@models/user-result.dto&#x27;
-import { UserSearch    } from &#x27;@models/user-search.dto&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { GithubProfile, IGithubProfile } from &#x27;@account/models/github&#x27;
+import { HttpClient } from &#x27;@angular/common/http&#x27;
+import { Injectable } from &#x27;@angular/core&#x27;
+import { CommitSearch } from &#x27;@github/models/commit-search.dto&#x27;
+import { Languages } from &#x27;@github/models/languages.model.dto&#x27;
+import { RepoSearch } from &#x27;@github/models/repo-search.dto&#x27;
+import { GithubResult } from &#x27;@github/models/user-result.dto&#x27;
+import { ICodeLanguage } from &#x27;@models/language&#x27;
+import { GitCommit, IGitCommit, IRepository, Repository } from &#x27;@models/repository&#x27;
+import { IUserProfile } from &#x27;@profile/models/profile&#x27;
+import { StorageService } from &#x27;@services/storage.service&#x27;
 
-@Injectable()
+@Injectable({ providedIn: &#x27;root&#x27; })
 export class GithubService {
+  private _baseUrl: string &#x3D; &#x27;https://api.github.com/search&#x27;;
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  private _username: string;
-  private _search: Dictionary &#x3D; {};
-  private _profile: UserProfile;
+  constructor(private storage: StorageService, private http: HttpClient) { }
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  constructor(private options: SharedOptions, private http: HttpClient) {
-    this._search &#x3D; localStorage.getItem(&#x27;search&#x27;) ? JSON.parse(localStorage.getItem(&#x27;search&#x27;)) : {};
+  public getUser(query: string) {
+    return this.http.get&lt;GithubProfile&gt;(&#x60;${this._baseUrl}/users&#x60;, { params: { q: query } })
+      .toPromise()
+      .then(async (result) &#x3D;&gt; this.http.get&lt;GithubResult&gt;(result[&#x27;items&#x27;][0][&#x27;url&#x27;]).toPromise());
+  }
+  public getUserRepos(repos_url: string): Promise&lt;IRepository[]&gt; {
+    return this.http.get&lt;RepoSearch[]&gt;(repos_url)
+      .toPromise()
+      .then((result: RepoSearch[]) &#x3D;&gt; { return result.map(repo &#x3D;&gt; Repository.create(repo)) });
+  }
+  public getRepoLanguages(repo: IRepository): Promise&lt;Languages&gt; {
+    return this.http.get&lt;Languages&gt;(repo.languages_url).toPromise();
+  }
+  public getRepoCommits(repo: IRepository): Promise&lt;IGitCommit[]&gt; {
+    return this.http.get&lt;CommitSearch[]&gt;(&#x60;${repo.repo_api}/commits&#x60;)
+      .toPromise()
+      .then((result: CommitSearch[]) &#x3D;&gt; result.map(x &#x3D;&gt; GitCommit.create(x, repo.repo_uid)));
   }
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  public setSelectedUsername(login: string) {
-    this._username &#x3D; login;
-  }
-  public setSelectedProfile(profile: UserProfile) {
-    this._profile &#x3D; profile;
-  }
-  public getSelectedProfile() {
-    return this._profile;
-  }
-  public getSelectedUsername() {
-    return this._username;
-  }
-  public async searchUsers(query: Params): Promise&lt;Observable&lt;UserResult[]&gt;&gt; {
-    const response &#x3D; await this.http
-      .get&lt;UserSearch&gt;(builder()[SearchScopes.Users], { params: query })
-      .toPromise();
-    this._search[SearchScopes.Users] &#x3D; !this._search[SearchScopes.Users]
-      ? new Array&lt;UserResult&gt;()
-      : this._search[SearchScopes.Users];
-    return this.processUsers(response.items);
-  }
-  public getUserByLogin(login?: string) {
-    return login !&#x3D; undefined ? this._search[SearchScopes.Users]?.find((user: UserResult) &#x3D;&gt; user.login &#x3D;&#x3D; login) : null;
-  }
-  private processUsers(users: UserResult[]): Observable&lt;UserResult[]&gt; {
-    return new Observable&lt;UserResult[]&gt;((emitter) &#x3D;&gt; {
-      users.forEach((user: UserResult) &#x3D;&gt; {
-        if (!this._search[SearchScopes.Users].some((item: UserResult) &#x3D;&gt; item.id &#x3D;&#x3D; user.id)) {
-          this.http.get&lt;UserResult&gt;(user.url).toPromise().then((result) &#x3D;&gt; {
-            this._search[SearchScopes.Users].push(result);
-            this.updateStorage(&#x27;search&#x27;, this._search);
-            emitter.next(this._search[SearchScopes.Users].slice().filter((user: UserResult) &#x3D;&gt; users.some(x &#x3D;&gt; x.id &#x3D;&#x3D; user.id)));
-          });
+  // Overall Data Initialization
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
+  public initializeUser(displayName?: string, email?: string, photo?: string) {
+    return new Promise&lt;IUserProfile&gt;(async (resolve, reject) &#x3D;&gt; {
+      let storage: IUserProfile[] &#x3D; JSON.parse(localStorage.getItem(&#x27;profiles&#x27;));
+      if (storage !&#x3D; null &amp;&amp; storage.length &gt; 0 &amp;&amp; storage?.some((profile: IUserProfile) &#x3D;&gt; profile?.email &#x3D;&#x3D; email)) {
+        const current: IUserProfile &#x3D; storage[&#x27;profiles&#x27;]?.find((profile: IUserProfile) &#x3D;&gt; profile?.email &#x3D;&#x3D; email);
+        resolve(current);
+      }
+      else {
+        storage &#x3D; storage?.length &gt; 0 ? storage :new Array&lt;IUserProfile&gt;();
+        const user_github: IGithubProfile &#x3D; GithubProfile.create(await this.getUser(email));
+        const repos: IRepository[] &#x3D; (await this.getUserRepos(user_github.repos_url)).filter(x &#x3D;&gt; !x.fork);
+        const user_profile: IUserProfile &#x3D; {
+          email: email,
+          name: displayName,
+          avatar_url: photo,
+          knowledge: { repositories: repos },
+          references: { github: user_github }
         }
-        else {
-          emitter.next(this._search[SearchScopes.Users].slice().filter((user: UserResult) &#x3D;&gt; users.some(x &#x3D;&gt; x.id &#x3D;&#x3D; user.id)));
-        }
-      });
+        storage.push(user_profile);
+
+        user_profile.knowledge &#x3D; { repositories: repos };
+        user_profile.knowledge.repositories.forEach(async (repo) &#x3D;&gt; {
+          try {
+            repo.languages &#x3D; await this.getRepoLanguages(repo);
+            repo.commits &#x3D; await this.getRepoCommits(repo);
+            await this.setUserLanguages(repo.languages, user_profile);
+            localStorage.setItem(&#x27;profiles&#x27;, JSON.stringify(storage));
+          }
+          catch (error) { }
+        });
+        resolve(user_profile);
+      }
     });
   }
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
+  // Overall Data Initialization
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
+  public setUserLanguages(languages: Languages, profile: IUserProfile): Promise&lt;IUserProfile&gt; {
+    return new Promise((resolve, reject) &#x3D;&gt; {
+      profile.knowledge.languages &#x3D; !profile.knowledge.languages
+        ? new Array&lt;ICodeLanguage&gt;()
+        : profile.knowledge.languages;
 
-  private updateStorage(scope: string, value: any) {
-    localStorage.setItem(scope, JSON.stringify(value));
+      Object.keys(languages).forEach(language &#x3D;&gt; {
+        const current: (value: string) &#x3D;&gt; ICodeLanguage &#x3D; (value: string) &#x3D;&gt; profile.knowledge.languages.find(x &#x3D;&gt; x.alias &#x3D;&#x3D; value);
+
+        if (!profile.knowledge.languages.includes(current(language))) {
+          profile.knowledge.languages.push({ alias: language, terms: [language] })
+        }
+
+        const instances &#x3D; profile?.knowledge?.repositories?.slice()?.filter(x &#x3D;&gt; Object.keys(x.languages)?.includes(language));
+
+        current(language).value &#x3D; current(language).value &gt; 0
+          ? current(language).value + languages[language]
+          : languages[language];
+        current(language).since &#x3D; instances
+          .slice()
+          .sort((a, b) &#x3D;&gt; new Date(a.created).valueOf() - new Date(b.created).valueOf())[0].created;
+        current(language).prior &#x3D; instances
+          .slice()
+          .sort((a, b) &#x3D;&gt; new Date(b.updated).valueOf() - new Date(a.updated).valueOf())[0].updated;
+        current(language).repos &#x3D; instances.slice().map(x &#x3D;&gt; x.repo_uid);
+        current(language).total &#x3D; new Date().valueOf() - new Date(current(language).since).valueOf();
+        current(language).count &#x3D; instances.length;
+
+        resolve(profile);
+      });
+    })
   }
 }
-export interface Dictionary {
-  [scope: string]: any[];
-}
-export interface ICollection {
-  [scope: string]: Observable&lt;any[]&gt;;
-}</code></pre>
+</code></pre>
     </div>
 
 </div>

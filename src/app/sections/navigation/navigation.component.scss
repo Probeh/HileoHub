@@ -1,0 +1,57 @@
+@import "styles.scss";
+
+.navigation {
+  background: $teal;
+  color: white;
+  height: $nav_height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .nav-primary {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    flex: auto;
+
+    .text-title {
+      font-size: 30px;
+      margin-right: 20px;
+    }
+
+    .form-control {
+      margin-left: 20px;
+    }
+  }
+  .nav-action {
+    transition: ease-in 300ms;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    min-width: 40px;
+    min-height: 40px;
+    margin-right: 20px;
+    color: white;
+    display: flex;
+    .fa {
+      font-size: 20px;
+    }
+  }
+  .icon {
+    background: lighten($color: $teal, $amount: 10%);
+  }
+  .nav-action:hover {
+    transition: ease-in 200ms;
+    background: darken($color: $teal, $amount: 5%);
+  }
+  .nav-action:active {
+    background: darken($color: $teal, $amount: 20%);
+  }
+  .fa:hover {
+    cursor: pointer;
+  }
+
+  .nav-secondary {
+
+  }
+}

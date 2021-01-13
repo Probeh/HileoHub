@@ -1,0 +1,122 @@
+@import "styles.scss";
+
+$background: lighten(
+  $color: $dark,
+  $amount: 20%,
+);
+
+.sidenav {
+  @extend .shadow;
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 100vh;
+  max-height: 100vh;
+  color: white;
+  .sidenav-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: $nav_height;
+    background: $teal;
+    justify-content: center;
+    position: relative;
+    .text-title {
+      font-size: 30px;
+    }
+  }
+  .sidenav-center {
+    width: 100%;
+    background: $background;
+    flex: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+
+    .nav-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50px;
+    }
+    .nav-content {
+      flex: auto;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+  .sidenav-footer {
+    width: 100%;
+    height: $nav_height;
+    background: $teal;
+  }
+}
+.collapse {
+  .sidenav-header > .nav-action {
+    position: absolute;
+  }
+  .sidenav-header > .text-title {
+    transition: ease-out 250ms;
+    opacity: 0%;
+  }
+  transition: ease-out 250ms;
+}
+.expanded {
+  .sidenav-header > .nav-action {
+    transition: ease-in 250ms;
+    position: absolute;
+    right: 0px;
+  }
+  .sidenav-header > .text-title {
+    transition: ease-in 250ms;
+    opacity: 100%;
+  }
+  width: 250px;
+  transition: ease-in 250ms;
+}
+.nav-action {
+  transition: ease-in 300ms;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  color: white;
+  .fa {
+    font-size: 20px;
+  }
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 0px;
+}
+.menu {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: lighten($color: $teal, $amount: 10%);
+}
+.nav-action-hover {
+  transition: ease-in 200ms;
+  background: $teal;
+}
+.nav-action:hover {
+  @extend .nav-action-hover;
+}
+.nav-action.active {
+  background: lighten($color: $teal, $amount: 10%);
+}
+.nav-action:active {
+  transition: ease-in 200ms;
+  background: $teal;
+}
+.fa:hover {
+  cursor: pointer;
+}
+.content {
+  height: 50px;
+  justify-content: left;
+  padding-left: 20px;
+}

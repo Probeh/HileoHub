@@ -1,0 +1,9 @@
+<p>
+  language-chart works!
+</p>
+<p-chart
+  [type]="this.chart"
+  [data]="this.entries"
+  [options]="this.options"
+  (onDataSelect)="selectData($event)"
+></p-chart>

@@ -1,0 +1,705 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>HileoHub</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">HileoHub</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>NavigationComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/sections/navigation/navigation.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-navigation</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./navigation.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./navigation.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#authState">authState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#username">username</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fireLogin">fireLogin</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fireLogout">fireLogout</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toggleSidenav">toggleSidenav</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(sidenav: <a href="../injectables/SidenavService.html">SidenavService</a>, auth: <a href="../injectables/AuthService.html">AuthService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/sections/navigation/navigation.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>sidenav</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SidenavService.html" target="_self" >SidenavService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>auth</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fireLogin"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            fireLogin
+                        </b>
+                        <a href="#fireLogin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>fireLogin()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/sections/navigation/navigation.component.ts:32</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fireLogout"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            fireLogout
+                        </b>
+                        <a href="#fireLogout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>fireLogout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/app/sections/navigation/navigation.component.ts:35</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/sections/navigation/navigation.component.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleSidenav"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            toggleSidenav
+                        </b>
+                        <a href="#toggleSidenav"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>toggleSidenav()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/sections/navigation/navigation.component.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="authState"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            authState</b>
+                            <a href="#authState"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/sections/navigation/navigation.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="username"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            username</b>
+                            <a href="#username"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/sections/navigation/navigation.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { IUserAccount } from &#x27;@account/models/account&#x27;;
+import { AuthService } from &#x27;@account/services/auth.service&#x27;
+import { Component, OnInit } from &#x27;@angular/core&#x27;
+import { IKeyValue } from &#x27;@helpers/key-value.interface&#x27;;
+import { SidenavService } from &#x27;@sidenav/services/sidenav.service&#x27;
+
+@Component({
+  selector: &#x27;app-navigation&#x27;,
+  templateUrl: &#x27;./navigation.component.html&#x27;,
+  styleUrls: [&#x27;./navigation.component.scss&#x27;]
+})
+export class NavigationComponent implements OnInit {
+  public username: string;
+  public authState: boolean &#x3D; false;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
+  constructor(private sidenav: SidenavService, private auth: AuthService) {
+    this.auth.authChanged.subscribe(
+      (result: IKeyValue&lt;boolean, IUserAccount&gt;) &#x3D;&gt; {
+        if (result.key) {
+          this.username &#x3D; result.val?.name;
+          this.authState &#x3D; result.key;
+        }
+      }
+    );
+    this.auth.getAuthState();
+  }
+  ngOnInit() { }
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
+  public toggleSidenav() {
+    this.sidenav.toggleSidenav();
+  }
+  public fireLogin() {
+    this.auth.githubLogin();
+  }
+  public fireLogout() {
+    this.auth.githubLogout();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;navigation&quot;&gt;
+  &lt;div class&#x3D;&quot;nav-primary&quot;&gt;
+    &lt;div class&#x3D;&quot;text-title&quot;&gt;hileo&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;nav-secondary&quot;&gt;
+    &lt;button
+      *ngIf&#x3D;&quot;!this.authState&quot;
+      class&#x3D;&quot;btn nav-action icon&quot;
+      (click)&#x3D;&quot;this.fireLogin()&quot;
+    &gt;&lt;i class&#x3D;&quot;fa fa-github&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button
+      *ngIf&#x3D;&quot;this.authState&quot;
+      class&#x3D;&quot;btn nav-action icon&quot;
+      (click)&#x3D;&quot;this.fireLogout()&quot;
+    &gt;&lt;i class&#x3D;&quot;fa fa-github mr-2&quot;&gt;&lt;/i&gt;{{this.username}}&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./navigation.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;styles.scss&quot;;
+
+.navigation {
+  background: $teal;
+  color: white;
+  height: $nav_height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .nav-primary {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    flex: auto;
+
+    .text-title {
+      font-size: 30px;
+      margin-right: 20px;
+    }
+
+    .form-control {
+      margin-left: 20px;
+    }
+  }
+  .nav-action {
+    transition: ease-in 300ms;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    min-width: 40px;
+    min-height: 40px;
+    margin-right: 20px;
+    color: white;
+    display: flex;
+    .fa {
+      font-size: 20px;
+    }
+  }
+  .icon {
+    background: lighten($color: $teal, $amount: 10%);
+  }
+  .nav-action:hover {
+    transition: ease-in 200ms;
+    background: darken($color: $teal, $amount: 5%);
+  }
+  .nav-action:active {
+    background: darken($color: $teal, $amount: 20%);
+  }
+  .fa:hover {
+    cursor: pointer;
+  }
+
+  .nav-secondary {
+
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="navigation">  <div class="nav-primary">    <div class="text-title">hileo</div>  </div>  <div class="nav-secondary">    <button      *ngIf="!this.authState"      class="btn nav-action icon"      (click)="this.fireLogin()"    ><i class="fa fa-github"></i></button>    <button      *ngIf="this.authState"      class="btn nav-action icon"      (click)="this.fireLogout()"    ><i class="fa fa-github mr-2"></i>{{this.username}}</button>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CloudServicesComponent', 'selector': 'app-cloud-services'},{'name': 'CompaniesComponent', 'selector': 'app-companies'},{'name': 'EnvironmentsComponent', 'selector': 'app-environments'},{'name': 'FrameworksComponent', 'selector': 'app-frameworks'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'IndustriesComponent', 'selector': 'app-industries'},{'name': 'InsightsComponent', 'selector': 'app-insights'},{'name': 'LabelComponent', 'selector': 'app-label'},{'name': 'LanguageChartComponent', 'selector': 'app-language-chart'},{'name': 'LanguageComponent', 'selector': 'app-language'},{'name': 'LanguageResultComponent', 'selector': 'app-language-result'},{'name': 'LanguagesComponent', 'selector': 'app-languages'},{'name': 'LibrariesComponent', 'selector': 'app-libraries'},{'name': 'LoadingComponent', 'selector': 'app-loading'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'PlatformsComponent', 'selector': 'app-platforms'},{'name': 'PortfolioComponent', 'selector': 'app-portfolio'},{'name': 'PrivateComponent', 'selector': 'app-private'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PublicComponent', 'selector': 'app-public'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'RepositoriesComponent', 'selector': 'app-repositories'},{'name': 'RepositoryChartComponent', 'selector': 'app-repository-chart'},{'name': 'RepositoryComponent', 'selector': 'app-repository'},{'name': 'RepositoryListComponent', 'selector': 'app-repository-list'},{'name': 'RepositoryResultComponent', 'selector': 'app-repository-result'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResumeComponent', 'selector': 'app-resume'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'ShowcaseComponent', 'selector': 'app-showcase'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SocialComponent', 'selector': 'app-social'},{'name': 'SoftwareComponent', 'selector': 'app-software'},{'name': 'TimelineComponent', 'selector': 'app-timeline'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'NavigationComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NavigationComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

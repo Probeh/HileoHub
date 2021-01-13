@@ -1,58 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&family=Pacifico&family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap");
 // ======================================= //
-// Global Style Variables
+// Global Theme Variables
 // ======================================= //
-* {
-  font-size: 14px;
-}
-// ======================================= //
-// Global Font Variables:
-// ======================================= //
-$padauk  : "Padauk"  , sans-serif;
-$poppins : "Poppins" , sans-serif;
-$roboto  : "Roboto"  , sans-serif;
-$pacifico: "Pacifico", sans-serif;
-// ======================================= //
-// Global Color Variables:
-// ======================================= //
-$theme: lightskyblue;
-
-$blue: #007bff;
-$cyan: #17a2b8;
-$danger: #dc3545;
-$dark: #343a40;
-$gray-dark: #343a40;
-$gray: #6c757d;
-$green: #28a745;
-$indigo: #6610f2;
-$info: #17a2b8;
-$light: #f8f9fa;
-$orange: #fd7e14;
-$pink: #e83e8c;
-$primary: #007bff;
-$purple: #6f42c1;
-$red: #dc3545;
-$secondary: #6c757d;
-$success: #28a745;
-$teal: #34CCAA;
-$warning: #ffc107;
-$white: #fff;
-$yellow: #ffc107;
-// ======================================= //
-.bg-teal {
-  background: $teal;
-  color: white;
-}
-.bg-theme {
-  background: $theme;
-}
-.text-teal {
-  color: $teal;
-}
-.text-theme {
-  color: $theme;
-}
-.text-pacifico {
-  font-family: 'Pacifico', cursive;
-}
+$bootstrap4-light-blue: url("../../../primeng/resources/themes/bootstrap4-light-blue/theme.css");
+$bootstrap4-light-purple: url("../../../primeng/resources/themes/bootstrap4-light-purple/theme.css");
+$bootstrap4-dark-blue: url("../../../primeng/resources/themes/bootstrap4-dark-blue/theme.css");
+$bootstrap4-dark-purple: url("../../../primeng/resources/themes/bootstrap4-dark-purple/theme.css");
+$md-light-indigo: url("../../../primeng/resources/themes/md-light-indigo/theme.css");
+$md-light-deeppurple: url("../../../primeng/resources/themes/md-light-deeppurple/theme.css");
+$md-dark-indigo: url("../../../primeng/resources/themes/md-dark-indigo/theme.css");
+$md-dark-deeppurple: url("../../../primeng/resources/themes/md-dark-deeppurple/theme.css");
+$mdc-light-indigo: url("../../../primeng/resources/themes/mdc-light-indigo/theme.css");
+$mdc-light-deeppurple: url("../../../primeng/resources/themes/mdc-light-deeppurple/theme.css");
+$mdc-dark-indigo: url("../../../primeng/resources/themes/mdc-dark-indigo/theme.css");
+$mdc-dark-deeppurple: url("../../../primeng/resources/themes/mdc-dark-deeppurple/theme.css");
+$fluent-light: url("../../../primeng/resources/themes/fluent-light/theme.css");
+$saga-blue: url("../../../primeng/resources/themes/saga-blue/theme.css");
+$saga-green: url("../../../primeng/resources/themes/saga-green/theme.css");
+$saga-orange: url("../../../primeng/resources/themes/saga-orange/theme.css");
+$saga-purple: url("../../../primeng/resources/themes/saga-purple/theme.css");
+$vela-blue: url("../../../primeng/resources/themes/vela-blue/theme.css");
+$vela-green: url("../../../primeng/resources/themes/vela-green/theme.css");
+$vela-orange: url("../../../primeng/resources/themes/vela-orange/theme.css");
+$vela-purple: url("../../../primeng/resources/themes/vela-purple/theme.css");
+$arya-blue: url("../../../primeng/resources/themes/arya-blue/theme.css");
+$arya-green: url("../../../primeng/resources/themes/arya-green/theme.css");
+$arya-orange: url("../../../primeng/resources/themes/arya-orange/theme.css");
+$arya-purple: url("../../../primeng/resources/themes/arya-purple/theme.css");
+$nova: url("../../../primeng/resources/themes/nova/theme.css");
+$nova-alt: url("../../../primeng/resources/themes/nova-alt/theme.css");
+$nova-accent: url("../../../primeng/resources/themes/nova-accent/theme.css");
+$luna-amber: url("../../../primeng/resources/themes/luna-amber/theme.css");
+$luna-blue: url("../../../primeng/resources/themes/luna-blue/theme.css");
+$luna-green: url("../../../primeng/resources/themes/luna-green/theme.css");
+$luna-pink: url("../../../primeng/resources/themes/luna-pink/theme.css");
+$rhea: url("../../../primeng/resources/themes/rhea/theme.css");

@@ -1,0 +1,96 @@
+<div
+  class="row"
+  style="padding: 15px 0px;"
+>
+  <div
+    class="col-xs-12 col-sm-4 col-lg-3"
+    *ngFor="let item of this.knob_items"
+  >
+    <div
+      class="card knob-card text-white shadow"
+      [ngStyle]="{'border': '1px solid '+ item.background, 'margin': '5px 0px'}"
+    >
+      <div
+        class="card-header text-right"
+        style="padding: 10px 20px 0px 10px;"
+        [ngStyle]="{'background': item.background}"
+      >
+        <h6>{{item.title | titlecase}}</h6>
+      </div>
+      <div
+        class="card-body shadow text-center"
+        [ngStyle]="{'background': item.background}"
+      >
+        <div class="row">
+          <div
+            class="col-xs-12 col-sm-4"
+            style="display: flex; justify-content: center; align-items: center;"
+          >
+            <i
+              [ngClass]="item.icon"
+              style="font-size: 42px;"
+            ></i>
+          </div>
+          <div
+            class="col-xs-12 col-sm-8 p-1"
+            style="display: flex; justify-content: center; align-items: center;"
+          >
+            <h3 style="margin: 0px 5px 0px 0px;">{{item.value}}</h3>
+            <h4 class="m-0">{{item.suffix}}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer p-2 text-muted">View {{item.title}}</div>
+    </div>
+  </div>
+</div>
+<div class="row pt-2">
+  <div class="col-xs-12 col-md-8">
+    <div
+      class="card"
+      [ngStyle]="{'border': '1px solid '+'#2DC1BE'}"
+    >
+      <div
+        class="card-header bg-teal text-white"
+      >Activity</div>
+      <div
+        class="card-body overflow-auto p-0"
+        style="max-height: 450px;"
+      >
+        <app-repository-list></app-repository-list>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-4">
+    <div
+      class="card"
+      [ngStyle]="{'border': '1px solid '+'#4A90E4'}"
+    >
+      <div
+        class="card-header text-white"
+        style="background: #4A90E4;"
+      >Languages</div>
+      <div
+        class="card-body p-0 overflow-auto"
+        style="max-height: 450px;"
+      >
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th class="align-middle">#</th>
+              <th class="align-middle">Language</th>
+              <th class="align-middle">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of this.getUserLanguages(); let index=index">
+              <td>{{index + 1}}</td>
+              <td>{{item.alias}}</td>
+              <td>{{item.value}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

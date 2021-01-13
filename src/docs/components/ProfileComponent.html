@@ -122,6 +122,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#user_profile">user_profile</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -131,6 +146,14 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getUserLanguages">getUserLanguages</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getUserRepos">getUserRepos</a>
+                            </li>
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
@@ -152,15 +175,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(profile: <a href="../injectables/ProfileService.html">ProfileService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/profile/profile.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/profile/profile.component.ts:11</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>profile</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProfileService.html" target="_self" >ProfileService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -174,6 +227,88 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUserLanguages"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getUserLanguages
+                        </b>
+                        <a href="#getUserLanguages"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getUserLanguages()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/app/profile/profile.component.ts:19</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUserRepos"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getUserRepos
+                        </b>
+                        <a href="#getUserRepos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getUserRepos()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/app/profile/profile.component.ts:16</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -196,8 +331,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/profile/profile.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/app/profile/profile.component.ts:14</a></div>
                 </td>
             </tr>
 
@@ -214,12 +349,48 @@
         </tbody>
     </table>
 </section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user_profile"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            user_profile</b>
+                            <a href="#user_profile"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/IUserProfile.html" target="_self" >IUserProfile</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/profile/profile.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { IUserProfile } from &#x27;@profile/models/profile&#x27;;
+import { ProfileService } from &#x27;@profile/services/profile.service&#x27;;
 
 @Component({
   selector: &#x27;app-profile&#x27;,
@@ -227,28 +398,112 @@
   styleUrls: [&#x27;./profile.component.scss&#x27;]
 })
 export class ProfileComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  public user_profile: IUserProfile;
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
+  constructor(private profile: ProfileService) { }
+  ngOnInit() { this.user_profile &#x3D; this.profile.getCurrentProfile(); }
+  // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
+  public getUserRepos() {
+    return this.user_profile?.knowledge?.repositories?.slice();
   }
-
-}
-</code></pre>
+  public getUserLanguages() {
+    return this.user_profile?.knowledge.languages?.slice();
+  }
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
-  profile works!
-&lt;/p&gt;
-</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;row h-100&quot;&gt;
+  &lt;div class&#x3D;&quot;col-xl-2 col-md-3 col-sm-12 p-0&quot;&gt;
+    &lt;div class&#x3D;&quot;card profile-card&quot;&gt;
+      &lt;img
+        [src]&#x3D;&quot;this.user_profile.avatar_url&quot;
+        class&#x3D;&quot;avatar&quot;
+        alt&#x3D;&quot;&quot;
+      &gt;
+      &lt;div class&#x3D;&quot;card-body&quot;&gt;
+        &lt;h5 class&#x3D;&quot;card-title m-0&quot;&gt;{{this.user_profile?.name | titlecase}}&lt;/h5&gt;
+        &lt;p class&#x3D;&quot;text-muted m-0&quot;&gt;{{this.user_profile?.email}}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div
+        class&#x3D;&quot;card-footer&quot;
+        *ngIf&#x3D;&quot;this.user_profile?.description&quot;
+      &gt;
+        &lt;p class&#x3D;&quot;text-muted m-0&quot;&gt;{{this.user_profile?.description}}&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;list-group list-group-flush&quot;&gt;
+      &lt;a routerLink&#x3D;&quot;overview&quot; routerLinkActive&#x3D;&quot;active&quot; class&#x3D;&quot;list-group-item list-group-item-action&quot;&gt;&lt;i class&#x3D;&quot;fa fa-id-card mr-1&quot;&gt;&lt;/i&gt; Overview&lt;/a&gt;
+      &lt;a routerLink&#x3D;&quot;languages&quot; routerLinkActive&#x3D;&quot;active&quot; class&#x3D;&quot;list-group-item list-group-item-action&quot;&gt;&lt;i class&#x3D;&quot;fa fa-file-code-o mr-1&quot;&gt;&lt;/i&gt; Languages&lt;/a&gt;
+      &lt;a routerLink&#x3D;&quot;repositories&quot; routerLinkActive&#x3D;&quot;active&quot; class&#x3D;&quot;list-group-item list-group-item-action&quot;&gt;&lt;i class&#x3D;&quot;fa fa-suitcase mr-1&quot;&gt;&lt;/i&gt; Projects&lt;/a&gt;
+      &lt;a routerLink&#x3D;&quot;libraries&quot; routerLinkActive&#x3D;&quot;active&quot; class&#x3D;&quot;list-group-item list-group-item-action&quot;&gt;&lt;i class&#x3D;&quot;fa fa-book mr-1&quot;&gt;&lt;/i&gt; Libraries&lt;/a&gt;
+      &lt;a routerLink&#x3D;&quot;frameworks&quot; routerLinkActive&#x3D;&quot;active&quot; class&#x3D;&quot;list-group-item list-group-item-action&quot;&gt;&lt;i class&#x3D;&quot;fa fa-industry mr-1&quot;&gt;&lt;/i&gt; Frameworks&lt;/a&gt;
+      &lt;a routerLink&#x3D;&quot;platforms&quot; routerLinkActive&#x3D;&quot;active&quot; class&#x3D;&quot;list-group-item list-group-item-action&quot;&gt;&lt;i class&#x3D;&quot;fa fa-desktop mr-1&quot;&gt;&lt;/i&gt; Platforms&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-xl-10 col-md-9 col-sm-12 overflow-auto p-0 h-100&quot;&gt;
+    &lt;router-outlet&gt;&lt;/router-outlet&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
                     <code>./profile.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;styles.scss&quot;;
+
+.profile-card {
+  .card-header {
+    background: $primary;
+    padding: 2px;
+  }
+  .card-body {
+    text-align: center;
+    .card-title {
+      color: $secondary;
+    }
+  }
+}
+.menu-card {
+  .card-header {
+    background: $primary;
+    padding: 2px;
+  }
+  .card-body {
+    padding: 0px;
+    margin: 0px;
+  }
+}
+.avatar {
+  border-radius: 50%;
+  max-width: 100px;
+  margin: 10px auto;
+  @extend .shadow;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: $secondary;
+}
+.list-group-item-action {
+  background: inherit;
+  color: $secondary;
+}
+.list-group-item-action:hover {
+  border-color: $teal;
+  background: $teal;
+  color: white;
+}
+.list-group-item-action.active {
+  border-color: $teal;
+  background: $teal;
+  color: white;
+}
+.list-group-item:active {
+  border-color: $teal;
+  background: lighten($color: $teal, $amount: 10%);
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -276,8 +531,8 @@ export class ProfileComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>  profile works!</p></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CodeResultComponent', 'selector': 'app-code-result'},{'name': 'CodeSearchComponent', 'selector': 'app-code-search'},{'name': 'CommitSearchComponent', 'selector': 'app-commit-search'},{'name': 'GithubComponent', 'selector': 'app-github'},{'name': 'IdentityComponent', 'selector': 'app-identity'},{'name': 'IssueSearchComponent', 'selector': 'app-issue-search'},{'name': 'LabelSearchComponent', 'selector': 'app-label-search'},{'name': 'PackageComponent', 'selector': 'app-package'},{'name': 'PackageResultComponent', 'selector': 'app-package-result'},{'name': 'PackageSearchComponent', 'selector': 'app-package-search'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'ProjectComponent', 'selector': 'app-project'},{'name': 'ProjectResultComponent', 'selector': 'app-project-result'},{'name': 'ProjectSearchComponent', 'selector': 'app-project-search'},{'name': 'RepoResultComponent', 'selector': 'app-repo-result'},{'name': 'RepoSearchComponent', 'selector': 'app-repo-search'},{'name': 'RepositoryComponent', 'selector': 'app-repository'},{'name': 'TopicResultComponent', 'selector': 'app-topic-result'},{'name': 'TopicSearchComponent', 'selector': 'app-topic-search'},{'name': 'UserResultComponent', 'selector': 'app-user-result'},{'name': 'UserSearchComponent', 'selector': 'app-user-search'}];
+        var COMPONENT_TEMPLATE = '<div><div class="row h-100">  <div class="col-xl-2 col-md-3 col-sm-12 p-0">    <div class="card profile-card">      <img        [src]="this.user_profile.avatar_url"        class="avatar"        alt=""      >      <div class="card-body">        <h5 class="card-title m-0">{{this.user_profile?.name | titlecase}}</h5>        <p class="text-muted m-0">{{this.user_profile?.email}}</p>      </div>      <div        class="card-footer"        *ngIf="this.user_profile?.description"      >        <p class="text-muted m-0">{{this.user_profile?.description}}</p>      </div>    </div>    <div class="list-group list-group-flush">      <a routerLink="overview" routerLinkActive="active" class="list-group-item list-group-item-action"><i class="fa fa-id-card mr-1"></i> Overview</a>      <a routerLink="languages" routerLinkActive="active" class="list-group-item list-group-item-action"><i class="fa fa-file-code-o mr-1"></i> Languages</a>      <a routerLink="repositories" routerLinkActive="active" class="list-group-item list-group-item-action"><i class="fa fa-suitcase mr-1"></i> Projects</a>      <a routerLink="libraries" routerLinkActive="active" class="list-group-item list-group-item-action"><i class="fa fa-book mr-1"></i> Libraries</a>      <a routerLink="frameworks" routerLinkActive="active" class="list-group-item list-group-item-action"><i class="fa fa-industry mr-1"></i> Frameworks</a>      <a routerLink="platforms" routerLinkActive="active" class="list-group-item list-group-item-action"><i class="fa fa-desktop mr-1"></i> Platforms</a>    </div>  </div>  <div class="col-xl-10 col-md-9 col-sm-12 overflow-auto p-0 h-100">    <router-outlet></router-outlet>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AccountComponent', 'selector': 'app-account'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CloudServicesComponent', 'selector': 'app-cloud-services'},{'name': 'CompaniesComponent', 'selector': 'app-companies'},{'name': 'EnvironmentsComponent', 'selector': 'app-environments'},{'name': 'FrameworksComponent', 'selector': 'app-frameworks'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'IndustriesComponent', 'selector': 'app-industries'},{'name': 'InsightsComponent', 'selector': 'app-insights'},{'name': 'LabelComponent', 'selector': 'app-label'},{'name': 'LanguageChartComponent', 'selector': 'app-language-chart'},{'name': 'LanguageComponent', 'selector': 'app-language'},{'name': 'LanguageResultComponent', 'selector': 'app-language-result'},{'name': 'LanguagesComponent', 'selector': 'app-languages'},{'name': 'LibrariesComponent', 'selector': 'app-libraries'},{'name': 'LoadingComponent', 'selector': 'app-loading'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'OverviewComponent', 'selector': 'app-overview'},{'name': 'PlatformsComponent', 'selector': 'app-platforms'},{'name': 'PortfolioComponent', 'selector': 'app-portfolio'},{'name': 'PrivateComponent', 'selector': 'app-private'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'PublicComponent', 'selector': 'app-public'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'RepositoriesComponent', 'selector': 'app-repositories'},{'name': 'RepositoryChartComponent', 'selector': 'app-repository-chart'},{'name': 'RepositoryComponent', 'selector': 'app-repository'},{'name': 'RepositoryListComponent', 'selector': 'app-repository-list'},{'name': 'RepositoryResultComponent', 'selector': 'app-repository-result'},{'name': 'ResourcesComponent', 'selector': 'app-resources'},{'name': 'ResumeComponent', 'selector': 'app-resume'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'ShowcaseComponent', 'selector': 'app-showcase'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SocialComponent', 'selector': 'app-social'},{'name': 'SoftwareComponent', 'selector': 'app-software'},{'name': 'TimelineComponent', 'selector': 'app-timeline'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ProfileComponent'};
 </script>

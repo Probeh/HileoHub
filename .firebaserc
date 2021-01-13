@@ -1,15 +1,5 @@
 {
   "projects": {
-    "default": "hileohub"
-  },
-  "targets": {
-    "hileohub": {
-      "hosting": {
-        "target": "app",
-        "HileoHub": [
-          "hileohub"
-        ]
-      }
-    }
+    "default": "hileo-hub"
   }
 }

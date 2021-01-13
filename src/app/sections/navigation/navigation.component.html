@@ -1,0 +1,17 @@
+<div class="navigation">
+  <div class="nav-primary">
+    <div class="text-title">hileo</div>
+  </div>
+  <div class="nav-secondary">
+    <button
+      *ngIf="!this.authState"
+      class="btn nav-action icon"
+      (click)="this.fireLogin()"
+    ><i class="fa fa-github"></i></button>
+    <button
+      *ngIf="this.authState"
+      class="btn nav-action icon"
+      (click)="this.fireLogout()"
+    ><i class="fa fa-github mr-2"></i>{{this.username}}</button>
+  </div>
+</div>

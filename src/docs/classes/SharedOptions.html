@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/@common/helpers/shared-options.ts</code>
+            <code>src/app/common/helpers/shared-options.ts</code>
         </p>
 
 
@@ -82,11 +82,15 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#firebase">firebase</a>
+                                <a href="#credentials">credentials</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#github">github</a>
+                                <a href="#endpoints">endpoints</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#providers">providers</a>
                             </li>
                         </ul>
                     </td>
@@ -101,6 +105,78 @@
     </table>
 </section>
 
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(providers?: any[], credentials?: any[], endpoints?: any[])</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/app/common/helpers/shared-options.ts:5</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>providers</td>
+                                                  
+                                                        <td>
+                                                                    <code>any[]</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>credentials</td>
+                                                  
+                                                        <td>
+                                                                    <code>any[]</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>endpoints</td>
+                                                  
+                                                        <td>
+                                                                    <code>any[]</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Yes
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
 
             <section>
     
@@ -111,24 +187,24 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="firebase"></a>
+                        <a name="credentials"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            firebase</b>
-                            <a href="#firebase"><span class="icon ion-ios-link"></span></a>
+                            credentials</b>
+                            <a href="#credentials"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../interfaces/Credentials.html" target="_self" >Credentials</a></code>
+                            <i>Type : </i>    <code>any[]</code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/app/@common/helpers/shared-options.ts:6</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/app/common/helpers/shared-options.ts:5</a></div>
                             </td>
                         </tr>
 
@@ -139,24 +215,52 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="github"></a>
+                        <a name="endpoints"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            github</b>
-                            <a href="#github"><span class="icon ion-ios-link"></span></a>
+                            endpoints</b>
+                            <a href="#endpoints"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../interfaces/Credentials.html" target="_self" >Credentials</a></code>
+                            <i>Type : </i>    <code>any[]</code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/app/@common/helpers/shared-options.ts:5</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="4" class="link-to-prism">src/app/common/helpers/shared-options.ts:4</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="providers"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            providers</b>
+                            <a href="#providers"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="3" class="link-to-prism">src/app/common/helpers/shared-options.ts:3</a></div>
                             </td>
                         </tr>
 
@@ -175,15 +279,20 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Credentials } from &#x27;@helpers/credentials&#x27;
-
-export class SharedOptions {
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class SharedOptions {
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-  public github  : Credentials;
-  public firebase: Credentials;
+  public providers  : any[];
+  public endpoints  : any[];
+  public credentials: any[];
   // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
-}
-</code></pre>
+  constructor(providers?: any[], credentials?: any[], endpoints?: any[]) {
+    // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
+    this.providers   &#x3D; providers  ;
+    this.endpoints   &#x3D; endpoints  ;
+    this.credentials &#x3D; credentials;
+    // &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; //
+  }
+}</code></pre>
     </div>
 </div>
 

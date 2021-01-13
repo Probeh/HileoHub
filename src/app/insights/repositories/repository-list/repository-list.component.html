@@ -1,0 +1,116 @@
+<p-table
+  [value]="this.user_profile?.knowledge?.repositories"
+  dataKey="name"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th style="width: 3rem"></th>
+      <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon>
+      </th>
+      <th pSortableColumn="created">Created <p-sortIcon field="created"></p-sortIcon>
+      </th>
+      <th pSortableColumn="size">Size <p-sortIcon field="size"></p-sortIcon>
+      </th>
+      <th pSortableColumn="language">Language <p-sortIcon field="language"></p-sortIcon>
+      </th>
+      <th pSortableColumn="rating">Reviews <p-sortIcon field="rating"></p-sortIcon>
+      </th>
+      <th pSortableColumn="updates">Updates <p-sortIcon field="updates"></p-sortIcon>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template
+    pTemplate="body"
+    let-repository
+    let-expanded="expanded"
+  >
+    <tr>
+      <td>
+        <button
+          type="button"
+          pButton
+          pRipple
+          [pRowToggler]="repository"
+          class="p-button-text p-button-rounded p-button-plain"
+          [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"
+        ></button>
+      </td>
+      <td>{{repository.name.slice().substring(0,15)}}{{repository.name.length >= 15 ? '...' : ''}}</td>
+      <td>{{repository.created | date: 'mediumDate'}}</td>
+      <td>{{this.getRepoSize(repository)}}</td>
+      <td>{{repository.primary_language}}</td>
+      <td>
+        <p-rating
+          [ngModel]="repository.stargazers"
+          [readonly]="true"
+          [cancel]="false"
+        ></p-rating>
+      </td>
+      <td>{{repository.commits ? repository.commits.length : 0}}</td>
+    </tr>
+  </ng-template>
+  <ng-template
+    pTemplate="rowexpansion"
+    let-repository
+  >
+    <tr>
+      <td colspan="7">
+        <div class="p-p-3">
+          <p-table
+            [value]="this.getLanguageInfo(repository)"
+            dataKey="id"
+          >
+            <ng-template pTemplate="header">
+    <tr>
+      <th style="width: 3rem"></th>
+      <th pSortableColumn="language">Language <p-sortIcon field="language"></p-sortIcon>
+      </th>
+      <th pSortableColumn="total">Total <p-sortIcon field="total"></p-sortIcon>
+      </th>
+      <th pSortableColumn="ratio">Ratio <p-sortIcon field="ratio"></p-sortIcon>
+      </th>
+      <th pSortableColumn="percent">Percent <p-sortIcon field="percent"></p-sortIcon>
+      </th>
+      <th style="width: 4rem"></th>
+    </tr>
+  </ng-template>
+  <ng-template
+    pTemplate="body"
+    let-language
+  >
+    <tr>
+      <td></td>
+      <td>
+        <p
+          class="m-0"
+          style="max-width: 50%; padding: 2.5px 5px; background: #c8e6c9; color: #256029;"
+        >{{language.name}}</p>
+      </td>
+      <td>{{language.total}}</td>
+      <td>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped"
+            [ngClass]="language.color"
+            role="progressbar"
+            [ngStyle]="{'width': language.ratio + '%'}"
+            [attr.aria-valuenow]="language.ratio"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+      </td>
+      <td>{{language.percent}}%</td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage">
+    <tr>
+      <td colspan="6">No code was found for this repository</td>
+    </tr>
+  </ng-template>
+</p-table>
+</div>
+</td>
+</tr>
+</ng-template>
+</p-table>

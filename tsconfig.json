@@ -1,57 +1,45 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "allowJs": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2015",
-    "resolveJsonModule": true,
-    "module": "commonjs",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "baseUrl"               : "./"            ,
+    "outDir"                : "./dist/out-tsc",
+    "sourceMap"             : false           ,
+    "declaration"           : false           ,
+    "downlevelIteration"    : true            ,
+    "experimentalDecorators": true            ,
+    "resolveJsonModule"     : true            ,
+    "pretty"                : true            ,
+    "removeComments"        : true            ,
+    "importHelpers"         : true            ,
+    "moduleResolution"      : "node"          ,
+    "target"                : "es2015"        ,
+    "module"                : "es2020"        ,
+    "lib"                   : ["es2018"       , "dom"],
     "paths": {
-      "@github/*": [
-        "src/app/github/*"
-      ],
-      "@models/*": [
-        "src/app/@common/models/*"
-      ],
-      "@data/*": [
-        "src/app/@common/data/*"
-      ],
-      "@enums/*": [
-        "src/app/@common/enums/*"
-      ],
-      "@helpers/*": [
-        "src/app/@common/helpers/*"
-      ],
-      "@services/*": [
-        "src/app/@common/services/*"
-      ],
-      "@identity/*": [
-        "src/app/identity/*"
-      ],
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@env/*": [
-        "src/environments/*"
-      ],
-      "@common/*": [
-        "src/app/@common/*"
-      ],
-      "@app/*": [
-        "src/app/*"
-      ],
-    },
+      "@account/*"     : ["src/app/account/*"                           ],
+      "@github/*"      : ["src/app/github/*"                            ],
+      "@insights/*"    : ["src/app/insights/*"                          ],
+      "@main/*"        : ["src/app/main/*"                              ],
+      "@home/*"        : ["src/app/home/*"                              ],
+      "@profile/*"     : ["src/app/profile/*"                           ],
+      "@public/*"      : ["src/app/public/*"                            ],
+      "@search/*"      : ["src/app/search/*"                            ],
+      "@social/*"      : ["src/app/social/*"                            ],
+      "@resources/*"   : ["src/app/resources/*"                         ],
+      "@navigation/*"  : ["src/app/sections/navigation/*"               ],
+      "@sidenav/*"     : ["src/app/sections/sidenav/*"                  ],
+      "@loading/*"     : ["src/app/sections/loading/*"                  ],
+      "@models/*"      : ["src/app/common/models/*"                     ],
+      "@enums/*"       : ["src/app/common/enums/*"                      ],
+      "@helpers/*"     : ["src/app/common/helpers/*"                    ],
+      "@services/*"    : ["src/app/common/services/*"                   ],
+      "@interceptors/*": ["src/app/common/interceptors/*"               ],
+      "@utils/*"       : ["src/app/common/utils/*"                      ],
+      "@common/*"      : ["src/app/common/*"                            ],
+      "@assets/*"      : ["src/assets/*"                                ],
+      "@env/*"         : ["src/environments/*"                          ],
+      "@app/*"         : ["src/app/*"                                   ],
+      "common"         : ["dist/common/common"           , "dist/common"]
+    }
   }
 }
